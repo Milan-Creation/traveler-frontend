@@ -18339,12 +18339,13 @@ body.boxed-wrapper .testimonials-three__inner {
   border-radius: 6px;
   border: none;
   display: block;
-  width: 15%;
+  width: 13%;
   font-size: 18px;
   font-weight: 600;
   margin-top: 15px;
   font-family: 'poppins';
   letter-spacing: 1px;
+  text-align: center;
 }
 .input-box {
   position: relative;

@@ -1,0 +1,343 @@
+<html>
+  <head>
+    <title>Booking Travel</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="csrf-token"
+      content="nkmCAFhw23zdM2ayPRGbwnoqimmXgrlqh0oemr8L"
+    />
+    <meta name="hasadminToken" content="1" />
+    
+    <!-- Bootstrap CSS -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link
+      rel="icon"
+      type="image/png"
+      href="http://localhost:8000/img/favicon.png"
+    />
+    <!-- Icons Links -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- css Link -->
+    <link rel="stylesheet" href="app.css" />
+    <link rel="preload" href="app.js" as="script" />
+  </head>
+
+  <body>
+    <header class="bg-white shadow-sm">
+      <nav class="navbar navbar-expand-md bg-white shadow-sm py-3 header">
+        <div class="container">
+          <a class="navbar-brand gradient-text" href="index.html">
+            <img src="assets/ghumojhumo.png" alt="Logo" />
+          </a>
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Navbar items -->
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav mx-auto text-center" style="gap: 20px">
+              <li class="nav-item">
+                <a class="nav-link text-dark fw-medium active" href="#">
+                  <img src="assets/nav-icon-1.png" alt="Flights" />
+                  <span class="hero-nav"> Flights</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark fw-medium" href="#">
+                  <img src="assets/nav-icon-2.png" alt="Hotels" />
+                  <span class="hero-nav"> Hotels</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark fw-medium" href="#">
+                  <img src="assets/nav-icon-3.png" alt="Transfer" />
+                  <span class="hero-nav"> Transfer</span>
+                </a>
+              </li>
+            </ul>
+            <div class="d-flex gap-2">
+              <a href="#" class="btn-signup text-decoration-none">
+                <img src="assets/Group 7.png" alt="Login" />
+                Login or Create Account
+                <button class="chevron-down">
+                  <i class="bi bi-chevron-down"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="ticket-section my-5">
+        <div class="container">
+            <div class="row">
+                <div class="header">
+                    <span class="d-flex logos">
+                        <img src="assets/planes.svg" alt="Airline Logo">
+                        <h4>Ghumo Jhumo</h4>
+                    </span>
+                </div>
+                <div class="col-md-12 d-flex p-0">
+                 
+                    <div class="col-md-8 d-flex visit-section">
+                        <div class="ticket ">
+                            <div class="title-visit">VISIT PARIS!</div>
+                            <div class="body d-flex">
+                                
+                                <div class="col-md-4">
+                                    <div class="info">
+                                        <div>
+                                            <span>Name:</span> John Richards<br>
+                                            <span> Date:</span> October 15, 2050
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="info">
+                                        
+                                        <div><span>Destination:</span> Paris, France<br>
+                                       <span>Return Date:</span> October 22, 2050</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-2">
+                                    <img src="assets/plane.svg">
+                                </div>
+                      
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 visits">
+                                    
+                        <div class="col-md-6">
+                            <div class="info">
+                                <div>
+                                    <span>Flight Number:</span> F1234<br>
+                                    <span> Class:</span> First Class
+                                </div>
+
+                            </div>
+                        </div>
+                                    
+                        <div class="col-md-6">
+                            <div class="info">
+                                <div>
+                                    <span>Gate:</span> 12A <br>
+                                    <span> Boarding Time:</span> 8:00 AM
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <span class="empty-color">
+                </span>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+          <div class="row mb-4">
+            <div class="col-md-3 mb-3">
+              <div class="d-flex align-items-center mb-3">
+                <span class="text-primary fs-4 fw-bold">ghumo jhumo</span>
+              </div>
+              <p class="text-secondary">
+                Making travel simple, affordable, and enjoyable for everyone.
+              </p>
+              <div class="d-flex gap-3">
+                <a href="#" class="text-secondary"
+                  ><i class="bi bi-facebook fs-5"></i
+                ></a>
+                <a href="#" class="text-secondary"
+                  ><i class="bi bi-twitter fs-5"></i
+                ></a>
+                <a href="#" class="text-secondary"
+                  ><i class="bi bi-instagram fs-5"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <h5 class="fw-semibold mb-3">Company</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class="text-secondary text-decoration-none"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-secondary text-decoration-none"
+                    >Careers</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-secondary text-decoration-none">Blog</a>
+                </li>
+                <li>
+                  <a href="#" class="text-secondary text-decoration-none"
+                    >Press</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-secondary text-decoration-none"
+                    >Gift Cards</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h5 class="fw-semibold mb-3">Support</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class="text-secondary text-decoration-none"
+                    >Contact Us</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-secondary text-decoration-none"
+                    >Help Center</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-secondary text-decoration-none"
+                    >COVID-19 Updates</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-secondary text-decoration-none"
+                    >Cancellation Options</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-secondary text-decoration-none"
+                    >Safety Resource Center</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h5 class="fw-semibold mb-3">Legal</h5>
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class="text-secondary text-decoration-none"
+                    >Terms &amp; Conditions</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-secondary text-decoration-none"
+                    >Privacy Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-secondary text-decoration-none"
+                    >Cookie Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-secondary text-decoration-none"
+                    >Accessibility</a
+                  >
+                </li>
+                <li>
+                  <a href="#" class="text-secondary text-decoration-none"
+                    >Reward Program Terms</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="border-top border-secondary pt-3">
+            <p class="text-center text-secondary mb-0">
+              © 2025
+              <span>
+                <a
+                  href="https://venusstudies.in/"
+                  class="text-white text-decoration-none"
+                  target="_blank"
+                >
+                  Venus Studies
+                </a>
+              </span>
+              . All rights reserved.
+            </p>
+          </div>
+        </div>
+      </footer>
+  
+      <!-- Bootstrap Icons -->
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      />
+  
+      <!-- Bootstrap Icons (Make sure to include Bootstrap and Bootstrap Icons in your project) -->
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+      />
+      <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+        rel="stylesheet"
+      />
+  
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+      <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"
+      ></script>
+  
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+      ></script>
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+      ></script>
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+      />
+  
+      <script src="app.js"></script>
+      <!-- <script src="fetch.js"></script> -->
+    </body>
+  </html>
+  

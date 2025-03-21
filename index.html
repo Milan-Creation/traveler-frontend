@@ -1,0 +1,1093 @@
+<html>
+  <head>
+    <title>Ghumo Jhumo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="csrf-token"
+      content="nkmCAFhw23zdM2ayPRGbwnoqimmXgrlqh0oemr8L"
+    />
+    <meta name="hasadminToken" content="1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="http://localhost:8000/img/favicon.png"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Icons Links -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+
+    <!-- css Link -->
+    <link rel="stylesheet" href="app.css" />
+    <link rel="preload" href="app.js" as="script" />
+  </head>
+
+  <body>
+    <header class="bg-white shadow-sm">
+      <nav class="navbar navbar-expand-md bg-white shadow-sm py-3">
+        <div class="container">
+          <a class="navbar-brand gradient-text" href="#">Ghumo Jhumo</a>
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Navbar items -->
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav mx-auto text-center">
+              <li class="nav-item">
+                <a class="nav-link text-dark fw-medium" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark fw-medium" href="#">My Trips</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark fw-medium" href="#">Offers</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark fw-medium" href="#">Support</a>
+              </li>
+            </ul>
+            <div class="d-flex gap-2">
+              <span class="text-dark"
+                ><i class="fa-solid fa-user"></i> Venus1</span
+              >
+              <a
+                href="http://localhost:8000/admin/logout"
+                class="btn btn-outline-primary text-white"
+                rel="noopener noreferrer"
+                >Logout</a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="position-relative text-white text-center">
+      <div
+        class="position-absolute top-0 start-0 w-100 h-100 bg-dark"
+        style="
+          background: url(&quot;https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2000&amp;q=80&quot;)
+            center/cover no-repeat;
+          filter: brightness(0.5);
+        "
+      ></div>
+      <div class="container position-relative py-5">
+        <h1 class="display-4 fw-bold">Discover Your Perfect Journey</h1>
+        <p class="lead">
+          Find and book the best deals on flights, hotels, and transfers
+        </p>
+      </div>
+    </section>
+
+    <section class="container mt-4 position-relative" style="z-index: 10">
+      <div class="bg-white rounded shadow p-4" style="margin-top: -80px">
+        <!-- Tabs -->
+
+        <ul class="nav" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link active"
+              id="flights-tab"
+              data-bs-toggle="tab"
+              href="#flights"
+              aria-selected="true"
+              role="tab"
+            >
+              <i class="bi bi-airplane"></i> Flights
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link"
+              id="hotels-tab"
+              data-bs-toggle="tab"
+              href="#hotels"
+              aria-selected="false"
+              tabindex="-1"
+              role="tab"
+            >
+              <i class="bi bi-building"></i> Hotels
+            </a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link"
+              id="transfers-tab"
+              data-bs-toggle="tab"
+              href="#transfers"
+              aria-selected="false"
+              tabindex="-1"
+              role="tab"
+            >
+              <i class="bi bi-truck"></i> Transfers
+            </a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <form
+            onsubmit="searchFlights(event)"
+            action="flight-search"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="_token"
+              value="nkmCAFhw23zdM2ayPRGbwnoqimmXgrlqh0oemr8L"
+              autocomplete="off"
+            />
+            <!-- Flights Tab -->
+            <div
+              class="tab-pane fade show active"
+              id="flights"
+              role="tabpanel"
+              aria-labelledby="flights-tab"
+            >
+              <div class="mb-3">
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    value="1"
+                    type="radio"
+                    checked=""
+                    name="trip-type"
+                  />
+                  <label class="form-check-label text-dark">One Way</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    value="2"
+                    type="radio"
+                    name="trip-type"
+                  />
+                  <label class="form-check-label text-dark">Round Trip</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    value="3"
+                    type="radio"
+                    name="trip-type"
+                  />
+                  <label class="form-check-label text-dark">Multi-City</label>
+                </div>
+              </div>
+              <div class="container mt-5">
+                <div class="search-box p-4">
+                  <div class="row g-3 align-items-center">
+                    <div class="col-md-5">
+                      <label for="fromCity" class="form-label">From</label>
+                      <select
+                        id="fromCitySelect"
+                        name="from"
+                        class="citySelect form-select"
+                      >
+                        <option value="Delhi" selected="" disabled="">
+                          Select From
+                        </option>
+                        <option value="BOM">Mumbai, India (BOM)</option>
+                        <option value="DEL">New Delhi, India (DEL)</option>
+                        <option value="BKK">Bangkok, Thailand (BKK)</option>
+                        <option value="BLR">Bengaluru, India (BLR)</option>
+                        <option value="PNQ">Pune, India (PNQ)</option>
+                        <option value="HYD">Hyderabad, India (HYD)</option>
+                        <option value="CCU">Kolkata, India (CCU)</option>
+                        <option value="MAA">Chennai, India (MAA)</option>
+                        <option value="GOI">Goa, India (GOI)</option>
+                        <option value="DXB">Dubai, UAE (DXB)</option>
+                      </select>
+                      <small class="text-muted">DEL, Delhi Airport India</small>
+                    </div>
+                    <div class="col-md-2 text-center">
+                      <span class="swap-icon">⇆</span>
+                    </div>
+                    <div class="col-md-5">
+                      <label for="toCity" class="form-label">To</label>
+                      <select
+                        id="toCitySelect"
+                        name="to"
+                        class="citySelect form-select"
+                      >
+                        <option value="Bengaluru" selected="" disabled="">
+                          Select To
+                        </option>
+                        <option value="BOM">Mumbai, India (BOM)</option>
+                        <option value="DEL">New Delhi, India (DEL)</option>
+                        <option value="BKK">Bangkok, Thailand (BKK)</option>
+                        <option value="BLR">Bengaluru, India (BLR)</option>
+                        <option value="PNQ">Pune, India (PNQ)</option>
+                        <option value="HYD">Hyderabad, India (HYD)</option>
+                        <option value="CCU">Kolkata, India (CCU)</option>
+                        <option value="MAA">Chennai, India (MAA)</option>
+                        <option value="GOI">Goa, India (GOI)</option>
+                        <option value="DXB">Dubai, UAE (DXB)</option>
+                      </select>
+                      <small class="text-muted"
+                        >BLR, Bengaluru International Airport India</small
+                      >
+                    </div>
+                  </div>
+                  <div class="row g-3 mt-3">
+                    <div class="col-md-6">
+                      <label for="departure" class="form-label"
+                        >Departure</label
+                      >
+                      <div class="d-flex gap-2">
+                        <div class="col-md-3">
+                          <input
+                            type="text"
+                            class="datetimepicker"
+                            id="departure"
+                            name="departure"
+                          />
+                        </div>
+                        <div class="col-md-3">
+                          <select
+                            name="departureTime"
+                            id="departureTime"
+                            class="form-select"
+                          >
+                            <option value="AnyTime">AnyTime</option>
+                            <option value="Morning">Morning</option>
+                            <option value="AfterNoon">AfterNoon</option>
+                            <option value="Evening">Evening</option>
+                            <option value="Night">Night</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <label for="return" class="form-label">Return</label>
+                      <div class="d-flex gap-2">
+                        <div class="col-md-3">
+                          <input
+                            type="text"
+                            class="datetimepicker"
+                            id="return"
+                            name="return"
+                          />
+                        </div>
+                        <div class="col-md-3">
+                          <select
+                            name="returnTime"
+                            id="returnTime"
+                            class="form-select"
+                          >
+                            <option value="AnyTime">AnyTime</option>
+                            <option value="Morning">Morning</option>
+                            <option value="AfterNoon">AfterNoon</option>
+                            <option value="Evening">Evening</option>
+                            <option value="Night">Night</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row g-3 mt-3">
+                    <div class="col-md-6">
+                      <div class="input-box">
+                        <div class="position-relative">
+                          <label>Travellers & Class</label>
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="travellersInput"
+                            placeholder="0 Adult, 1 Child"
+                            readonly
+                          />
+                          <div class="travel-container" id="travelOptions">
+                            <h5>Travellers & Class</h5>
+                            <p>1 Adult</p>
+                            <p>Economy</p>
+                            <hr />
+                            <div>
+                              <h6>Adults <small>(Aged 12+ yrs)</small></h6>
+                              <div class="counter">
+                                <span>-</span>
+                                <span>1</span>
+                                <span>+</span>
+                              </div>
+                            </div>
+                            <div>
+                              <h6>Children <small>(Aged 2-12 yrs)</small></h6>
+                              <div class="counter">
+                                <span>-</span>
+                                <span>0</span>
+                                <span>+</span>
+                              </div>
+                            </div>
+                            <div>
+                              <h6>Infants <small>(Below 2 yrs)</small></h6>
+                              <div class="counter">
+                                <span>-</span>
+                                <span>0</span>
+                                <span>+</span>
+                              </div>
+                            </div>
+                            <hr />
+                            <h6>Travel Class</h6>
+                            <ul class="travel-class">
+                              <li>Economy</li>
+                              <li>Premium Economy</li>
+                              <li>Business</li>
+                              <li>First Class</li>
+                            </ul>
+                            <div class="d-flex justify-content-between mt-3">
+                              <button
+                                class="btn btn-outline-secondary"
+                                id="cancelBtn"
+                              >
+                                Cancel
+                              </button>
+                              <button class="btn btn-primary" id="doneBtn">
+                                Done
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-2 d-flex align-items-end">
+                      <a class="btn btn-primary w-100" href="search.html">
+                        <!-- <button class="btn btn-primary w-100" id="searchFlightBtn"> -->
+                        Search Flights
+                        <!-- </button> -->
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <!-- Hotels Tab -->
+          <div
+            class="tab-pane fade py-5"
+            id="hotels"
+            role="tabpanel"
+            aria-labelledby="hotels-tab"
+          >
+            <div class="row g-3">
+              <div class="col-md-3">
+                <label class="form-label text-dark">Destination</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="City or Hotel"
+                />
+              </div>
+              <div class="col-md-3">
+                <label class="form-label text-dark">Check-in</label>
+                <input type="date" class="form-control" />
+              </div>
+              <div class="col-md-3">
+                <label class="form-label text-dark">Check-out</label>
+                <input type="date" class="form-control" />
+              </div>
+              <div class="col-md-3">
+                <label class="form-label text-dark">Guests &amp; Rooms</label>
+                <select class="form-select">
+                  <option>2 Guests, 1 Room</option>
+                </select>
+              </div>
+            </div>
+            <div class="mt-3 text-end">
+              <button class="btn btn-primary">Search Hotels</button>
+            </div>
+          </div>
+
+          <!-- Transfers Tab -->
+          <div
+            class="tab-pane fade py-5"
+            id="transfers"
+            role="tabpanel"
+            aria-labelledby="transfers-tab"
+          >
+            <div class="row g-3">
+              <div class="col-md-3">
+                <label class="form-label text-dark">Pickup Location</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Airport or Address"
+                />
+              </div>
+              <div class="col-md-3">
+                <label class="form-label text-dark">Dropoff Location</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Hotel or Address"
+                />
+              </div>
+              <div class="col-md-3">
+                <label class="form-label text-dark">Date</label>
+                <input type="date" class="form-control" />
+              </div>
+              <div class="col-md-3">
+                <label class="form-label text-dark">Passengers</label>
+                <select class="form-select">
+                  <option>2 Passengers</option>
+                </select>
+              </div>
+            </div>
+            <div class="mt-3 text-end">
+              <button class="btn btn-primary">Search Transfers</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <h2 class="text-center text-dark fw-bold mb-4">Special Offers</h2>
+      <div class="row g-4">
+        <!-- Offer Card 1 -->
+        <div class="col-md-4">
+          <div class="card offer-card border-0 shadow-lg">
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                class="card-img-top"
+                alt="Luxury Hotel"
+              />
+            </div>
+            <div class="card-body">
+              <div
+                class="d-flex justify-content-between align-items-center mb-2"
+              >
+                <span class="text-primary fw-semibold">Limited Time</span>
+                <span class="badge bg-danger-subtle text-danger">30% OFF</span>
+              </div>
+              <h5 class="card-title text-dark">Luxury Beach Resorts</h5>
+              <p class="card-text text-muted">
+                Experience luxury stays at top beach destinations with exclusive
+                discounts.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-bold">$199</span>
+                <a
+                  href="#"
+                  class="btn btn-link text-primary text-decoration-none"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Offer Card 2 -->
+        <div class="col-md-4">
+          <div class="card offer-card border-0 shadow-lg">
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                class="card-img-top"
+                alt="Flight Deal"
+              />
+            </div>
+            <div class="card-body">
+              <div
+                class="d-flex justify-content-between align-items-center mb-2"
+              >
+                <span class="text-primary fw-semibold">Flash Sale</span>
+                <span class="badge bg-danger-subtle text-danger">50% OFF</span>
+              </div>
+              <h5 class="card-title text-dark">International Flights</h5>
+              <p class="card-text text-muted">
+                Grab unbelievable deals on international flights to popular
+                destinations.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-bold">$299</span>
+                <a
+                  href="#"
+                  class="btn btn-link text-primary text-decoration-none"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Offer Card 3 -->
+        <div class="col-md-4">
+          <div class="card offer-card border-0 shadow-lg">
+            <div class="overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                class="card-img-top"
+                alt="Holiday Package"
+              />
+            </div>
+            <div class="card-body">
+              <div
+                class="d-flex justify-content-between align-items-center mb-2"
+              >
+                <span class="text-primary fw-semibold">Holiday Special</span>
+                <span class="badge bg-danger-subtle text-danger">25% OFF</span>
+              </div>
+              <h5 class="card-title text-dark">Complete Vacation Packages</h5>
+              <p class="card-text text-muted">
+                All-inclusive vacation packages with flights, hotels, and
+                activities.
+              </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="fw-bold">$499</span>
+                <a
+                  href="#"
+                  class="btn btn-link text-primary text-decoration-none"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light py-5">
+      <div class="container">
+        <h2 class="text-center text-dark fw-bold mb-4">Popular Destinations</h2>
+        <div class="row g-4">
+          <!-- Destination 1 -->
+          <div class="col-6 col-md-3">
+            <div class="position-relative overflow-hidden rounded">
+              <img
+                src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                alt="Bali"
+                class="img-fluid w-100 h-100 object-fit-cover"
+              />
+              <div
+                class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"
+              ></div>
+              <div class="position-absolute bottom-0 start-0 p-3 text-white">
+                <h3 class="h5 fw-bold">Bali</h3>
+                <p class="small">Indonesia</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Destination 2 -->
+          <div class="col-6 col-md-3">
+            <div class="position-relative overflow-hidden rounded">
+              <img
+                src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                alt="Paris"
+                class="img-fluid w-100 h-100 object-fit-cover"
+              />
+              <div
+                class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"
+              ></div>
+              <div class="position-absolute bottom-0 start-0 p-3 text-white">
+                <h3 class="h5 fw-bold">Paris</h3>
+                <p class="small">France</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Destination 3 -->
+          <div class="col-6 col-md-3">
+            <div class="position-relative overflow-hidden rounded">
+              <img
+                src="https://images.unsplash.com/photo-1543832923-44667a44c804?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                alt="Maldives"
+                class="img-fluid w-100 h-100 object-fit-cover"
+              />
+              <div
+                class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"
+              ></div>
+              <div class="position-absolute bottom-0 start-0 p-3 text-white">
+                <h3 class="h5 fw-bold">Maldives</h3>
+                <p class="small">South Asia</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Destination 4 -->
+          <div class="col-6 col-md-3">
+            <div class="position-relative overflow-hidden rounded">
+              <img
+                src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                alt="New York"
+                class="img-fluid w-100 h-100 object-fit-cover"
+              />
+              <div
+                class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-50"
+              ></div>
+              <div class="position-absolute bottom-0 start-0 p-3 text-white">
+                <h3 class="h5 fw-bold">New York</h3>
+                <p class="small">United States</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container py-5">
+      <h2 class="text-center fw-bold text-dark mb-4">Why Choose TravelEase</h2>
+      <div class="row g-4">
+        <div class="col-md-4 text-center">
+          <div
+            class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+            style="width: 60px; height: 60px"
+          >
+            <i class="bi bi-search text-primary fs-4"></i>
+          </div>
+          <h3 class="h5 fw-bold text-dark">Best Price Guarantee</h3>
+          <p class="text-muted">
+            Find a lower price? We'll match it and give you an additional
+            discount.
+          </p>
+        </div>
+        <div class="col-md-4 text-center">
+          <div
+            class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+            style="width: 60px; height: 60px"
+          >
+            <i class="bi bi-people text-primary fs-4"></i>
+          </div>
+          <h3 class="h5 fw-bold text-dark">24/7 Customer Support</h3>
+          <p class="text-muted">
+            Our dedicated support team is available round the clock to assist
+            you.
+          </p>
+        </div>
+        <div class="col-md-4 text-center">
+          <div
+            class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+            style="width: 60px; height: 60px"
+          >
+            <i class="bi bi-airplane text-primary fs-4"></i>
+          </div>
+          <h3 class="h5 fw-bold text-dark">Flexible Booking Options</h3>
+          <p class="text-muted">
+            Change your travel plans with ease with our flexible booking
+            policies.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-primary py-5 text-center text-white">
+      <div class="container">
+        <h2 class="h3 fw-bold mb-3">Subscribe to Our Newsletter</h2>
+        <p class="text-light mb-4 mx-auto" style="max-width: 600px">
+          Stay updated with the latest travel deals, offers, and inspiration
+          delivered straight to your inbox.
+        </p>
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="input-group">
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Enter your email address"
+                aria-label="Email"
+              />
+              <button class="btn btn-dark">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Login Modal</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="loginForm">
+              <div class="mb-3">
+                <label for="UserName" class="form-label">UserName</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="UserName"
+                  id="UserName"
+                />
+              </div>
+              <div class="mb-3">
+                <label for="Password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  name="Password"
+                  id="Password"
+                />
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="submit" id="loginBtn" class="btn btn-primary">
+                  Login
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="loader" style="display: none"></div>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-md-3 mb-3">
+            <div class="d-flex align-items-center mb-3">
+              <span class="text-primary fs-4 fw-bold">ghumo jhumo</span>
+            </div>
+            <p class="text-secondary">
+              Making travel simple, affordable, and enjoyable for everyone.
+            </p>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-secondary"
+                ><i class="bi bi-facebook fs-5"></i
+              ></a>
+              <a href="#" class="text-secondary"
+                ><i class="bi bi-twitter fs-5"></i
+              ></a>
+              <a href="#" class="text-secondary"
+                ><i class="bi bi-instagram fs-5"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h5 class="fw-semibold mb-3">Company</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Press</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Gift Cards</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5 class="fw-semibold mb-3">Support</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >COVID-19 Updates</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Cancellation Options</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Safety Resource Center</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5 class="fw-semibold mb-3">Legal</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Terms &amp; Conditions</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Cookie Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Accessibility</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Reward Program Terms</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-top border-secondary pt-3">
+          <p class="text-center text-secondary mb-0">
+            © 2025
+            <span>
+              <a
+                href="https://venusstudies.in/"
+                class="text-white text-decoration-none"
+                target="_blank"
+              >
+                Venus Studies
+              </a>
+            </span>
+            . All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+
+    <!-- Bootstrap Icons (Make sure to include Bootstrap and Bootstrap Icons in your project) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+
+    <script src="app.js"></script>
+    <!-- <script src="fetch.js"></script> -->
+
+    <div
+      class="daterangepicker ltr show-ranges single show-calendar opensright"
+    >
+      <div class="ranges">
+        <ul>
+          <li data-range-key="Today">Today</li>
+          <li data-range-key="Yesterday">Yesterday</li>
+          <li data-range-key="Last 7 Days">Last 7 Days</li>
+          <li data-range-key="Last 30 Days">Last 30 Days</li>
+          <li data-range-key="This Month">This Month</li>
+          <li data-range-key="Last Month">Last Month</li>
+          <li data-range-key="Custom Range">Custom Range</li>
+        </ul>
+      </div>
+      <div class="drp-calendar left single" style="display: block">
+        <div class="calendar-table"></div>
+        <div class="calendar-time" style="display: none"></div>
+      </div>
+      <div class="drp-calendar right" style="display: none">
+        <div class="calendar-table"></div>
+        <div class="calendar-time" style="display: none"></div>
+      </div>
+      <div class="drp-buttons">
+        <span class="drp-selected"></span
+        ><button class="cancelBtn btn btn-sm btn-default" type="button">
+          Cancel</button
+        ><button
+          class="applyBtn btn btn-sm btn-primary"
+          disabled="disabled"
+          type="button"
+        >
+          Apply
+        </button>
+      </div>
+    </div>
+    <div
+      class="daterangepicker ltr show-ranges single show-calendar opensright"
+    >
+      <div class="ranges">
+        <ul>
+          <li data-range-key="Today">Today</li>
+          <li data-range-key="Yesterday">Yesterday</li>
+          <li data-range-key="Last 7 Days">Last 7 Days</li>
+          <li data-range-key="Last 30 Days">Last 30 Days</li>
+          <li data-range-key="This Month">This Month</li>
+          <li data-range-key="Last Month">Last Month</li>
+          <li data-range-key="Custom Range">Custom Range</li>
+        </ul>
+      </div>
+      <div class="drp-calendar left single" style="display: block">
+        <div class="calendar-table"></div>
+        <div class="calendar-time" style="display: none"></div>
+      </div>
+      <div class="drp-calendar right" style="display: none">
+        <div class="calendar-table"></div>
+        <div class="calendar-time" style="display: none"></div>
+      </div>
+      <div class="drp-buttons">
+        <span class="drp-selected"></span
+        ><button class="cancelBtn btn btn-sm btn-default" type="button">
+          Cancel</button
+        ><button
+          class="applyBtn btn btn-sm btn-primary"
+          disabled="disabled"
+          type="button"
+        >
+          Apply
+        </button>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const travellersInput = document.getElementById("travellersInput");
+        const travelOptions = document.getElementById("travelOptions");
+        const cancelBtn = document.getElementById("cancelBtn");
+        const doneBtn = document.getElementById("doneBtn");
+        const counters = document.querySelectorAll(".counter");
+        const travelClassItems = document.querySelectorAll(".travel-class li");
+
+        let travellers = {
+          adults: 1,
+          children: 0,
+          infants: 0,
+          class: "Economy",
+        };
+
+        travellersInput.addEventListener("click", function () {
+          travelOptions.classList.toggle("show");
+        });
+
+        cancelBtn.addEventListener("click", function () {
+          travelOptions.classList.remove("show");
+        });
+
+        doneBtn.addEventListener("click", function () {
+          updateTravellersInput();
+          localStorage.setItem("travellers", JSON.stringify(travellers));
+          travelOptions.classList.remove("show");
+        });
+
+        counters.forEach((counter) => {
+          const spans = counter.querySelectorAll("span");
+          const minus = spans[0];
+          const count = spans[1];
+          const plus = spans[2];
+          let type = counter.previousElementSibling.textContent
+            .toLowerCase()
+            .split(" ")[0];
+
+          minus.addEventListener("click", function () {
+            if (travellers[type] > (type === "adults" ? 1 : 0)) {
+              travellers[type]--;
+              count.textContent = travellers[type];
+              updateTravellersInput();
+            }
+          });
+
+          plus.addEventListener("click", function () {
+            travellers[type]++;
+            count.textContent = travellers[type];
+            updateTravellersInput();
+          });
+        });
+
+        travelClassItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            travelClassItems.forEach((el) => el.classList.remove("selected"));
+            item.classList.add("selected");
+            travellers.class = item.textContent;
+            updateTravellersInput();
+          });
+        });
+
+        function updateTravellersInput() {
+          travellersInput.value = `${travellers.adults} Adult, ${travellers.children} Child, ${travellers.infants} Infant - ${travellers.class}`;
+        }
+      });
+      
+    </script>
+  </body>
+</html>
