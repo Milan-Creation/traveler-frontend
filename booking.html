@@ -1,0 +1,928 @@
+<html>
+  <head>
+    <title>Booking Travel</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="csrf-token"
+      content="nkmCAFhw23zdM2ayPRGbwnoqimmXgrlqh0oemr8L"
+    />
+    <meta name="hasadminToken" content="1" />
+    
+    <!-- Bootstrap CSS -->
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link
+      rel="icon"
+      type="image/png"
+      href="http://localhost:8000/img/favicon.png"
+    />
+    <!-- Icons Links -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- css Link -->
+    <link rel="stylesheet" href="app.css" />
+    <link rel="preload" href="app.js" as="script" />
+  </head>
+
+  <body>
+    <header class="bg-white shadow-sm">
+      <nav class="navbar navbar-expand-md bg-white shadow-sm py-3 header">
+        <div class="container">
+          <a class="navbar-brand gradient-text" href="index.html">
+            <img src="assets/ghumojhumo.png" alt="Logo" />
+          </a>
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Navbar items -->
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav mx-auto text-center" style="gap: 20px">
+              <li class="nav-item">
+                <a class="nav-link text-dark fw-medium active" href="#">
+                  <img src="assets/nav-icon-1.png" alt="Flights" />
+                  <span class="hero-nav"> Flights</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark fw-medium" href="#">
+                  <img src="assets/nav-icon-2.png" alt="Hotels" />
+                  <span class="hero-nav"> Hotels</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark fw-medium" href="#">
+                  <img src="assets/nav-icon-3.png" alt="Transfer" />
+                  <span class="hero-nav"> Transfer</span>
+                </a>
+              </li>
+            </ul>
+            <div class="d-flex gap-2">
+              <a href="#" class="btn-signup text-decoration-none">
+                <img src="assets/Group 7.png" alt="Login" />
+                Login or Create Account
+                <button class="chevron-down">
+                  <i class="bi bi-chevron-down"></i>
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="position-relative text-white text-center hero-section-2">
+      <!-- <div class="containers">
+        <div class="title py-5">Booking Travel</div>
+        <div class="logo-container">
+          <img src="assets/images.jpeg" alt="Logo" class="logo" width="100px" />
+        </div>
+      </div> -->
+    </section>
+
+    <section class="book-now">
+      <button type="button" class="book-now-btn" data-bs-toggle="modal" data-bs-target="#bookingModal">
+          Book Now
+      </button>
+              
+        <!-- Booking Modal -->
+        <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title text-style" id="bookingModalLabel">Flight Ticket Booking</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <form>
+                          <div class="card p-4 shadow-lg">
+                              <h4 class="mb-3">Passenger Information</h4>
+                              <div class="row g-3">
+                                  <div class="col-md-6">
+                                      <label class="form-label">Full Name</label>
+                                      <input type="text" class="form-control" placeholder="Enter full name" required>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label class="form-label">Date of Birth</label>
+                                      <input type="date" class="form-control" required>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label class="form-label">Gender</label>
+                                      <select class="form-select" required>
+                                          <option value="">Select Gender</option>
+                                          <option value="Male">Male</option>
+                                          <option value="Female">Female</option>
+                                          <option value="Other">Other</option>
+                                      </select>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label class="form-label">Nationality</label>
+                                      <input type="text" class="form-control" placeholder="Enter nationality" required>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label class="form-label">Email</label>
+                                      <input type="email" class="form-control" placeholder="Enter email" required>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label class="form-label">Phone Number</label>
+                                      <input type="tel" class="form-control" placeholder="Enter phone number" required>
+                                  </div>
+                              </div>
+                              
+                              <h4 class="mt-4">Passport & Visa Details</h4>
+                              <div class="row g-3">
+                                  <div class="col-md-6">
+                                      <label class="form-label">Passport Number</label>
+                                      <input type="text" class="form-control" placeholder="Enter passport number" required>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label class="form-label">Issuing Country</label>
+                                      <input type="text" class="form-control" placeholder="Enter issuing country" required>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label class="form-label">Date of Issue</label>
+                                      <input type="date" class="form-control" required>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label class="form-label">Date of Expiry</label>
+                                      <input type="date" class="form-control" required>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label class="form-label">Visa Type</label>
+                                      <select class="form-select">
+                                          <option value="">Select Visa Type</option>
+                                          <option value="Tourist">Tourist</option>
+                                          <option value="Business">Business</option>
+                                          <option value="Work">Work</option>
+                                          <option value="Student">Student</option>
+                                      </select>
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label class="form-label">Visa Number</label>
+                                      <input type="text" class="form-control" placeholder="Enter visa number">
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label class="form-label">Visa Issuing Country</label>
+                                      <input type="text" class="form-control" placeholder="Enter issuing country">
+                                  </div>
+                                  <div class="col-md-6">
+                                      <label class="form-label">Visa Expiry Date</label>
+                                      <input type="date" class="form-control">
+                                  </div>
+                              </div>
+                              
+                              <div class="text-center mt-4">
+                                  <button type="submit" class="btn-confirm-booking">Confirm Booking</button>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    </section>
+
+    <div class="container">
+      <div class="row d-flex">
+        <!-- Start Main Section -->
+        <main class="col-md-9 main-section py-5">
+            <div class="container mt-4">
+              <div class="flight-card p-3 border rounded">
+                <h4 class="fw-bold">Ghaziabad - Mumbai</h4>
+                <p class="text-muted fw-semibold" style="font-size: 14px">
+                  Non Stop | All departure/arrival times are in local time
+                </p>
+                <div
+                  class="alert-message d-flex align-items-center p-2 rounded"
+                >
+                  <span>&#9888;</span>
+                  <span class="ms-2"
+                    >Different airport from the one searched: Now flying From
+                    Hindon Airport <b>(HDO)</b></span
+                  >
+                </div>
+
+                <div class="shadow-sm">
+                  <div
+                    class="mt-3 d-flex justify-content-between align-items-center"
+                  >
+                    <div class="d-flex align-items-center">
+                      <img
+                        src="https://imgak.goibibo.com/flights-gi-assets/images/v2/app-img/IX.png"
+                        width="32"
+                        height="32"
+                        class="me-2"
+                      />
+                      <div>
+                        <strong>Air India Express | IX 2515</strong>
+                        <p class="text-muted">Boeing 737</p>
+                      </div>
+                    </div>
+                    <div class="text-end">
+                      <span class="fw-bold">ECONOMY | Xpress Value</span>
+                    </div>
+                  </div>
+
+                  <div class="mt-3 d-flex justify-content-between">
+                    <span class="px-2" style="background-color: #e5f3ff"
+                      >Start on: <strong>20 Mar, Thu 2025</strong></span
+                    >
+                    <span class="px-2" style="background-color: #e5f3ff"
+                      >Arrive on: <strong>20 Mar, Thu 2025</strong></span
+                    >
+                  </div>
+
+                  <div
+                    class="mt-3 d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <h5 class="fw-bold">13:00</h5>
+                      <p class="fw-semibold">HDO</p>
+                    </div>
+                    <div class="container mt-5">
+                      <div class="flight-duration">
+                        <div class="line"></div>
+                        <span class="duration-box">2h 45m</span>
+                        <div class="line"></div>
+                      </div>
+                      <div class="text-center duration-text">Duration</div>
+                    </div>
+                    <div class="text-end">
+                      <h5 class="fw-bold">15:45</h5>
+                      <p class="fw-semibold">BOM</p>
+                    </div>
+                  </div>
+
+                  <div class="d-flex justify-content-between">
+                    <div>
+                      <strong>Ghaziabad</strong>
+                      <p class="text-muted">Hindon Airport, India</p>
+                    </div>
+                    <div class="text-end">
+                      <strong>Mumbai</strong>
+                      <p class="text-muted">
+                        Chhatrapati Shivaji International Airport, India
+                      </p>
+                      <p class="fw-bold" style="color: coral">Terminal T2</p>
+                    </div>
+                  </div>
+
+                  <div
+                    class="d-flex justify-content-between mt-3 baggage-info"
+                    style="border-top: 1px solid #d3d3d3; padding: 10px"
+                  >
+                    <span>
+                      Baggage:-
+                      <svg
+                        width="1rem"
+                        height="1rem"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="CheckIn__CheckinIcon-sc-ayznhy-0 hJPxjR marginL5"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M8.102 2.224H7.069V.948h.398c.251 0 .443-.205.443-.474S7.718 0 7.467 0H2.565c-.251 0-.443.205-.443.474s.192.474.443.474h.398v1.276H1.93c-.9 0-1.637.79-1.637 1.754v8.43c0 .964.738 1.754 1.637 1.754h.015v.143c0 .379.295.695.65.695h.324c.354 0 .649-.316.649-.695v-.143H6.42v.143c0 .379.295.695.649.695h.324c.355 0 .65-.316.65-.695v-.143h.014c.9 0 1.638-.79 1.638-1.754v-8.43c.059-.964-.679-1.754-1.593-1.754zM6.184.948v1.276H3.863V.948h2.32zM3.06 5.1c0-.268.128-.474.295-.474.158 0 .296.222.296.474v6.17c0 .269-.128.474-.296.474-.167 0-.295-.205-.295-.474V5.1zm2.045-.412c-.167 0-.295.205-.295.474v6.169c0 .269.128.474.295.474.168 0 .296-.205.296-.474v-6.17c0-.252-.128-.473-.296-.473zm1.455.474c0-.269.128-.474.295-.474.168 0 .296.22.296.474v6.169c0 .269-.128.474-.296.474-.167 0-.295-.205-.295-.474v-6.17z"
+                          fill="#222"
+                        ></path>
+                      </svg>
+                      <strong> 7 Kgs </strong> Cabin</span
+                    >
+                    <span>
+                      <svg
+                        width="1.6rem"
+                        height="1.6rem"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="Cabin__CabinIcon-sc-1da560d-0 hsAnyH marginL16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M6.388 5.625a.28.28 0 01-.174-.062c-.31-.246-3.034-2.455-3.034-4C3.18 0 5.837 0 6.97 0c1.135 0 3.792 0 3.792 1.563 0 1.544-2.724 3.754-3.035 4a.28.28 0 01-.173.062H6.388zm5.622.28a.276.276 0 00-.313.04.327.327 0 00-.098.32c.144.593.214 1.2.214 1.861l.002.563c.007 1.177.015 3.267-.25 4.544a.323.323 0 00.125.329.276.276 0 00.33-.007c.645-.496.96-.944.96-1.368V7.814c0-.929-.327-1.57-.97-1.907zM2.127 8.689l.003-.563c0-.66.07-1.268.213-1.86a.325.325 0 00-.098-.32.278.278 0 00-.313-.04c-.642.338-.97.98-.97 1.907v4.375c0 .424.315.872.96 1.368a.276.276 0 00.33.007c.102-.071.151-.202.125-.329-.265-1.277-.257-3.367-.25-4.545zm.745-3.954c.226-.539.376-.929.41-1.417a.33.33 0 00-.044-.19L3.19 3.05l-.013-.021c-.016-.027-.032-.053-.046-.08a.29.29 0 00-.28-.155.296.296 0 00-.248.207 9.344 9.344 0 00-.413 1.87.312.312 0 00.212.34.277.277 0 00.078.012c.113 0 .22-.071.267-.187l.124-.302zm8.465-1.732c.197.589.335 1.216.412 1.864a.314.314 0 01-.211.34.284.284 0 01-.079.012.292.292 0 01-.267-.186l-.122-.297c-.226-.54-.376-.93-.41-1.418a.328.328 0 01.043-.19l.107-.177a.293.293 0 01.279-.154c.114.012.21.092.248.207zm.01 5.123c0-1.478-.368-2.359-.692-3.135l-.001-.002c-.081-.193-.16-.38-.23-.572a.298.298 0 00-.215-.193.281.281 0 00-.268.092 15.365 15.365 0 01-1.866 1.75.867.867 0 01-.228.127v1.365c.338.13.338.442-.001.57 0 0-.131.058-.292.058H6.386c-.16 0-.292-.057-.292-.057-.337-.13-.337-.442.002-.571V6.192a.874.874 0 01-.23-.126c-.4-.319-1.173-.968-1.865-1.751a.285.285 0 00-.268-.092.3.3 0 00-.216.193c-.066.182-.14.36-.216.542l-.012.03-.001.002c-.324.776-.692 1.657-.692 3.135l-.002.568c-.012 1.994-.026 4.475 1.063 5.648.406.437.932.659 1.564.659h3.5c.633 0 1.159-.222 1.565-.659 1.089-1.173 1.074-3.654 1.063-5.648l-.003-.568zM7.263 6.25H6.68V7.5h.584V6.25z"
+                          fill="#222"
+                        ></path>
+                      </svg>
+                      <strong> 15 Kgs (1 piece) </strong> Check-In</span
+                    >
+                    <a
+                      href="#"
+                      class="text-primary fw-bold text-decoration-none"
+                      data-bs-toggle="modal"
+                      data-bs-target="#baggageModal"
+                    >
+                      View Baggage Details
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="baggageModal"
+                tabindex="-1"
+                aria-labelledby="baggageModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h6 class="modal-title fw-bold" id="baggageModalLabel">
+                        Baggage Details
+                      </h6>
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="d-flex align-items-center mb-3">
+                        <img
+                          src="https://imgak.goibibo.com/flights-gi-assets/images/v2/app-img/IX.webp"
+                          alt="Flights"
+                          class="carrier-logo me-2"
+                        />
+                        <span class="fw-bold">HDO-BOM</span>
+                        <span class="ms-2 text-muted">(IX 2515)</span>
+                      </div>
+                      <table class="table table-bordered"  style="font-size: 16px;">
+                        <thead>
+                          <tr>
+                            <th
+                              style="background-color: #f4f4f4;"
+                            >
+                              Baggage Type
+                            </th>
+                            <th
+                              style="background-color: #f4f4f4;"
+                            >
+                              <svg
+                                width="1rem"
+                                height="1rem"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="CheckIn__CheckinIcon-sc-ayznhy-0 hJPxjR marginL5"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  clip-rule="evenodd"
+                                  d="M8.102 2.224H7.069V.948h.398c.251 0 .443-.205.443-.474S7.718 0 7.467 0H2.565c-.251 0-.443.205-.443.474s.192.474.443.474h.398v1.276H1.93c-.9 0-1.637.79-1.637 1.754v8.43c0 .964.738 1.754 1.637 1.754h.015v.143c0 .379.295.695.65.695h.324c.354 0 .649-.316.649-.695v-.143H6.42v.143c0 .379.295.695.649.695h.324c.355 0 .65-.316.65-.695v-.143h.014c.9 0 1.638-.79 1.638-1.754v-8.43c.059-.964-.679-1.754-1.593-1.754zM6.184.948v1.276H3.863V.948h2.32zM3.06 5.1c0-.268.128-.474.295-.474.158 0 .296.222.296.474v6.17c0 .269-.128.474-.296.474-.167 0-.295-.205-.295-.474V5.1zm2.045-.412c-.167 0-.295.205-.295.474v6.169c0 .269.128.474.295.474.168 0 .296-.205.296-.474v-6.17c0-.252-.128-.473-.296-.473zm1.455.474c0-.269.128-.474.295-.474.168 0 .296.22.296.474v6.169c0 .269-.128.474-.296.474-.167 0-.295-.205-.295-.474v-6.17z"
+                                  fill="#222"
+                                ></path>
+                              </svg>
+                              Check-In
+                            </th>
+                            <th
+                              style="background-color: #f4f4f4;"
+                            >
+                              <svg
+                                width="1rem"
+                                height="1.6rem"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="Cabin__CabinIcon-sc-1da560d-0 hsAnyH marginL16"
+                              >
+                                <path
+                                  fill-rule="evenodd"
+                                  clip-rule="evenodd"
+                                  d="M6.388 5.625a.28.28 0 01-.174-.062c-.31-.246-3.034-2.455-3.034-4C3.18 0 5.837 0 6.97 0c1.135 0 3.792 0 3.792 1.563 0 1.544-2.724 3.754-3.035 4a.28.28 0 01-.173.062H6.388zm5.622.28a.276.276 0 00-.313.04.327.327 0 00-.098.32c.144.593.214 1.2.214 1.861l.002.563c.007 1.177.015 3.267-.25 4.544a.323.323 0 00.125.329.276.276 0 00.33-.007c.645-.496.96-.944.96-1.368V7.814c0-.929-.327-1.57-.97-1.907zM2.127 8.689l.003-.563c0-.66.07-1.268.213-1.86a.325.325 0 00-.098-.32.278.278 0 00-.313-.04c-.642.338-.97.98-.97 1.907v4.375c0 .424.315.872.96 1.368a.276.276 0 00.33.007c.102-.071.151-.202.125-.329-.265-1.277-.257-3.367-.25-4.545zm.745-3.954c.226-.539.376-.929.41-1.417a.33.33 0 00-.044-.19L3.19 3.05l-.013-.021c-.016-.027-.032-.053-.046-.08a.29.29 0 00-.28-.155.296.296 0 00-.248.207 9.344 9.344 0 00-.413 1.87.312.312 0 00.212.34.277.277 0 00.078.012c.113 0 .22-.071.267-.187l.124-.302zm8.465-1.732c.197.589.335 1.216.412 1.864a.314.314 0 01-.211.34.284.284 0 01-.079.012.292.292 0 01-.267-.186l-.122-.297c-.226-.54-.376-.93-.41-1.418a.328.328 0 01.043-.19l.107-.177a.293.293 0 01.279-.154c.114.012.21.092.248.207zm.01 5.123c0-1.478-.368-2.359-.692-3.135l-.001-.002c-.081-.193-.16-.38-.23-.572a.298.298 0 00-.215-.193.281.281 0 00-.268.092 15.365 15.365 0 01-1.866 1.75.867.867 0 01-.228.127v1.365c.338.13.338.442-.001.57 0 0-.131.058-.292.058H6.386c-.16 0-.292-.057-.292-.057-.337-.13-.337-.442.002-.571V6.192a.874.874 0 01-.23-.126c-.4-.319-1.173-.968-1.865-1.751a.285.285 0 00-.268-.092.3.3 0 00-.216.193c-.066.182-.14.36-.216.542l-.012.03-.001.002c-.324.776-.692 1.657-.692 3.135l-.002.568c-.012 1.994-.026 4.475 1.063 5.648.406.437.932.659 1.564.659h3.5c.633 0 1.159-.222 1.565-.659 1.089-1.173 1.074-3.654 1.063-5.648l-.003-.568zM7.263 6.25H6.68V7.5h.584V6.25z"
+                                  fill="#222"
+                                ></path>
+                              </svg>
+                              Cabin
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody style="font-size: 14px;">
+                          <tr>
+                            <td>ADULT</td>
+                            <td>15 Kgs (1 piece only)</td>
+                            <td>7 Kgs</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cancellation & Date Change Policy -->
+
+            <div class="container mt-4">
+              <div class="policy-card">
+                <div
+                  class="d-flex justify-content-between align-items-center mb-3"
+                >
+                  <div class="policy-header">
+                    Cancellation & Date Change Policy
+      
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <div class="d-flex align-items-center">
+                    <img
+                      src="https://imgak.goibibo.com/flights-gi-assets/images/v2/app-img/IX.webp"
+                      width="24"
+                      height="24"
+                      class="me-2"
+                    />
+                    <span class="fw-bold text-start">Ghaziabad - Mumbai</span>
+                  </div>
+                  <span class="badge bg-warning text-dark text-end"
+                    >Partially Refundable</span
+                  >
+                </div>
+
+               <!-- View Policy Trigger -->
+                <h6 class="fw-bold">
+                    Cancellation Charges 
+                    <span class="text-primary" style="font-size: 12px; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#policyModal"> View Policy </span>
+                </h6>
+
+
+                    <!-- Modal Structure -->
+                    <div class="modal fade" id="policyModal" tabindex="-1" aria-labelledby="policyModalLabel" aria-hidden="true" style="font-size: 12px;">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content p-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="fw-bold">Policies</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <ul class="nav nav-tabs policy-tabs mt-3" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" data-bs-toggle="tab" href="#cancellation">CANCELLATION CHARGES</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" data-bs-toggle="tab" href="#reschedule">RESCHEDULE CHARGES</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content mt-3">
+                                    <div id="cancellation" class="tab-pane fade show active">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center">
+                                                <img src="https://imgak.goibibo.com/flights-gi-assets/images/v2/app-img/IX.webp" width="24" height="24" class="me-2">
+                                                <span class="fw-bold">Ghaziabad - Mumbai</span>
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="mt-3">
+                                            <h6 class="fw-bold">Cancellation Charges</h6>
+                                            <div class="table-responsive">
+                                                <table class="table table-bordered" style="font-size: 12px;">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="background-color: #f4f4f4;">Cancel Between (IST)</th>
+                                                            <th style="background-color: #f4f4f4;">Airline + Goibibo Fee (Per Passenger)</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Now - 20 Mar, 11:00</td>
+                                                            <td>Adult: <strong>&#8377;4300 + &#8377;300</strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>20 Mar, 11:00 - 20 Mar, 13:00</td>
+                                                            <td><strong>Non Refundable</strong></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-3 text-muted">
+                                    <strong>Important:</strong> The airline fee is indicative. Goibibo does not guarantee the accuracy of this information. All fees mentioned are per passenger. All refunds are subject to airline approval.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                <table class="table policy-table">
+                  <thead>
+                    <tr>
+                      <th style="background-color: #f4f4f4;">Cancel Between (IST)</th>
+                      <th style="background-color: #f4f4f4;">Fee For All Passenger(s)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Now - 20 Mar, 11:00</td>
+                      <td><strong>₹4600</strong></td>
+                    </tr>
+                    <tr>
+                      <td>20 Mar, 11:00 - 20 Mar, 13:00</td>
+                      <td><strong>₹4998</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <h6 class="fw-bold">Reschedule Charges <span class="text-primary" style="font-size: 12px;"> View Policy </span> </h6>
+                <table class="table policy-table">
+                  <thead>
+                    <tr>
+                      <th  style="background-color: #f4f4f4;">Reschedule Between (IST)</th>
+                      <th  style="background-color: #f4f4f4;">Fee For All Passenger(s)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Now - 20 Mar, 11:00</td>
+                      <td><strong>₹3300 + Fare difference</strong></td>
+                    </tr>
+                    <tr>
+                      <td>20 Mar, 11:00 - 20 Mar, 13:00</td>
+                      <td><strong>Non Changeable</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- IMPORTANT INFORMATION -->
+            <div class="container mt-4 border rounded p-3">
+                <div class="important-info">
+                    <div class="important-tag">IMPORTANT INFORMATION</div>
+                    <div class="info-section">
+                        <img src="https://gos3.ibcdn.com/alert-1687501181.png" alt="Alert">
+                        <span class="fw-bold" style="font-size: 14px;">Please read the below information carefully before proceeding towards making the payment.</span>
+                    </div>
+                    <div class="info-section">
+                        <strong>Airport Change for your searched trip</strong>
+                    </div>
+                    <p>You searched for (DEL) as your origin. But you are trying to book Ghaziabad (HDO). Please review all the details before booking to ensure a great travel experience.</p>
+                </div>
+                    <div class="info-section">
+                        <img src="https://gos3.ibcdn.com/safety-1687501225.png" alt="Safety">
+                        <strong>Travel guidelines and baggage information</strong>
+                    </div>
+                    <ul>
+                        <li>Carry no more than 1 check-in baggage and 1 hand baggage per passenger. If violated, airline may levy extra charges.</li>
+                        <li>An unaccompanied minor usually refers to a child traveling without an adult aged 18 or older. Please check with the airline for their rules and regulations.</li>
+                        <li>Certain items, including firearms, weapons, or any dangerous items, are prohibited in check-in and cabin baggage as per airline regulations.</li>
+                    </ul>
+                    
+                    <div class="checkbox-custom">
+                        <input type="checkbox" id="impInfo" class="form-check-input me-2">
+                        <label for="impInfo">I have read the above information carefully and would like to proceed with the booking.</label>
+                    </div>
+                    
+                    <div class="yes-no">
+                        <span>Was the information helpful?</span>
+                        <span class="text-primary">Yes</span> /
+                        <span class="text-danger">No</span>
+                    </div>
+            </div>
+              
+            <!-- Traveller Details -->
+            <div class="container mt-4 border rounded">
+              <h4 class="p-2 fw-bold">Traveller Details</h4>
+              <div id="traveller-forms"></div>
+              <button class="view-btn mt-3 w-20 my-2">Proceed</button>
+            </div>
+
+          <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                  const travellers = JSON.parse(localStorage.getItem("travellers")) || {
+                      adults: 1,
+                      children: 0,
+                      infants: 0
+                  };
+
+                  const travellerContainer = document.getElementById("traveller-forms");
+
+                  function createTravellerForm(index, type) {
+                      return `
+                          <div class="accordion" id="accordion-${type}-${index}">
+                              <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${type}-${index}">
+                                          ${type} ${index}
+                                      </button>
+                                  </h2>
+                                  <div id="collapse-${type}-${index}" class="accordion-collapse collapse show">
+                                      <div class="accordion-body">
+                                          <div class="row">
+                                              <div class="col-md-3">
+                                                  <select class="form-control">
+                                                      <option>GENDER</option>
+                                                      <option>Male</option>
+                                                      <option>Female</option>
+                                                  </select>
+                                              </div>
+                                              <div class="col-md-5">
+                                                  <input type="text" class="form-control" placeholder="First & Middle Name">
+                                              </div>
+                                              <div class="col-md-4">
+                                                  <input type="text" class="form-control" placeholder="Last Name">
+                                              </div>
+                                          </div>
+                                          ${type === "Adult" ? `
+                                          <div class="mt-3">
+                                              <input type="email" class="form-control" placeholder="Email">
+                                              <small class="text-muted">Your ticket will be sent to this email address</small>
+                                          </div>
+                                          <div class="mt-3 row">
+                                              <div class="col-md-2">
+                                                  <select class="form-control" name="COUNTRY_NAME"><option value="">Code</option><option value="91_India">+91</option><option value="93_Afghanistan">+93</option><option value="213_Algeria">+213</option><option value="1_American Samoa">+1</option><option value="376_Andorra">+376</option><option value="244_Angola">+244</option><option value="1_Anguilla">+1</option><option value="672_Antarctica">+672</option><option value="1_Antigua and Barbuda">+1</option><option value="54_Argentina">+54</option><option value="374_Armenia">+374</option><option value="297_Aruba">+297</option><option value="61_Australia">+61</option><option value="43_Austria">+43</option><option value="994_Azerbaijan">+994</option><option value="1_Bahamas">+1</option><option value="973_Bahrain">+973</option><option value="880_Bangladesh">+880</option><option value="1_Barbados">+1</option><option value="32_Belgium">+32</option><option value="501_Belize">+501</option><option value="229_Benin">+229</option><option value="1_Bermuda">+1</option><option value="975_Bhutan">+975</option><option value="591_Bolivia">+591</option><option value="267_Botswana">+267</option><option value="55_Brazil">+55</option><option value="246_British Indian Ocean Territory">+246</option><option value="1_British Virgin Islands">+1</option><option value="673_Brunei">+673</option><option value="226_Burkina Faso">+226</option><option value="257_Burundi">+257</option><option value="855_Cambodia">+855</option><option value="237_Cameroon">+237</option><option value="1_Canada">+1</option><option value="238_Cape Verde">+238</option><option value="1_Cayman Islands">+1</option><option value="236_Central African Republic">+236</option><option value="235_Chad">+235</option><option value="56_Chile">+56</option><option value="86_China">+86</option><option value="61_Christmas Island">+61</option><option value="61_Cocos Islands">+61</option><option value="57_Colombia">+57</option><option value="269_Comoros">+269</option><option value="682_Cook Islands">+682</option><option value="506_Costa Rica">+506</option><option value="599_Curacao">+599</option><option value="357_Cyprus">+357</option><option value="420_Czech Republic">+420</option><option value="45_Denmark">+45</option><option value="253_Djibouti">+253</option><option value="1_Dominica">+1</option><option value="1809_Dominican Republic">+1809</option><option value="670_East Timor">+670</option><option value="593_Ecuador">+593</option><option value="20_Egypt">+20</option><option value="503_El Salvador">+503</option><option value="240_Equatorial Guinea">+240</option><option value="291_Eritrea">+291</option><option value="372_Estonia">+372</option><option value="251_Ethiopia">+251</option><option value="500_Falkland Islands">+500</option><option value="298_Faroe Islands">+298</option><option value="679_Fiji">+679</option><option value="358_Finland">+358</option><option value="33_France">+33</option><option value="689_French Polynesia">+689</option><option value="241_Gabon">+241</option><option value="220_Gambia">+220</option><option value="995_Georgia">+995</option><option value="49_Germany">+49</option><option value="233_Ghana">+233</option><option value="350_Gibraltar">+350</option><option value="30_Greece">+30</option><option value="299_Greenland">+299</option><option value="1_Grenada">+1</option><option value="1_Guam">+1</option><option value="502_Guatemala">+502</option><option value="1_Guernsey">+1</option><option value="224_Guinea">+224</option><option value="245_Guinea-Bissau">+245</option><option value="592_Guyana">+592</option><option value="509_Haiti">+509</option><option value="504_Honduras">+504</option><option value="852_Hong Kong">+852</option><option value="36_Hungary">+36</option><option value="354_Iceland">+354</option><option value="62_Indonesia">+62</option><option value="353_Ireland">+353</option><option value="1_Isle of Man">+1</option><option value="972_Israel">+972</option><option value="39_Italy">+39</option><option value="1_Jamaica">+1</option><option value="81_Japan">+81</option><option value="1_Jersey">+1</option><option value="962_Jordan">+962</option><option value="7_Kazakhstan">+7</option><option value="254_Kenya">+254</option><option value="686_Kiribati">+686</option><option value="965_Kuwait">+965</option><option value="996_Kyrgyzstan">+996</option><option value="856_Laos">+856</option><option value="371_Latvia">+371</option><option value="961_Lebanon">+961</option><option value="266_Lesotho">+266</option><option value="218_Libya">+218</option><option value="423_Liechtenstein">+423</option><option value="370_Lithuania">+370</option><option value="352_Luxembourg">+352</option><option value="853_Macau">+853</option><option value="261_Madagascar">+261</option><option value="265_Malawi">+265</option><option value="60_Malaysia">+60</option><option value="960_Maldives">+960</option><option value="223_Mali">+223</option><option value="356_Malta">+356</option><option value="692_Marshall Islands">+692</option><option value="222_Mauritania">+222</option><option value="230_Mauritius">+230</option><option value="262_Mayotte">+262</option><option value="52_Mexico">+52</option><option value="691_Micronesia">+691</option><option value="373_Moldova">+373</option><option value="377_Monaco">+377</option><option value="976_Mongolia">+976</option><option value="1_Montserrat">+1</option><option value="212_Morocco">+212</option><option value="258_Mozambique">+258</option><option value="95_Myanmar">+95</option><option value="264_Namibia">+264</option><option value="674_Nauru">+674</option><option value="977_Nepal">+977</option><option value="31_Netherlands">+31</option><option value="599_Netherlands Antilles">+599</option><option value="687_New Caledonia">+687</option><option value="64_New Zealand">+64</option><option value="505_Nicaragua">+505</option><option value="227_Niger">+227</option><option value="234_Nigeria">+234</option><option value="683_Niue">+683</option><option value="1_Northern Mariana Islands">+1</option><option value="47_Norway">+47</option><option value="968_Oman">+968</option><option value="92_Pakistan">+92</option><option value="680_Palau">+680</option><option value="970_Palestine">+970</option><option value="507_Panama">+507</option><option value="675_Papua New Guinea">+675</option><option value="595_Paraguay">+595</option><option value="51_Peru">+51</option><option value="63_Philippines">+63</option><option value="64_Pitcairn">+64</option><option value="48_Poland">+48</option><option value="351_Portugal">+351</option><option value="1_Puerto Rico">+1</option><option value="974_Qatar">+974</option><option value="242_Republic of the Congo">+242</option><option value="262_Reunion">+262</option><option value="40_Romania">+40</option><option value="7_Russia">+7</option><option value="250_Rwanda">+250</option><option value="590_Saint Barthelemy">+590</option><option value="290_Saint Helena">+290</option><option value="1_Saint Kitts and Nevis">+1</option><option value="1_Saint Lucia">+1</option><option value="590_Saint Martin">+590</option><option value="508_Saint Pierre and Miquelon">+508</option><option value="1_Saint Vincent and the Grenadines">+1</option><option value="685_Samoa">+685</option><option value="378_San Marino">+378</option><option value="239_Sao Tome and Principe">+239</option><option value="966_Saudi Arabia">+966</option><option value="221_Senegal">+221</option><option value="248_Seychelles">+248</option><option value="232_Sierra Leone">+232</option><option value="65_Singapore">+65</option><option value="1_Sint Maarten">+1</option><option value="421_Slovakia">+421</option><option value="677_Solomon Islands">+677</option><option value="252_Somalia">+252</option><option value="27_South Africa">+27</option><option value="82_South Korea">+82</option><option value="211_South Sudan">+211</option><option value="34_Spain">+34</option><option value="94_Sri Lanka">+94</option><option value="597_Suriname">+597</option><option value="47_Svalbard and Jan Mayen">+47</option><option value="268_Swaziland">+268</option><option value="46_Sweden">+46</option><option value="41_Switzerland">+41</option><option value="886_Taiwan">+886</option><option value="992_Tajikistan">+992</option><option value="255_Tanzania">+255</option><option value="66_Thailand">+66</option><option value="228_Togo">+228</option><option value="690_Tokelau">+690</option><option value="676_Tonga">+676</option><option value="1_Trinidad and Tobago">+1</option><option value="216_Tunisia">+216</option><option value="90_Turkey">+90</option><option value="993_Turkmenistan">+993</option><option value="1_Turks and Caicos Islands">+1</option><option value="688_Tuvalu">+688</option><option value="1_U.S. Virgin Islands">+1</option><option value="256_Uganda">+256</option><option value="971_United Arab Emirates">+971</option><option value="44_United Kingdom">+44</option><option value="1_United States">+1</option><option value="598_Uruguay">+598</option><option value="998_Uzbekistan">+998</option><option value="678_Vanuatu">+678</option><option value="379_Vatican">+379</option><option value="58_Venezuela">+58</option><option value="84_Vietnam">+84</option><option value="681_Wallis and Futuna">+681</option><option value="212_Western Sahara">+212</option><option value="967_Yemen">+967</option><option value="260_Zambia">+260</option></select>
+                                              </div>
+                                              <div class="col-md-10">
+                                                  <input type="text" class="form-control" placeholder="Mobile Number">
+                                              </div>
+                                          </div>
+                                          ` : ""}
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      `;
+                  }
+
+                  // Use a single operation to update the DOM instead of multiple +=
+                  let travellerFormsHTML = "";
+
+                  for (let i = 1; i <= travellers.adults; i++) {
+                      travellerFormsHTML += createTravellerForm(i, "Adult");
+                  }
+                  for (let i = 1; i <= travellers.children; i++) {
+                      travellerFormsHTML += createTravellerForm(i, "Child");
+                  }
+                  for (let i = 1; i <= travellers.infants; i++) {
+                      travellerFormsHTML += createTravellerForm(i, "Infant");
+                  }
+
+                  travellerContainer.innerHTML = travellerFormsHTML; // Efficient DOM update
+              });
+          </script>
+
+        </main>
+        <!-- Main Section Ending -->
+
+        <!-- Aside Section -->
+         <aside class="aside-section col-md-3 py-5">
+                <div class="container mt-4">
+                    <div class="fare-summary shadow p-3">
+                        <h5 class="fw-bold">FARE SUMMARY</h5>
+                        <p class="text-muted">1 ADULT</p>
+                        <hr>
+                        <div class="price-breakup shadow-sm">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <svg width="16" height="16" fill="#404040" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 0a8 8 0 108 8 8.01 8.01 0 00-8-8zm0 14.546A6.545 6.545 0 1114.545 8 6.554 6.554 0 018 14.546z" fill="#404040"></path>
+                                        <path d="M11.636 7.273H4.363a.727.727 0 100 1.454h7.273a.727.727 0 100-1.454z" fill="#404040"></path>
+                                    </svg>
+                                    <span class="ms-2 breakup-title">Base fare</span>
+                                </div>
+                                <span class="fw-bold">₹4,184</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <div class="d-flex align-items-center">
+                                    <span class="fare-icon"></span>
+                                    <span>Adult (1 x ₹4,184)</span>
+                                </div>
+                                <span>₹4,184</span>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="breakup-title">Taxes and Surcharges</span>
+                                <span class="fw-bold">₹814</span>
+                            </div>
+                        </div>
+
+                        <hr>
+                        <div class="d-flex justify-content-between text-primary fw-bold">
+                            <span>Grand Total</span>
+                            <span>₹4,998</span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold" style="font-size:14px">goCash Apply ₹100</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="py-2" style="font-size: 12px;">
+                            <span> Total goCash Balance :₹100 </span>
+                            <span>  ₹100 GoCash+ applicable on this booking </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container marginT20">
+                    <div class="gotribe-side-strip-wrapper">
+                        <h5>Earn goCash</h5>
+                        <div class="gotribe-side-strip">
+                            <img src="https://gos3.ibcdn.com/gocashimage-1625739820.png" alt="gotribe">
+                            <p>Get ₹100 goCash post this booking!</p>
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+         </aside>
+    </div>
+</div>
+    <footer class="bg-dark text-white pt-5 pb-3">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-md-3 mb-3">
+            <div class="d-flex align-items-center mb-3">
+              <span class="text-primary fs-4 fw-bold">ghumo jhumo</span>
+            </div>
+            <p class="text-secondary">
+              Making travel simple, affordable, and enjoyable for everyone.
+            </p>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-secondary"
+                ><i class="bi bi-facebook fs-5"></i
+              ></a>
+              <a href="#" class="text-secondary"
+                ><i class="bi bi-twitter fs-5"></i
+              ></a>
+              <a href="#" class="text-secondary"
+                ><i class="bi bi-instagram fs-5"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h5 class="fw-semibold mb-3">Company</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Careers</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Press</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Gift Cards</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5 class="fw-semibold mb-3">Support</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >COVID-19 Updates</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Cancellation Options</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Safety Resource Center</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5 class="fw-semibold mb-3">Legal</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Terms &amp; Conditions</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Cookie Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Accessibility</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Reward Program Terms</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-top border-secondary pt-3">
+          <p class="text-center text-secondary mb-0">
+            © 2025
+            <span>
+              <a
+                href="https://venusstudies.in/"
+                class="text-white text-decoration-none"
+                target="_blank"
+              >
+                Venus Studies
+              </a>
+            </span>
+            . All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+
+    <!-- Bootstrap Icons (Make sure to include Bootstrap and Bootstrap Icons in your project) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+
+    <script src="app.js"></script>
+    <!-- <script src="fetch.js"></script> -->
+  </body>
+</html>
