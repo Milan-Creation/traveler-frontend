@@ -627,11 +627,11 @@ h6 {
   padding-right: 15px;
 }
 
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   .container {
     max-width: 1200px;
   }
-}
+} */
 .row {
   --bs-gutter-x: 30px;
 }
@@ -5983,7 +5983,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 .main-slider-three__form {
   position: relative;
-  bottom: 455px;
+  bottom: 50px;
   z-index: 1;
   margin-left: -15px;
   margin-right: auto;
