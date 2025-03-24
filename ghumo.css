@@ -3111,11 +3111,12 @@ h6 {
 .main-header__btn {
   border: 100px;
   padding: 13.5px 25px;
-  font-size: 16px;
+  font-size: 14px;
   color: var(--gotur-white, #fff);
-  font-weight: 700;
+  font-weight: 600;
   background-color: var(--gotur-primary, #F7921E);
 }
+
 .main-header__btn::after, .main-header__btn::before {
   background-color: var(--gotur-white, #fff);
 }
@@ -3238,6 +3239,10 @@ h6 {
 .main-header--one .main-menu__list > li.current > a,
 .main-header--one .main-menu__list > li:hover > a {
   color: var(--gotur-base, #F7921E) !important;
+}
+li.dropdown.megamenu {
+  display: contents;
+  gap: 10px;
 }
 .main-header--one .main-menu .main-menu__list > li {
   padding-top: 40px;
@@ -3559,6 +3564,7 @@ h6 {
   .main-menu .main-menu__list,
   .main-menu .main-menu__list ul {
     display: flex;
+    gap: 15px;
   }
 }
 .main-menu .main-menu__list > li {
@@ -5774,7 +5780,7 @@ body.megamenu-popup-active .mobile-nav__content {
 .main-slider-three__title {
   font-style: normal;
   font-weight: 800;
-  font-size: 90px;
+  font-size: 85px;
   line-height: 120%;
   margin-bottom: 33px;
   padding-bottom: 0;
@@ -5864,8 +5870,9 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 .main-slider-three__thumb {
   position: absolute;
-  bottom: 100px;
-  /* right: -80px; */
+  right: -80px;
+  bottom: 150px;
+  width: 70%;
 }
 @media (max-width: 991px) {
   .main-slider-three__thumb {
@@ -18339,7 +18346,7 @@ body.boxed-wrapper .testimonials-three__inner {
   border-radius: 6px;
   border: none;
   display: block;
-  width: 13%;
+  width: 15%;
   font-size: 18px;
   font-weight: 600;
   margin-top: 15px;
@@ -18450,4 +18457,37 @@ input.form-control {
 .travel-class li.selected {
   font-weight: bold;
   color: blue;
+}
+
+.faq-container {
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+.faq-answer {
+  display: none;
+  padding: 15px;
+  font-size: 16px;
+  color: #555;
+}
+.faq-question::after {
+  content: '\25BC'; /* Down arrow */
+  font-size: 14px;
+}
+.faq-question.active::after {
+  content: '\25B2'; /* Up arrow */
 }
