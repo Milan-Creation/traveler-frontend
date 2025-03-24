@@ -170,12 +170,12 @@ button.chevron-down {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50vh;
+  height: 30vh;
   width:100%;
 }
 
 .hero-section-2{
-  background-image:url('assets/Booking.png');
+  background-image:url('assets/bookings.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -822,6 +822,7 @@ input:checked + .slider:before {
 }
 aside.col-md-3.aside-section {
   height: fit-content;
+  border: 1px solid #ededed;
 }
 .price-breakup {
   max-width: 400px;
