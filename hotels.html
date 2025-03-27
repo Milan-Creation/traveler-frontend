@@ -9,7 +9,7 @@
       name="description"
       content="Gotur is a modern travel &amp; tour booking HTML Template. It is perfect for travel agencies, tour operators, trip holiday booking websites, adventure and booking companies looking for a unique and intuitive search function and all other travel &amp; tourism websites and businesses."
     />
-    <title>Ghumo Jhumo</title>
+    <title>Hotels</title>
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
@@ -435,181 +435,7 @@
         <!-- /.row -->
       </div>
       <!-- /.container -->
-      <div class="main-slider-three__action-form">
-        <div class="container">
-          <div class="main-slider-three__form">
-            <div
-              class="banner-form wow fadeInUp animated"
-              data-wow-duration="1500ms"
-              data-wow-delay="300ms"
-              style="
-                visibility: visible;
-                animation-duration: 1500ms;
-                animation-delay: 300ms;
-                animation-name: fadeInUp;
-              "
-            >
-            <form onsubmit="searchFlights(event)" action="flight-search" method="POST">
-            <div class="container mt-5 position-relative">
-              <div class="booking-container">
-                  <div class="tab-content mt-4">
-                    
-                      <div class="tab-pane fade show active" id="flights">
-                          <div class="row g-3">
-                           
-                              <div class="col-md-4 input-box">
-                                  <label>From</label>
-                                  <select id="fromCitySelect" name="form-control" class="citySelect form-select">
-                                    <option value="Delhi" selected disabled>e.g. - Area, Landmark or Property Name</option>
-                                  </select>
-                                <small class="text-muted">DEL, Delhi Airport India</small>
-                              </div>
-                           
-                              <div class="col-md-2 input-box">
-                                  <label>Departure</label>
-                                  <input type="text" class="datetimepicker form-control" id="departure"
-                                  name="departure" placeholder="Friday, 9 May 2025"/>
-                              </div>
-
-                              <div class="col-md-2 input-box">
-                                <label>Return</label>
-                                <input type="text" class="datetimepicker form-control" id="return" name="return" placeholder="Tap to add return date"/>
-                              </div>
-
-                            <div class="col-md-2 input-box">
-                              <div class="position-relative">
-                                <label>Travellers & Class</label>
-                                <input type="text" class="form-control" id="travellersInput" placeholder="0 Adult, 1 Child" readonly>
-                                <div class="travel-container" id="travelOptions">
-                                    <h5>Travellers & Class</h5>
-                                    <p>1 Adult</p>
-                                    <p>Economy</p>
-                                    <hr>
-                                    <div>
-                                        <h6>Adults <small>(Aged 12+ yrs)</small></h6>
-                                        <div class="counter">
-                                            <span>-</span>
-                                            <span>1</span>
-                                            <span>+</span>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h6>Children <small>(Aged 2-12 yrs)</small></h6>
-                                        <div class="counter">
-                                            <span>-</span>
-                                            <span>0</span>
-                                            <span>+</span>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <h6>Infants <small>(Below 2 yrs)</small></h6>
-                                        <div class="counter">
-                                            <span>-</span>
-                                            <span>0</span>
-                                            <span>+</span>
-                                        </div>
-                                    </div>
-                                    <hr>
-                                    <h6>Travel Class</h6>
-                                    <ul class="travel-class">
-                                        <li>Economy</li>
-                                        <li>Premium Economy</li>
-                                        <li>Business</li>
-                                        <li>First Class</li>
-                                    </ul>
-                                    <div class="d-flex justify-content-between mt-3">
-                                        <button class="btn btn-outline-secondary" id="cancelBtn">Cancel</button>
-                                        <button class="btn btn-primary" id="doneBtn">Done</button>
-                                    </div>
-                                </div>
-                            </div>
-                          </div>
-                          
-                          </div>
-                          <a href="search.html" class="search-flight-btn">
-                            Search Flights
-                          </a>
-                      </div>
-                      <div class="tab-pane fade" id="hotels">
-                          <div class="row g-3">
-                            <div class="col-md-2 input-box">
-                              <label>From</label>
-                              
-                              <select id="fromCitySelect" name="from" class="citySelect form-select">
-                                <option value="Delhi" selected disabled>Select From</option>
-                            </select>
-                            <small class="text-muted">DEL, Delhi Airport India</small>
-                          </div>
-                          <div class="col-md-2 input-box">
-                              <label>To</label>
-                              <select id="toCitySelect" name="to" class="citySelect form-select">
-                                <option value="Bengaluru" selected disabled>Select To</option>
-                            </select>
-                            <small class="text-muted">BLR, Bengaluru International Airport India</small>
-                          </div>
-                          <div class="col-md-2 input-box">
-                              <label>Departure</label>
-                              <input type="text" class="datetimepicker form-control" id="departure"
-                              name="departure" placeholder="Friday, 9 May 2025"/>
-                          </div>
-                          <div class="col-md-2 input-box">
-                            <label>Return</label>
-                          <input type="text" class="datetimepicker form-control" id="return" name="return" placeholder="Tap to add return date"/>
-                        </div>
-                        <div class="col-md-2 input-box">
-                          <label>Travellers & Class</label>
-                          <input type="text" class="form-control" placeholder="0 Adult, 1 Child">
-                      </div>
-                      </div>
-                      <button class="search-flight-btn">Search Flights</button>
-                      </div>
-                      
-                      <div class="tab-pane fade" id="transfers">
-                          <div class="row g-3">
-
-                            <div class="col-md-2 input-box">
-                              <label>From</label>
-                              
-                              <select id="fromCitySelect" name="from" class="citySelect form-select">
-                                <option value="Delhi" selected disabled>Select From</option>
-                            </select>
-                            <small class="text-muted">DEL, Delhi Airport India</small>
-                          </div>
-
-                          <div class="col-md-2 input-box">
-                            <label>To</label>
-                            <select id="toCitySelect" name="to" class="citySelect form-select">
-                              <option value="Bengaluru" selected disabled>Select To</option>
-                          </select>
-                          <small class="text-muted">BLR, Bengaluru International Airport India</small>
-                        </div>
-                        <div class="col-md-2 input-box">
-                          <label>Departure</label>
-                          <input type="text" class="datetimepicker form-control" id="departure"
-                          name="departure" placeholder="Friday, 9 May 2025"/>
-                      </div>
-
-                      <div class="col-md-4 input-box">
-                          <div class="position-relative">
-                              <label>Travellers & Class</label>
-                              <input type="text" class="form-control" id="travellersInput" placeholder="0 Adult, 1 Child" readonly>
-                  
-                      </div>
-
-                    </div>
-                          <button class="search-flight-btn">Search Flights</button>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          </form>
-            </div>
-            <!-- banner-form -->
-          </div>
-          <!-- /.main-slider-four__form -->
-        </div>
-        <!-- /.container -->
-      </div>
+   
       <!-- /.main-slider-three__action-form -->
       <div class="main-slider-three__element">
         <div class="main-slider-three__element__item">
@@ -644,6 +470,125 @@
     </section>
     <!-- /.main-slider-three -->
       
+          <!-- Form Section -->
+          <section>
+            <div class="main-slider-three__action-form">
+              <div class="container-fluid">
+                <div class="main-slider-three__form">
+                  <div class="main-slider-three__action-form">
+                    <div class="container">
+                      <div class="main-slider-three__form">
+                        <div
+                          class="banner-form wow fadeInUp animated"
+                          data-wow-duration="1500ms"
+                          data-wow-delay="300ms"
+                          style="
+                            visibility: visible;
+                            animation-duration: 1500ms;
+                            animation-delay: 300ms;
+                            animation-name: fadeInUp;
+                          "
+                        >
+                        <form onsubmit="searchFlights(event)" action="flight-search" method="POST">
+                        <div class="container mt-5 position-relative">
+                          <div class="booking-container">
+                              <div class="tab-content mt-4">
+                                
+                                  <div class="tab-pane fade show active" id="flights">
+                                      <div class="row g-3">
+                                       
+                                          <div class="col-md-4 input-box">
+                                              <label>From</label>
+                                              <select id="fromCitySelect" name="form-control" class="citySelect form-select">
+                                                <option value="Delhi" selected disabled>e.g. - Area, Landmark or Property Name</option>
+                                              </select>
+                                            <small class="text-muted">DEL, Delhi Airport India</small>
+                                          </div>
+                                       
+                                          <div class="col-md-2 input-box">
+                                              <label>Departure</label>
+                                              <input type="text" class="datetimepicker form-control" id="departure"
+                                              name="departure" placeholder="Friday, 9 May 2025"/>
+                                          </div>
+            
+                                          <div class="col-md-2 input-box">
+                                            <label>Return</label>
+                                            <input type="text" class="datetimepicker form-control" id="return" name="return" placeholder="Tap to add return date"/>
+                                          </div>
+            
+                                        <div class="col-md-2 input-box">
+                                          <div class="position-relative">
+                                            <label>Travellers & Class</label>
+                                            <input type="text" class="form-control" id="travellersInput" placeholder="0 Adult, 1 Child" readonly>
+                                            <div class="travel-container" id="travelOptions">
+                                                <h5>Travellers & Class</h5>
+                                                <p>1 Adult</p>
+                                                <p>Economy</p>
+                                                <hr>
+                                                <div>
+                                                    <h6>Adults <small>(Aged 12+ yrs)</small></h6>
+                                                    <div class="counter">
+                                                        <span>-</span>
+                                                        <span>1</span>
+                                                        <span>+</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h6>Children <small>(Aged 2-12 yrs)</small></h6>
+                                                    <div class="counter">
+                                                        <span>-</span>
+                                                        <span>0</span>
+                                                        <span>+</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <h6>Infants <small>(Below 2 yrs)</small></h6>
+                                                    <div class="counter">
+                                                        <span>-</span>
+                                                        <span>0</span>
+                                                        <span>+</span>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <h6>Travel Class</h6>
+                                                <ul class="travel-class">
+                                                    <li>Economy</li>
+                                                    <li>Premium Economy</li>
+                                                    <li>Business</li>
+                                                    <li>First Class</li>
+                                                </ul>
+                                                <div class="d-flex justify-content-between mt-3">
+                                                    <button class="btn btn-outline-secondary" id="cancelBtn">Cancel</button>
+                                                    <button class="btn btn-primary" id="doneBtn">Done</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                      
+                                      </div>
+                                      <a href="hotels-booking.html" class="search-flight-btn">
+                                        Search Flights
+                                      </a>
+                                  </div>
+                           
+                          </div>
+                      </div>
+                      </form>
+                        </div>
+                        <!-- banner-form -->
+                      </div>
+                      <!-- /.main-slider-four__form -->
+                    </div>
+                    <!-- /.container -->
+                  </div>
+                  <!-- banner-form -->
+                </div>
+                <!-- /.main-slider-four__form -->
+              </div>
+              <!-- /.container -->
+            </div>
+          </section>
+
     <section
     class="feature-package feature-package--two section-space"
     id="popular"
