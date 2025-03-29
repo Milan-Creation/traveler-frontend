@@ -3497,7 +3497,7 @@ li.dropdown.megamenu {
 }
 .sticky-header--cloned.main-header--one {
   background-color: var(--gotur-gray, #F3F8F6);
-  padding-bottom: 25px;
+  padding: 20px;
 }
 .sticky-header--cloned.main-header--one .topbar-one {
   display: none;
@@ -5746,20 +5746,19 @@ body.megamenu-popup-active .mobile-nav__content {
   .main-slider-three__content {
     height: auto;
     padding-top: 120px;
-    padding-bottom: 350px;
+    padding-bottom: 250px;
   }
 }
 @media (max-width: 767px) {
   .main-slider-three__content {
     height: auto;
     padding-top: 120px;
-    padding-bottom: 80px;
   }
 }
 @media (max-width: 575px) {
   .main-slider-three__content {
-    padding-top: 100px;
-    padding-bottom: 60px;
+    padding-top: 10px;
+    padding-bottom: 200px;
   }
 }
 .main-slider-three__sub-title {
@@ -6001,12 +6000,12 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 @media (max-width: 767px) {
   .main-slider-three__form {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 25px;
+    /* padding-bottom: 200px; */
     position: relative;
     z-index: 1;
-    bottom: 185px;
-  }
+    bottom: 30px;
+}
 }
 
 /*******Slider Four********/
@@ -18346,13 +18345,31 @@ body.boxed-wrapper .testimonials-three__inner {
   border-radius: 6px;
   border: none;
   display: block;
-  width: 15%;
+  width: 20%;
   font-size: 18px;
   font-weight: 600;
   margin-top: 15px;
   font-family: 'poppins';
   letter-spacing: 1px;
   text-align: center;
+}
+
+@media (max-width: 767px) {
+  .search-flight-btn {
+    background: #f7921e;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    border: none;
+    display: block;
+    width: 50%;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 15px;
+    font-family: 'poppins';
+    letter-spacing: 1px;
+    text-align: center;
+  }
 }
 .input-box {
   position: relative;
