@@ -237,7 +237,9 @@
 .pr-30 {
   padding-right: 30px;
 }
-
+a{
+  text-decoration: none;
+}
 /* button */
 .gotur-btn {
   overflow: hidden;
@@ -3115,6 +3117,7 @@ h6 {
   color: var(--gotur-white, #fff);
   font-weight: 600;
   background-color: var(--gotur-primary, #F7921E);
+  text-decoration: none;
 }
 
 .main-header__btn::after, .main-header__btn::before {
@@ -3574,6 +3577,7 @@ li.dropdown.megamenu {
 }
 .main-menu .main-menu__list > li.dropdown > a {
   position: relative;
+  text-decoration: none;
 }
 .main-menu .main-menu__list > li + li {
   margin-left: 40px;
@@ -5821,6 +5825,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 .main-slider-three__button .gotur-btn {
   padding: 13.5px 20px;
+  text-decoration: none;
 }
 .main-slider-three__button .gotur-btn i {
   margin-left: 10px;
