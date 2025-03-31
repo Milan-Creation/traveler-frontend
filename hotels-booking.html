@@ -1,1974 +1,957 @@
-<!doctype html>
-<html lang="en">
+<html>
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="bracket-web" />
+    <title>Hotels Booking</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
-      name="description"
-      content="Gotur is a modern travel &amp; tour booking HTML Template. It is perfect for travel agencies, tour operators, trip holiday booking websites, adventure and booking companies looking for a unique and intuitive search function and all other travel &amp; tourism websites and businesses."
+      name="csrf-token"
+      content="nkmCAFhw23zdM2ayPRGbwnoqimmXgrlqh0oemr8L"
     />
-    <title>Ghumo Jhumo</title>
+    <meta name="hasadminToken" content="1" />
+    
+    <!-- Bootstrap CSS -->
 
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com/" />
-    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
-    <link href="./css2" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- FontAwesome CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-
-    <!-- Bootstrap Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link
+      rel="icon"
+      type="image/png"
+      href="http://localhost:8000/img/favicon.png"
+    />
+    <!-- Icons Links -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- css Link -->
     <link rel="stylesheet" href="app.css" />
-    <link rel="stylesheet" href="./bootstrap.min.css" />
-    <link rel="stylesheet" href="./bootstrap-select.min.css" />
-    <link rel="stylesheet" href="./animate.min.css" />
-    <link rel="stylesheet" href="./all.min.css" />
-    <link rel="stylesheet" href="./jquery-ui.css" />
-    <link rel="stylesheet" href="./jarallax.css" />
-    <link rel="stylesheet" href="./jquery.magnific-popup.css" />
-    <link rel="stylesheet" href="./nouislider.min.css" />
-    <link rel="stylesheet" href="./nouislider.pips.css" />
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="./daterangepicker.css" />
-    <link rel="stylesheet" href="./owl.carousel.min.css" />
-    <link rel="stylesheet" href="./owl.theme.default.min.css" />
-    <link rel="stylesheet" href="./slick.css" />
+    <link rel="preload" href="app.js" as="script" />
 
-    <!-- template styles -->
-    <link rel="stylesheet" href="ghumo.css" />
+    <script>
+      function toggleDetails() {
+          let details = document.getElementById("price-details");
+          details.classList.toggle("d-none");
+          details.classList.toggle("d-block");
+      }
+  </script>
+
   </head>
 
- 
-  <body class="custom-cursor" style="">
-    <div
-      class="custom-cursor__cursor"
-      style="transform: translate3d(calc(-50% + 635px), calc(-50% + 19px), 0px)"
-    ></div>
-    <div class="custom-cursor__cursor-two" style="left: 635px; top: 19px"></div>
-
-    <div class="preloader" style="display: none">
-      <div
-        class="preloader__image"
-        style="background-image: url(assets/images/loader.png)"
-      ></div>
-    </div>
-    <!-- /.preloader -->
-    <div class="page-wrapper">
-      <div class="top-one top-one--two">
-        <div class="container-fluid">
-          <div class="top-one__inner">
-            <ul class="list-unstyled top-one__info">
-              <li class="top-one__info__item">
-                <i class="fa-solid fa-phone"></i>
-                <a href="tel:+6108-666-0112">+0000-666-0000</a>
+  <body>
+    <header class="bg-white shadow-sm">
+      <nav class="navbar navbar-expand-md bg-white shadow-sm py-3 header">
+        <div class="container">
+          <a class="navbar-brand gradient-text" href="index.html">
+            <img src="assets/ghumojhumo.png" alt="Logo" />
+          </a>
+          <!-- Toggle button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Navbar items -->
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav mx-auto text-center" style="gap: 20px">
+              <li class="nav-item">
+                <a class="nav-link text-dark fw-medium" href="index.html">
+                  <img src="assets/nav-icon-1.png" alt="Flights" />
+                  <span class="hero-nav"> Flights</span>
+                </a>
               </li>
-              <!-- /.top-one__info__item -->
-              <li class="top-one__info__item">
-                <i class="fa-solid fa-envelope"></i>
-                <a href="mailto:info@gmail.com">info@gmail.com</a>
+              <li class="nav-item">
+                <a class="nav-link text-dark fw-medium" href="booking.html">
+                  <img src="assets/nav-icon-2.png" alt="Hotels" />
+                  <span class="hero-nav"> Hotels</span>
+                </a>
               </li>
-              <!-- /.top-one__info__item -->
+              <li class="nav-item">
+                <a class="nav-link text-dark fw-medium" href="#">
+                  <img src="assets/nav-icon-3.png" alt="Transfer" />
+                  <span class="hero-nav"> Transfer</span>
+                </a>
+              </li>
             </ul>
-            <!-- /.list-unstyled top-one__info -->
-            <div class="top-one__right">
-              <div class="top-one__info__item">
-                <i class="fa-solid fa-map-marker-alt"></i>
-                <a href="https://www.google.com/maps"
-                  >184 Main Collins Street Victoria 8007</a
-                >
-              </div>
-              <!-- /.top-one__info__item -->
-              <div class="top-one__social">
-                <a href="https://facebook.com/">
-                  <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                  <span class="sr-only">Facebook</span></a
-                >
-                <a href="https://twitter.com/">
-                  <i class="fa-brands fa-twitter" aria-hidden="true"></i>
-
-                  <span class="sr-only">Twitter</span></a
-                >
-                <a href="https://instagram.com/">
-                  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-
-                  <span class="sr-only">Linked In</span></a
-                >
-                <a href="https://youtube.com/">
-                  <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-                  <span class="sr-only">Youtube</span></a
-                >
-              </div>
-              <!-- /.top-one__social -->
+            <div class="d-flex gap-2">
+              <a href="#" class="btn-signup text-decoration-none">
+                <img src="assets/Group 7.png" alt="Login" />
+                Login or Create Account
+                <button class="chevron-down">
+                  <i class="bi bi-chevron-down"></i>
+                </button>
+              </a>
             </div>
-            <!-- /.top-one__right -->
           </div>
-          <!-- /.top-one__inner -->
         </div>
-        <!-- /.container-fluid -->
-      </div>
-      <!-- /.top-one -->
-      <header
-      class="main-header main-header--one sticky-header sticky-header--normal active"
-    >
-      <div class="container-fluid">
-        <div class="main-header__inner">
-          <div class="main-header__logo logo-retina">
-            <a href="index.html"
-              ><img
-                src="assets/ghumojhumo.png"
-                alt="gotur HTML"
-                width="150px"
-                /></a>
-          </div>
-          <!-- /.main-header__logo -->
-          <div class="main-header__right">
-            <nav class="main-header__nav main-menu">
-              <ul class="main-menu__list">
-                <li class="dropdown megamenu">
-                  <span class="gap-3"><img src="assets/nav-icon-1.png"> </span>
-                  <a href="#" style="gap:20px; font-weight: 600;">Flights</a>
-                </li>
-
-                <li class="dropdown megamenu">
-                  <span><img src="assets/nav-icon-2.png"> </span>
-                  <a href="hotels.html" style="gap:20px; font-weight: 600;">Hotels</a>
-                </li>
-
-                <li class="dropdown megamenu">
-                  <span><img src="assets/nav-icon-3.png"> </span>
-                  <a href="#" style="font-weight: 600;">Transfer</a>
-                </li>
-              </ul>
-            </nav>
-
-            <!-- /.main-header__nav -->
-            <div class="main-header__info">
-              <a href="#" class="search-toggler main-header__info__item">
-                <i
-                  class="fa-solid fa-magnifying-glass"
-                  aria-hidden="true"
-                ></i>
-                <span class="sr-only">Search</span>
-              </a>
-              <a href="#" class="main-header__info__item">
-                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
-                <span class="sr-only">Cart</span>
-              </a>
-            </div>
-            <div class="main-header__btn-popup main-header__element__btn">
-              <i class="fa-solid fa-bars"></i>
-            </div>
-            <!-- /.mobile-nav__toggler -->
-            <a href="#" class="gotur-btn main-header__btn"
-              >Login in or Create Account <i class="fa-solid fa-paper-plane"></i
-            ></a>
-            <div class="mobile-nav__btn mobile-nav__toggler">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <!-- /.mobile-nav__toggler -->
-          </div>
-          <!-- /.main-header__right -->
-        </div>
-        <!-- /.main-header__inner -->
-      </div>
-      <!-- /.container-fluid -->
-    </header>
-    <header
-      class="main-header main-header--one sticky-header sticky-header--normal sticky-header--cloned active"
-    >
-      <div class="container-fluid">
-        <div class="main-header__inner">
-          <div class="main-header__logo logo-retina">
-            <a href="index.html"
-              ><img
-              src="assets/ghumojhumo.png"
-              alt="gotur HTML"
-              width="150px"
-              height="70px"
-          /></a>
-          </div>
-          <!-- /.main-header__logo -->
-          <div class="main-header__right">
-            <nav class="main-header__nav main-menu">
-              <ul class="main-menu__list">
-                <li class="dropdown megamenu">
-                  <span class="gap-3"><img src="assets/nav-icon-1.png"> </span>
-                  <a href="#" style="gap:20px; font-weight: 600;">Flights</a>
-                </li>
-
-                <li class="dropdown megamenu">
-                  <span><img src="assets/nav-icon-2.png"> </span>
-                  <a href="hotels.html" style="gap:20px; font-weight: 600;">Hotels</a>
-                </li>
-
-                <li class="dropdown megamenu">
-                  <span><img src="assets/nav-icon-3.png"> </span>
-                  <a href="#" style="font-weight: 600;">Transfer</a>
-                </li>
-
-                <!-- <li class="dropdown">
-                  <a href="#">Destination</a>
-                  <ul>
-                    <li class="dropdown">
-                      <a href="#">destination 01</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">destination grid</a></li>
-                        <li><a href="#">destination Left</a></li>
-                        <li><a href="#">destination Right</a></li>
-                        <li><a href="#">destination Carousel</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#">destination 02</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">destination grid</a></li>
-                        <li><a href="#">destination Left</a></li>
-                        <li><a href="#">destination Right</a></li>
-                        <li><a href="#">destination Carousel</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Destination Details</a></li>
-                  </ul>
-                </li>
-
-                <li class="dropdown">
-                  <a href="#">tours list</a>
-                  <ul>
-                    <li class="dropdown">
-                      <a href="#">Tour Listing 01</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">Tour Grid</a></li>
-                        <li><a href="#">Tour Left</a></li>
-                        <li><a href="#">Tour Right</a></li>
-                        <li><a href="#">Tour Carousel</a></li>
-                      </ul>
-                    </li>
-
-                    <li class="dropdown">
-                      <a href="#">Tour Listing 02</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">Tour Grid</a></li>
-                        <li><a href="#">Tour Left</a></li>
-                        <li><a href="#">Tour Right</a></li>
-                        <li><a href="#">Tour Carousel</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#">Tour Listing List</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">Tour Grid</a></li>
-                        <li><a href="#">Tour Left</a></li>
-                        <li><a href="#">Tour Right</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Listing Details 01</a></li>
-                    <li><a href="#">Listing Details 02</a></li>
-                  </ul>
-                </li>
-
-                <li class="dropdown">
-                  <a href="#">pages</a>
-                  <ul>
-                    <li><a href="#">Our Team</a></li>
-                    <li><a href="#">Team Carousel</a></li>
-                    <li><a href="#">Team Details</a></li>
-                    <li><a href="#">Testimonials</a></li>
-                    <li><a href="#">Testimonials Carousel</a></li>
-                    <li><a href="#">Pricing Plan</a></li>
-                    <li class="dropdown">
-                      <a href="#">Gallery</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">Gallery masonry</a></li>
-                        <li><a href="#">Gallery filter</a></li>
-                        <li><a href="#">Gallery Grid</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">FAQS</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">404 Error</a></li>
-                  </ul>
-                </li>
-
-                <li class="dropdown">
-                  <a href="#">Shop</a>
-                  <ul>
-                    <li class="dropdown">
-                      <a href="#">Products</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">No sidebar</a></li>
-                        <li><a href="#">Left sidebar</a></li>
-                        <li><a href="#">Right sidebar</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#">Products list</a>
-                      <ul class="sub-menu">
-                        <li><a href="#">No sidebar</a></li>
-                        <li><a href="#">Left sidebar</a></li>
-                        <li><a href="#">Right sidebar</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Products carousel</a></li>
-                    <li><a href="#">Product details</a></li>
-                    <li><a href="#">Cart</a></li>
-                    <li><a href="#">Checkout</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="#">news</a>
-                  <ul>
-                    <li class="dropdown">
-                      <a href="#">news grid</a>
-                      <ul>
-                        <li><a href="#">No sidebar</a></li>
-                        <li><a href="#">Left sidebar</a></li>
-                        <li><a href="#">Right sidebar</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#">news list</a>
-                      <ul>
-                        <li><a href="#">No sidebar</a></li>
-                        <li><a href="#">Left sidebar</a></li>
-                        <li><a href="#">Right sidebar</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Blog carousel</a></li>
-                    <li class="dropdown">
-                      <a href="#">news details</a>
-                      <ul>
-                        <li><a href="#">No sidebar</a></li>
-                        <li><a href="#">Left sidebar</a></li>
-                        <li><a href="#">Right sidebar</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#">Contact</a>
-                </li> -->
-              </ul>
-            </nav>
-            <!-- /.main-header__nav -->
-            <div class="main-header__info">
-              <a href="#" class="search-toggler main-header__info__item">
-                <i
-                  class="fa-solid fa-magnifying-glass"
-                  aria-hidden="true"
-                ></i>
-                <span class="sr-only">Search</span>
-              </a>
-              <a href="#" class="main-header__info__item">
-                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
-                <span class="sr-only">Cart</span>
-              </a>
-            </div>
-            <div class="main-header__btn-popup main-header__element__btn">
-              <i class="fa-solid fa-bars"></i>
-            </div>
-            <!-- /.mobile-nav__toggler -->
-            <a href="#" class="gotur-btn main-header__btn"
-              >Login in or Create Account  <i class="fa-solid fa-paper-plane"></i
-            ></a>
-            <div class="mobile-nav__btn mobile-nav__toggler">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <!-- /.mobile-nav__toggler -->
-          </div>
-          <!-- /.main-header__right -->
-        </div>
-        <!-- /.main-header__inner -->
-      </div>
-      <!-- /.container-fluid -->
+      </nav>
     </header>
 
-    <section class="main-slider-three" id="home">
-      <div class="container">
-        <div class="row justify-content-start">
-          <div class="col-xxl-6 col-lg-12">
-            <div class="main-slider-three__content">
-              <h5
-                class="main-slider-three__sub-title main-three bw-split-in-left"
-                style="perspective: 400px"
-              >
-                Welocome to Ghumo Jhumo
-              </h5>
-              <h2
-                class="main-slider-three__title main-three bw-split-in-left"
-                style="perspective: 400px"
-              >
-                  Book Hotels and Homestays
-              </h2>
-              <!-- slider-title -->
-              <div class="main-slider-three__button">
-                <a href="#" class="gotur-btn gotur-btn--primary"
-                  >get in touch <i class="fa-solid fa-paper-plane"></i
-                ></a>
-              </div>
-              <!-- /.main-slider-three__button -->
-            </div>
-            <!-- /.main-slider-three__content -->
-          </div>
-          <!-- /.col-xxl-10 col-lg-9 -->
-          <div class="col-xxl-6">
-            <div class="main-slider-three__thumb">
-              <a href="index.html">
-                <img src="assets/hero-man-1-3.png" alt="thumb image" width="800px"/>
-              </a>
-            </div>
-            <!-- /.main-slider-three__thumb -->
-          </div>
-          <!-- /.col-xxl-6 col-lg-8 -->
+    <section class="position-relative text-white text-center hero-section-2">
+      <!-- <div class="containers">
+        <div class="title py-5">Booking Travel</div>
+        <div class="logo-container">
+          <img src="assets/images.jpeg" alt="Logo" class="logo" width="100px" />
         </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container -->
-   
-      <!-- /.main-slider-three__action-form -->
-      <div class="main-slider-three__element">
-        <div class="main-slider-three__element__item">
-          <img src="assets/hero-shapr-1-1.png" alt="element" />
-        </div>
-        <!-- /.main-slider-three__element__item -->
-        <div class="main-slider-three__element__item-one">
-          <img src="assets/hero-shapr-1-2.png" alt="element" />
-        </div>
-        <!-- /.main-slider-three__element__item -->
-        <div class="main-slider-three__element__item-three">
-          <img src="assets/hero-shapr-1-2-a.png" alt="element" />
-        </div>
-        <!-- /.main-slider-three__element__item -->
-        <div class="main-slider-three__element__item-two">
-          <img src="assets/hero-shapr-1-3.png" alt="element" />
-        </div>
-        <!-- /.main-slider-three__element__item -->
-      </div>
-      <!-- /.main-slider-three__element -->
-      <div class="main-slider-three__element-two">
-        <img src="assets/why-choose-tree.png" alt="element" />
-      </div>
-      <!-- /.main-slider-three__element-two -->
-
-      <div class="main-slider-three__element-three">
-        <span class="main-slider-three__element-three-item"></span>
-        <span class="main-slider-three__element-three-item"></span>
-        <span class="main-slider-three__element-three-item"></span>
-      </div>
-      <!-- /.main-slider-three__element-three -->
+      </div> -->
     </section>
-    <!-- /.main-slider-three -->
+    
     <section class="section-background-color">
-
-          <!-- Form Section -->
-          <section>
-            <div class="main-slider-three__action-form">
-              <div class="container-fluid">
-                <div class="main-slider-three__form">
-                  <div class="main-slider-three__action-form">
-                    <div class="container">
-                      <div class="main-slider-three__form">
-                        <div
-                          class="banner-form wow fadeInUp animated"
-                          data-wow-duration="1500ms"
-                          data-wow-delay="300ms"
-                          style="
-                            visibility: visible;
-                            animation-duration: 1500ms;
-                            animation-delay: 300ms;
-                            animation-name: fadeInUp;
-                          "
-                        >
-                        <form onsubmit="searchFlights(event)" action="flight-search" method="POST">
-                        <div class="container mt-5 position-relative">
-                          <div class="booking-container">
-                              <div class="tab-content mt-4">
-                                
-                                  <div class="tab-pane fade show active" id="flights">
-                                      <div class="row g-3">
-                                       
-                                          <div class="col-md-4 input-box">
-                                              <label>From</label>
-                                              <select id="fromCitySelect" name="form-control" class="citySelect form-select">
-                                                <option value="Delhi" selected disabled>e.g. - Area, Landmark or Property Name</option>
-                                              </select>
-                                            <small class="text-muted">DEL, Delhi Airport India</small>
-                                          </div>
-                                       
-                                          <div class="col-md-2 input-box">
-                                              <label>CHECKIN</label>
-                                              <input type="text" class="datetimepicker form-control" id="departure"
-                                              name="departure" placeholder="Friday, 9 May 2025"/>
-                                          </div>
-            
-                                          <div class="col-md-2 input-box">
-                                            <label>CHECKOUT</label>
-                                            <input type="text" class="datetimepicker form-control" id="return" name="return" placeholder="Tap to add return date"/>
-                                          </div>
-            
-                                        <div class="col-md-2 input-box">
-                                          <div class="position-relative">
-                                            <label>GUEST & ROOMS</label>
-                                            <input type="text" class="form-control" id="travellersInput" placeholder="0 Adult, 1 Child" readonly>
-                                            <div class="travel-container" id="travelOptions">
-                                                <h5>Travellers & Class</h5>
-                                                <p>1 Adult</p>
-                                                <p>Economy</p>
-                                                <hr>
-                                                <div>
-                                                    <h6>Adults <small>(Aged 12+ yrs)</small></h6>
-                                                    <div class="counter">
-                                                        <span>-</span>
-                                                        <span>1</span>
-                                                        <span>+</span>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <h6>Children <small>(Aged 2-12 yrs)</small></h6>
-                                                    <div class="counter">
-                                                        <span>-</span>
-                                                        <span>0</span>
-                                                        <span>+</span>
-                                                    </div>
-                                                </div>
-                                                <div>
-                                                    <h6>Infants <small>(Below 2 yrs)</small></h6>
-                                                    <div class="counter">
-                                                        <span>-</span>
-                                                        <span>0</span>
-                                                        <span>+</span>
-                                                    </div>
-                                                </div>
-                                                <hr>
-                                                <h6>Travel Class</h6>
-                                                <ul class="travel-class">
-                                                    <li>Economy</li>
-                                                    <li>Premium Economy</li>
-                                                    <li>Business</li>
-                                                    <li>First Class</li>
-                                                </ul>
-                                                <div class="d-flex justify-content-between mt-3">
-                                                    <button class="btn btn-outline-secondary" id="cancelBtn">Cancel</button>
-                                                    <button class="btn btn-primary" id="doneBtn">Done</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                      </div>
-                                      
-                                      </div>
-                                      <a href="#" class="search-flight-btn">
-                                        Search Flights
-                                      </a>
-                                  </div>
-                           
-                          </div>
-                      </div>
-                      </form>
-                        </div>
-                        <!-- banner-form -->
-                      </div>
-                      <!-- /.main-slider-four__form -->
-                    </div>
-                    <!-- /.container -->
-                  </div>
-                  <!-- banner-form -->
-                </div>
-                <!-- /.main-slider-four__form -->
-              </div>
-              <!-- /.container -->
-            </div>
-          </section>
-
 
     <div class="container">
       <div class="row d-flex">
-        <!-- Aside Section -->
-        <aside class="aside-section-hotels-book col-lg-4 col-md-4 col-sm-12  mt-3">
-          <div class="container mt-2">
-              <div class="fare-summary">
-                  <div class="d-flex justify-content-between align-items-center filters">
-                      <h6 class="fw-bold">Filters</h6>
-                      <a href="#" class="text-danger text-decoration-none fw-bold">Clear</a>
-                  </div>
-                  <div class="card-fit p-4">
-                    <div class="card-body">
-                        <h6 class="text-dark fw-bold d-flex justify-content-between">
-                            <span>Popular Filters</span>
-                            <span>
-                                <i class="fas fa-chevron-down toggle-icon"></i>
-                            </span>
-                        </h6>
-            
-                        <div id="popularFilters" class="collapse show">
-                            <ul class="list-group list-group-flush">
-                                <li class="py-2 d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <input class="form-check-input me-2" type="checkbox" id="goStays">
-                                        <label class="form-check-label" for="goStays">goStays</label>
-                                    </div>
-                                    <span class="text-dark rounded-pill">(232)</span>
-                                </li>
-                                <li class="py-2 d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <input class="form-check-input me-2" type="checkbox" id="bookAt0">
-                                        <label class="form-check-label" for="bookAt0">Book @ ₹0</label>
-                                    </div>
-                                    <span class=" text-dark rounded-pill">(156)</span>
-                                </li>
-                                <li class="py-2 d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <input class="form-check-input me-2" type="checkbox" id="dailyStealDeal">
-                                        <label class="form-check-label" for="dailyStealDeal">Daily Steal Deal</label>
-                                    </div>
-                                    <span class=" text-dark rounded-pill">(71)</span>
-                                </li>
-                                <li class="py-2 d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <input class="form-check-input me-2" type="checkbox" id="earlyBirdDeal">
-                                        <label class="form-check-label" for="earlyBirdDeal">Early Bird Deal</label>
-                                    </div>
-                                    <span class=" text-dark rounded-pill">(638)</span>
-                                </li>
-                                <li class="py-2 d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <input class="form-check-input me-2" type="checkbox" id="coupleFriendly">
-                                        <label class="form-check-label" for="coupleFriendly">Couple Friendly</label>
-                                    </div>
-                                    <span class=" text-dark rounded-pill">(1780)</span>
-                                </li>
-                                <li class="py-2 d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <input class="form-check-input me-2" type="checkbox" id="freeCancellation">
-                                        <label class="form-check-label" for="freeCancellation">Free Cancellation</label>
-                                    </div>
-                                    <span class=" text-dark rounded-pill">(1883)</span>
-                                </li>
-                                <li class="py-2 d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <input class="form-check-input me-2" type="checkbox" id="freeBreakfast">
-                                        <label class="form-check-label" for="freeBreakfast">Free Breakfast</label>
-                                    </div>
-                                    <span class=" text-dark rounded-pill">(202)</span>
-                                </li>
-                                <li class="py-2 d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <input class="form-check-input me-2" type="checkbox" id="businessFriendly">
-                                        <label class="form-check-label" for="businessFriendly">Business Friendly</label>
-                                    </div>
-                                    <span class=" text-dark rounded-pill">(93)</span>
-                                </li>
-                                <li class="py-2 d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center">
-                                        <input class="form-check-input me-2" type="checkbox" id="payAtHotel">
-                                        <label class="form-check-label" for="payAtHotel">Pay At Hotel</label>
-                                    </div>
-                                    <span class=" text-dark rounded-pill">(12)</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-              
-                <div class="card-fit p-4">
-                  <div class="card-body">
-                      <h6 class="text-dark fw-bold d-flex justify-content-between">
-                          <span>Price</span>
-                          <span>
-                              <i class="fas fa-chevron-down toggle-icon"></i>
-                          </span>
-                      </h6>
-          
-                      <div id="price" class="collapse show">
-                        <ul class="list-group list-group-flush">
-                          <li class="py-2 d-flex justify-content-between align-items-center">
-                              <div class="d-flex align-items-center">
-                                  <input class="form-check-input me-2" type="checkbox" id="goStays">
-                                  <label class="form-check-label" for="goStays">₹0 to ₹1500</label>
-                              </div>
-                              <span class=" text-dark rounded-pill">(567)</span>
-                          </li>
-                          <li class="py-2 d-flex justify-content-between align-items-center">
-                              <div class="d-flex align-items-center">
-                                  <input class="form-check-input me-2" type="checkbox" id="bookAt0">
-                                  <label class="form-check-label" for="bookAt0">
-                                    ₹1500 to ₹3000</label>
-                              </div>
-                              <span class=" text-dark rounded-pill">(788)</span>
-                          </li>
-                          <li class="py-2 d-flex justify-content-between align-items-center">
-                              <div class="d-flex align-items-center">
-                                  <input class="form-check-input me-2" type="checkbox" id="dailyStealDeal">
-                                  <label class="form-check-label" for="dailyStealDeal">
-                                    ₹3000 to ₹6000</label>
-                              </div>
-                              <span class=" text-dark rounded-pill">(430)</span>
-                          </li>
-                          <li class="py-2 d-flex justify-content-between align-items-center">
-                              <div class="d-flex align-items-center">
-                                  <input class="form-check-input me-2" type="checkbox" id="earlyBirdDeal">
-                                  <label class="form-check-label" for="earlyBirdDeal">₹6000 to ₹9000</label>
-                              </div>
-                              <span class=" text-dark rounded-pill">(88)</span>
-                          </li>
-                          <li class="py-2 d-flex justify-content-between align-items-center">
-                              <div class="d-flex align-items-center">
-                                  <input class="form-check-input me-2" type="checkbox" id="coupleFriendly">
-                                  <label class="form-check-label" for="coupleFriendly">
-                                    ₹9000 to ₹12000</label>
-                              </div>
-                              <span class=" text-dark rounded-pill">(49)</span>
-                          </li>
-                          <li class="py-2 d-flex justify-content-between align-items-center">
-                              <div class="d-flex align-items-center">
-                                  <input class="form-check-input me-2" type="checkbox" id="freeCancellation">
-                                  <label class="form-check-label" for="freeCancellation">
-                                    ₹12000 to ₹15000</label>
-                              </div>
-                              <span class=" text-dark rounded-pill">(27)</span>
-                          </li>
-                          <li class="py-2 d-flex justify-content-between align-items-center">
-                              <div class="d-flex align-items-center">
-                                  <input class="form-check-input me-2" type="checkbox" id="freeBreakfast">
-                                  <label class="form-check-label" for="freeBreakfast"> ₹15000 to ₹30000
-                                   </label>
-                              </div>
-                              <span class=" text-dark rounded-pill">(33)</span>
-                          </li>
-                          <li class="py-2 d-flex justify-content-between align-items-center">
-                              <div class="d-flex align-items-center">
-                                  <input class="form-check-input me-2" type="checkbox" id="businessFriendly">
-                                  <label class="form-check-label" for="businessFriendly">
-                                    ₹30000+</label>
-                              </div>
-                              <span class=" text-dark rounded-pill">(29)</span>
-                          </li>
-                    
-                      </ul>
-                      </div>
-                  </div>
-              </div>
-            
-              <div class="card-fit p-4">
-                <div class="card-body">
-                    <h6 class="text-dark fw-bold d-flex justify-content-between">
-                        <span>Location</span>
-                        <span>
-                            <i class="fas fa-chevron-down toggle-icon"></i>
-                        </span>
-                    </h6>
-        
-                    <div id="location" class="collapse show">
-                      <ul class="list-group list-group-flush">
-                        <li class="py-2 d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <input class="form-check-input me-2" type="checkbox" id="goStays">
-                                <label class="form-check-label" for="goStays">
-                                  Karol bagh</label>
-                            </div>
-                        </li>
-                        <li class="py-2 d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <input class="form-check-input me-2" type="checkbox" id="bookAt0">
-                                <label class="form-check-label" for="bookAt0">
-                                 Lajpat Nagar</label>
-                            </div>
-                        </li>
-                        <li class="py-2 d-flex justify-content-between align-items-center">
-                            <div class="d-flex align-items-center">
-                                <input class="form-check-input me-2" type="checkbox" id="dailyStealDeal">
-                                <label class="form-check-label" for="dailyStealDeal">
-                                  Mehrauli </label>
-                            </div>
-                        </li>
-                    </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card-fit p-4">
-              <div class="card-body">
-                  <h6 class="text-dark fw-bold d-flex justify-content-between">
-                      <span>Star rating</span>
-                      <span>
-                          <i class="fas fa-chevron-down toggle-icon"></i>
-                      </span>
-                  </h6>
-      
-                  <div id="starsrating" class="collapse show">
-                    <ul class="list-group list-group-flush">
-                      <li class="py-2 d-flex justify-content-between align-items-center">
-                          <div class="d-flex align-items-center">
-                              <input class="form-check-input me-2" type="checkbox" id="goStays">
-                              <label class="form-check-label" for="goStays"> 3 Star</label>
-                          </div>
-                          <span class=" text-dark rounded-pill">(1500)</span>
-                      </li>
-                      <li class="py-2 d-flex justify-content-between align-items-center">
-                          <div class="d-flex align-items-center">
-                              <input class="form-check-input me-2" type="checkbox" id="bookAt0">
-                              <label class="form-check-label" for="bookAt0">4 Star</label>
-                          </div>
-                          <span class=" text-dark rounded-pill">(1500)</span>
-                      </li>
-                      <li class="py-2 d-flex justify-content-between align-items-center">
-                          <div class="d-flex align-items-center">
-                              <input class="form-check-input me-2" type="checkbox" id="dailyStealDeal">
-                              <label class="form-check-label" for="dailyStealDeal">
-                              5 Star</label>
-                          </div>
-                          <span class=" text-dark rounded-pill">(1500)</span>
-                      </li>
-                  </ul>
-                  </div>
-              </div>
-          </div>
-
-          <div class="card-fit p-4">
-            <div class="card-body">
-                <h6 class="text-dark fw-bold d-flex justify-content-between">
-                    <span>User rating</span>
-                    <span>
-                        <i class="fas fa-chevron-down toggle-icon"></i>
-                    </span>
-                </h6>
-    
-                <div id="userrating" class="collapse show">
-                  <ul class="list-group list-group-flush">
-                    <li class="py-2 d-flex justify-content-between align-items-center">
-                        <div class="d-flex align-items-center">
-                            <input class="form-check-input me-2" type="checkbox" id="goStays">
-                            <label class="form-check-label" for="goStays"> 
-                              3+</label>
-                        </div>
-                        <span class=" text-dark rounded-pill">(1366)</span>
-                    </li>
-                    <li class="py-2 d-flex justify-content-between align-items-center">
-                        <div class="d-flex align-items-center">
-                            <input class="form-check-input me-2" type="checkbox" id="bookAt0">
-                            <label class="form-check-label" for="bookAt0">
-                              4+</label>
-                        </div>
-                        <span class=" text-dark rounded-pill">(564)</span>
-                    </li>
-                    <li class="py-2 d-flex justify-content-between align-items-center">
-                        <div class="d-flex align-items-center">
-                            <input class="form-check-input me-2" type="checkbox" id="dailyStealDeal">
-                            <label class="form-check-label" for="dailyStealDeal">
-                            3.5+</label>
-                        </div>
-                        <span class=" text-dark rounded-pill">(1056)</span>
-                    </li>
-                    <li class="py-2 d-flex justify-content-between align-items-center">
-                      <div class="d-flex align-items-center">
-                          <input class="form-check-input me-2" type="checkbox" id="dailyStealDeal">
-                          <label class="form-check-label" for="dailyStealDeal">
-                          4.5+</label>
-                      </div>
-                      <span class=" text-dark rounded-pill">(134)</span>
-                  </li>
-                </ul>
-                </div>
-            </div>
-        </div>
-
-          </div>
-      </aside>
-
         <!-- Start Main Section -->
-        <main class="col-md-8 main-section pb-5">
+        <main class="col-md-9 main-section py-5">
+            <div class="container mt-4" style="font-size: 13px;">
+                <div class="property-info p-4">
+                    <div class="d-flex align-items-center">
+                        <img src="assets/hotel-2.jpg" alt="Hotel Image" class="hotel-image me-3">
+                        <div>
+                            <i class="bi bi-star-fill star-icon"></i>
+                            <i class="bi bi-star-fill star-icon"></i>
+                            <i class="bi bi-star-fill star-icon"></i>
+                            <i class="bi bi-star-fill star-icon"></i>
+                            <i class="bi bi-star-fill star-icon"></i>
 
-      <div class="container mt-4 hotels-section">
-        <div class="row justify-content-center">
-            <div class="col-lg-12 col-md-10 col-sm-12">
-                <div class="hotel-card p-3 d-flex flex-column flex-md-row align-items-center">
-                  <a href="tree-hotel.html" class="hotel-image me-md-3 mb-3 mb-md-0"> 
-                    <img src="assets/hotel-1.jpg" alt="Hotel">
-                  </a>
+                            <h5>Radisson Blu Plaza Delhi Airport</h5>
+                            <p><i class="bi bi-geo-alt"></i> National Highway 8</p>
+                            <span class="rating">4.3/5</span> <small>3084 Ratings</small>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p><strong>Check-In:</strong> Sat, 05 Apr, 2025 (11:00 AM)</p>
+                            <p><strong>Check-Out:</strong> Sat, 05 Apr, 2025 (4:30 PM)</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p><strong>Guests:</strong> 2 Guests | 1 Room</p>
+                        </div>
+                    </div>
+                    <div class="alert alert-success">Great Choice! You are saving ₹1000 with your booking</div>
+                    <div class="border p-3 rounded mb-2">
+                        <p><strong>1x Day Use Room</strong> (Check-in and Check-out on same day)</p>
+                        <p><strong>Room Type:</strong> Room Only <span class="non-refundable">Non-Refundable</span></p>
+                        <p><strong>Includes:</strong></p>
+                        <ul>
+                            <li>INR 500 credit on Spa services</li>
+                            <li>Free Pickup and Drop to Worldmark Aerocity (subject to availability)</li>
+                        </ul>
+                        <a href="#" class="text-primary text-decoration-none" data-bs-toggle="modal" data-bs-target="#policyModals" style="font-size: 13px; font-weight: 600; cursor: pointer;">
+                            View Booking & Cancellation Policy
+                        </a>
+                    </div>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="policyModals" tabindex="-1" aria-labelledby="policyModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="policyModalLabel">Booking & Cancellation Policy</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                <!-- Must Read Section -->
+                                 
+                                    <div class="policy-section">
+                                        <h3 class="section-header">Must read</h3>
+                                        <ul class="policy-list">
+                                            <li class="policy-item">Primary guest should be at least 18 years of age</li>
+                                            <li class="policy-item">Passport, Aadhar, Driving License and Govt. ID are accepted as ID proof(s)</li>
+                                            <li class="policy-item">Pets are not allowed</li>
+                                            <li class="policy-item">Outside food is not allowed</li>
+                                            <!-- Add other list items similarly -->
+                                        </ul>
+                                    </div>
+                    
+                            <!-- Guest Profile Section -->
+                            <div class="policy-section">
+                                <h3 class="section-header">Guest Profile</h3>
+                                <ul class="policy-list">
+                                    <li class="policy-item">Unmarried couples allowed</li>
+                                    <li class="policy-item">Primary guest should be at least 18 years of age</li>
+                                </ul>
+                            </div>
+                    
+                            <!-- Other Sections (repeat same structure) -->
+                            <!-- Add all other sections following the same pattern -->
+                    
+                            <!-- Non-refundable Policy -->
+                            <div class="non-refundable-alert">
+                                <p class="mb-0"><strong>This booking is non-refundable and the tariff cannot be cancelled with zero fee.</strong></p>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                   
+                </div>
+            </div>
+
+            <!-- Cancellation & Date Change Policy -->
+
+            <div class="container mt-4" style="font-size: 12px;">
+                <div class="demos-lines py-5">
+                    <div class="card shadow-sm border-0 p-4 mx-auto" style="background: linear-gradient(300deg, rgb(255, 255, 255) 0%, rgb(255, 236, 229) 100%);">
+                      <div class="card-body">
+                        <img src="https://gos3.ibcdn.com/non_gotribe-1713424944.png" 
+                             alt="gotribe" 
+                             class="img-fluid mx-auto d-block mb-3"
+                             style="max-width: 120px;">
                   
-                    <div class="flex-grow-1">
-                        <h6 class="fw-bold">Lemon Tree Premier Delhi Airport <span class="text-warning">★★★☆☆</span></h6>
-                        <p class="hotels-text">Calangute | 6 minutes walk to Calangute Beach</p>
-                        <span class="badge bg-secondary">Couple Friendly</span>
-                        <p class="text-muted small">Near Calangute Beach, stunning pool area surrounded by lush greenery, rooms with pool views.</p>
-                    </div>
-                    <div class="text-md-end text-center">
-                        <span class="badge-custom">Very Good 4.0</span>
-                        <p class="small-fonts text-muted">(5516 Ratings)</p>
-                        <p class="text-decoration-line-through text-muted">₹2,700</p>
-                        <h6 class="text-danger fw-bold">₹1,796</h6>
-                        <p class="small-fonts text-muted">+ ₹551 taxes & fees Per Night</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                        <h5 class="fw-bold mb-3">
+                          Complete this booking* and unlock goTribe1
+                        </h5>
+                        
+                        <p class="text-muted mb-4">
+                          Use additional benefits on your next bookings.
+                        </p>
+                  
+                        <div class="text-left mb-4">
+                          <ul class="list-unstyled">
+                            <li class="d-flex align-items-center gap-2 mb-3">
+                              <img src="https://gos3.ibcdn.com/orange_tick-1713424997.png" 
+                                   alt="tick" 
+                                   style="width: 20px;">
+                              <span><strong>10% discount</strong> on stays</span>
+                            </li>
+                            <li class="d-flex align-items-center gap-2">
+                              <img src="https://gos3.ibcdn.com/orange_tick-1713424997.png" 
+                                   alt="tick" 
+                                   style="width: 20px;">
+                              <span><strong>₹100</strong> welcome cashback*</span>
+                            </li>
+                          </ul>
+                          
+                          <hr class="my-4">
+                          
+                      <!-- View All Benefits Link -->
+                   <!-- View All Benefits Link -->
+                        <a href="#" class="text-decoration-none" 
+                        style="color: #FF6B35; font-weight: 500;" 
+                        data-bs-toggle="modal" data-bs-target="#benefitsModal">
+                        View all benefits →
+                        </a>
 
-      <div class="container mt-4 hotels-section">
-        <div class="row justify-content-center">
-            <div class="col-lg-12 col-md-10 col-sm-12">
-                <div class="hotel-card p-3 d-flex flex-column flex-md-row align-items-center">
-                    <img src="assets/hotel-2.jpg" alt="Hotel" class="hotel-image me-md-3 mb-3 mb-md-0">
-                    <div class="flex-grow-1">
-                        <h6 class="fw-bold">Hotel Chanchal Continental <span class="text-warning">★★★☆☆</span></h6>
-                        <p class="hotels-text">Calangute | 6 minutes walk to Calangute Beach</p>
-                        <span class="badge bg-secondary">Couple Friendly</span>
-                        <p class="text-muted small">Near Calangute Beach, stunning pool area surrounded by lush greenery, rooms with pool views.</p>
-                    </div>
-                    <div class="text-md-end text-center">
-                        <span class="badge-custom">Very Good 4.0</span>
-                        <p class="small-fonts text-muted">(5516 Ratings)</p>
-                        <p class="text-decoration-line-through text-muted">₹2,700</p>
-                        <h6 class="text-danger fw-bold">₹1,796</h6>
-                        <p class="small-fonts text-muted">+ ₹551 taxes & fees Per Night</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                        <!-- Benefits Modal -->
+                        <div class="modal fade" id="benefitsModal" tabindex="-1" aria-labelledby="benefitsModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header border-0 pb-0">
+                                    <h5 class="modal-title fs-4">Enjoy exclusive benefits with goTribe loyalty program</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                
+                                <div class="modal-body">
+                                    <div class="row g-4">
+                                        <!-- Tier 1 -->
+                                        <div class="col-12">
+                                            <div class="card h-100 border-0 shadow-sm">
+                                                <div class="card-body position-relative">
+                                                    <img src="https://go-assets.ibcdn.com/u/GI/images/1714543792216-GO_TRIBE_TIER_1_INACTIVE.png" 
+                                                        class="position-absolute top-0 start-0 mt-3 ms-3" style="width: 60px;">
+                                                    <h5 class="card-title mb-4 ps-5">
+                                                        Completing 1 Stay* makes you eligible for <b>goTribe1</b> membership
+                                                    </h5>
+                                                    <h6 class="text-muted mb-3">Unlock these benefits</h6>
+                                                    <ul class="list-unstyled">
+                                                        <li class="d-flex align-items-center mb-3">
+                                                            <img src="https://gos3.ibcdn.com/offer_grey-1713783474.png" class="me-3" style="width: 32px;">
+                                                            <div>
+                                                                <p class="mb-0 fw-bold">Get ₹100 goCash</p>
+                                                                <small class="text-muted">as goTribe welcome benefit</small>
+                                                            </div>
+                                                        </li>
+                                                        <li class="d-flex align-items-center">
+                                                            <img src="https://gos3.ibcdn.com/offer_grey-1713784822.png" class="me-3" style="width: 32px;">
+                                                            <div>
+                                                                <p class="mb-0 fw-bold">10% Off</p>
+                                                                <small class="text-muted">on Stays</small>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
 
-    <div class="container mt-4 hotels-section">
-      <div class="row justify-content-center">
-          <div class="col-lg-12 col-md-10 col-sm-12">
-              <div class="hotel-card p-3 d-flex flex-column flex-md-row align-items-center">
-                  <img src="assets/hotel-3.jpg" alt="Hotel" class="hotel-image me-md-3 mb-3 mb-md-0">
-                  <div class="flex-grow-1">
-                      <h6 class="fw-bold">
-                        Radisson Blu Hotel New Delhi Dwarka <span class="text-warning">★★★☆☆</span></h6>
-                      <p class="hotels-text">Calangute | 6 minutes walk to Calangute Beach</p>
-                      <span class="badge bg-secondary">Couple Friendly</span>
-                      <p class="text-muted small">Near Calangute Beach, stunning pool area surrounded by lush greenery, rooms with pool views.</p>
+                                        <!-- Tier 2 -->
+                                        <div class="col-12">
+                                            <div class="card h-100 border-0 shadow-sm">
+                                                <div class="card-body position-relative">
+                                                    <img src="https://go-assets.ibcdn.com/u/GI/images/1714543839077-GO_TRIBE_TIER_2_INACTIVE.png" 
+                                                        class="position-absolute top-0 start-0 mt-3 ms-3" style="width: 60px;">
+                                                    <h5 class="card-title mb-4 ps-5">
+                                                        Completing 3 bookings* makes you eligible for <b>goTribe2</b> membership
+                                                    </h5>
+                                                    <h6 class="text-muted mb-3">Unlock these benefits</h6>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <ul class="list-unstyled">
+                                                                <li class="d-flex align-items-center mb-3">
+                                                                    <img src="https://gos3.ibcdn.com/offer_grey-1713783474.png" class="me-3" style="width: 32px;">
+                                                                    <div>
+                                                                        <p class="mb-0 fw-bold">15% Off</p>
+                                                                        <small class="text-muted">on Stays</small>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <ul class="list-unstyled">
+                                                                <li class="d-flex align-items-center mb-3">
+                                                                    <img src="https://gos3.ibcdn.com/offer_grey-1713784822.png" class="me-3" style="width: 32px;">
+                                                                    <div>
+                                                                        <p class="mb-0 fw-bold">Free Breakfast</p>
+                                                                        <small class="text-muted">on Weekend Stays</small>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Tier 3 -->
+                                        <div class="col-12">
+                                            <div class="card h-100 border-0 shadow-sm">
+                                                <div class="card-body position-relative">
+                                                    <img src="https://go-assets.ibcdn.com/u/GI/images/1714556041929-GO_TRIBE_TIER_3_INACTIVE.png" 
+                                                        class="position-absolute top-0 start-0 mt-3 ms-3" style="width: 60px;">
+                                                    <h5 class="card-title mb-4 ps-5">
+                                                        Completing 5 bookings* makes you eligible for <b>goTribe3</b> membership
+                                                    </h5>
+                                                    <h6 class="text-muted mb-3">Unlock these benefits</h6>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <ul class="list-unstyled">
+                                                                <li class="d-flex align-items-center mb-3">
+                                                                    <img src="https://gos3.ibcdn.com/offer_grey-1713783474.png" class="me-3" style="width: 32px;">
+                                                                    <div>
+                                                                        <p class="mb-0 fw-bold">20% Off</p>
+                                                                        <small class="text-muted">on All Stays</small>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <ul class="list-unstyled">
+                                                                <li class="d-flex align-items-center mb-3">
+                                                                    <img src="https://gos3.ibcdn.com/offer_grey-1713784822.png" class="me-3" style="width: 32px;">
+                                                                    <div>
+                                                                        <p class="mb-0 fw-bold">Room Upgrade</p>
+                                                                        <small class="text-muted">Priority Upgrade</small>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer border-0 pt-0">
+                                    <button type="button" class="btn btn-primary w-100 py-3" data-bs-dismiss="modal">Continue Booking</button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        
+                        <!-- <script>
+                            document.addEventListener("DOMContentLoaded", function() {
+                                var myModal = new bootstrap.Modal(document.getElementById('benefitsModal'), {
+                                    keyboard: false
+                                });
+                                myModal.show();
+                            });
+                        </script> -->
+           
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="text-md-end text-center">
-                      <span class="badge-custom">Very Good 4.0</span>
-                      <p class="small-fonts text-muted">(5516 Ratings)</p>
-                      <p class="text-decoration-line-through text-muted">₹2,700</p>
-                      <h6 class="text-danger fw-bold">₹1,796</h6>
-                      <p class="small-fonts text-muted">+ ₹551 taxes & fees Per Night</p>
+            </div>
+
+            <!-- Form Section -->
+            <section class="bg-white p-2">
+                <div class="guest-details">
+                    <h3 class="fw-bold"> GUEST DETAILS</h3>
+                  
+                    <div class="table-container form-section" style="display: flex; gap: 10px; align-items: center;">
+                      <div>
+                        <label for="title" class="label">Title</label>
+                        <select class="input-field">
+                          <option value="mr">Mr</option>
+                          <option value="mrs">Mrs</option>
+                          <option value="ms">Ms</option>
+                          <option value="dr">Dr</option>
+                          <option value="prof">Prof</option>
+                        </select>
+                      </div>
+                    
+                      <div>
+                        <label for="first-name" class="label">First Name</label>
+                        <input type="text" class="input-field" value="Deepak Rajput">
+                      </div>
+                    
+                      <div>
+                        <label for="last-name" class="label">Last Name</label>
+                        <input type="text" class="input-field" placeholder="Enter Last Name">
+                      </div>
+                    </div>
+                    
+                    <div class="form-section py-4">
+                      <span class="label">Email Address (Your booking voucher will be sent to this email address)</span>
+                      <input type="text" class="input-field" placeholder="milancreation1401@gmail.com">
+                    </div>
+
+                    <div class="form-section" style="display: flex; gap: 10px; align-items: center;">
+                      <label class="label col-lg-2"> Mobile Number </label><br>
+                      <select class="info-text"> 
+                        <option value="+91">+91 India</option>
+                        <option value="+1">+1 USA</option>
+                        <option value="+44">+44 UK</option>
+                        <option value="+61">+61 Australia</option>
+                        <option value="+81">+81 Japan</option>
+                      </select>
+                    
+                      <input type="text" class="info-text" placeholder="123 0000 000">
+                    </div>
+                    
+                    <div class="form-section col-lg-5 py-4" style="display: flex; align-items: center; gap:8px;">
+                      <input type="checkbox" id="gstCheckbox">
+                      <span class="label pt-2">Enter GST Details (Optional)</span>
                   </div>
+                  
+                  <div class="container py-5" id="businessProfile" style="display: none;">
+                      <div class="form-section">                        
+                          <div class="row mb-4">
+                              <div class="col-12">
+                                  <h5 class=" fw-bold">BUSINESS PROFILE</h5>
+                              </div>
+                          </div>
+                  
+                          <!-- GST Number and Company Name Row -->
+                          <div class="row mb-4">
+                              <div class="col-md-6 mb-3 mb-md-0">
+                                  <label class=" label">GST Number</label>
+                                  <input type="text" class="form-control" placeholder="EG: 06BZAHM6385P6Z2">
+                                  <small class="example-text">Example format: 06BZAHM6385P6Z2</small>
+                              </div>
+                              <div class="col-md-6">
+                                  <label class="form-label">Company Name</label>
+                                  <input type="text" class="form-control" placeholder="Enter Company Name">
+                              </div>
+                          </div>
+                  
+                          <!-- Business Email -->
+                          <div class="row mb-4">
+                              <div class="col-12">
+                                  <label class="form-label">Business Email ID</label>
+                                  <input type="email" class="form-control" placeholder="Enter Email Address">
+                              </div>
+                          </div>
+                  
+                          <!-- Company Address -->
+                          <div class="row mb-4">
+                              <div class="col-12">
+                                  <label class="form-label">Company Address</label>
+                                  <input type="text" class="form-control" placeholder="Enter Company Address">
+                              </div>
+                          </div>
+                  
+                          <!-- Phone Number and Admin Email -->
+                          <div class="row">
+                              <div class="col-md-6 mb-3 mb-md-0">
+                                  <label class="form-label">Company Phone Number</label>
+                                  <input type="tel" class="form-control" placeholder="Enter Phone Number">
+                              </div>
+                              <div class="col-md-6">
+                                  <label class="form-label">Admin Email ID</label>
+                                  <input type="email" class="form-control" placeholder="Enter Email Address">
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  
+                  <script>
+                      document.getElementById("gstCheckbox").addEventListener("change", function() {
+                          var businessProfile = document.getElementById("businessProfile");
+                          businessProfile.style.display = this.checked ? "block" : "none";
+                      });
+                  </script>
+                
+                  </div>
+              
+            </section>
+
+            <!-- Pincode and state  -->
+            <div class="container">
+              <div class="billing-wrapper shadow-sm">
+                  <h2 class="h4 mb-3">Your pincode and state</h2>
+                  <p class="instruction-text">(Required for GST purpose on your tax invoice. You can edit this anytime later in your profile section.)</p>
+                  
+                  <form>
+                      <div class="mb-4">
+                          <div class="form-floating">
+                              <input type="text" class="form-control" id="billingAddress" placeholder="Enter Billing Address">
+                              <label for="billingAddress">Enter Billing Address</label>
+                          </div>
+                      </div>
+                      
+                      <div class="mb-4">
+                          <div class="form-floating">
+                              <input type="tel" class="form-control" id="pincode" placeholder="Enter Pincode" maxlength="6">
+                              <label for="pincode">Enter Pincode</label>
+                          </div>
+                      </div>
+                      
+                      <div class="mb-4">
+                          <div class="state-selector">
+                              <select class="form-select border-0 p-2">
+                                  <option selected>Punjab</option>
+                                  <!-- Add other state options here -->
+                              </select>
+                          </div>
+                      </div>
+                      
+                      <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="confirmCheck">
+                          <label class="form-check-label checkbox-label" for="confirmCheck">
+                              Confirm and save billing details to your profile
+                          </label>
+                      </div>
+                  </form>
               </div>
           </div>
-      </div>
-  </div>
 
-  <div class="container mt-4 hotels-section">
-    <div class="row justify-content-center">
-        <div class="col-lg-12 col-md-10 col-sm-12">
-            <div class="hotel-card p-3 d-flex flex-column flex-md-row align-items-center">
-                <img src="assets/hotel-3.jpg" alt="Hotel" class="hotel-image me-md-3 mb-3 mb-md-0">
-                <div class="flex-grow-1">
-                    <h6 class="fw-bold">
-                      Radisson Blu Hotel New Delhi Dwarka <span class="text-warning">★★★☆☆</span></h6>
-                    <p class="hotels-text">Calangute | 6 minutes walk to Calangute Beach</p>
-                    <span class="badge bg-secondary">Couple Friendly</span>
-                    <p class="text-muted small">Near Calangute Beach, stunning pool area surrounded by lush greenery, rooms with pool views.</p>
+            <!-- IMPORTANT INFORMATION -->
+            <div class="container mt-4 border rounded">
+              <div class="payment-container">
+                <h5 class="mb-3 fw-bold">SELECT PAYMENT OPTION</h5>
+                
+                <div class="alert-note">
+                    <div>📌 Book @ ₹0 not available</div>
+                    <div>Login to book this property @ ₹0</div>
                 </div>
-                <div class="text-md-end text-center">
-                    <span class="badge-custom">Very Good 4.0</span>
-                    <p class="small-fonts text-muted">(5516 Ratings)</p>
-                    <p class="text-decoration-line-through text-muted">₹2,700</p>
-                    <h6 class="text-danger fw-bold">₹1,796</h6>
-                    <p class="small-fonts text-muted">+ ₹551 taxes & fees Per Night</p>
+        
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="paymentOption">
+                    <label class="form-check-label" for="paymentOption">
+                        Pay entire ₹2816 now
+                    </label>
+                </div>
+        
+                <div class="divider"></div>
+        
+                <button class="login-btn">
+                    Login To Book @ ₹0
+                </button>
+        
+                <div class="text-center mt-3 text-muted" style="font-size: 0.8rem;">
+                    👍 By proceeding, I agree to Goibibo's Privacy Policy , User Agreement & Terms of Service
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+            </div>
+ 
+          <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                  const travellers = JSON.parse(localStorage.getItem("travellers")) || {
+                      adults: 1,
+                      children: 0,
+                      infants: 0
+                  };
 
+                  const travellerContainer = document.getElementById("traveller-forms");
 
-<div class="container mt-4 hotels-section">
-  <div class="row justify-content-center">
-      <div class="col-lg-12 col-md-10 col-sm-12">
-          <div class="hotel-card p-3 d-flex flex-column flex-md-row align-items-center">
-              <img src="assets/hotel-3.jpg" alt="Hotel" class="hotel-image me-md-3 mb-3 mb-md-0">
-              <div class="flex-grow-1">
-                  <h6 class="fw-bold">
-                    Radisson Blu Hotel New Delhi Dwarka <span class="text-warning">★★★☆☆</span></h6>
-                  <p class="hotels-text">Calangute | 6 minutes walk to Calangute Beach</p>
-                  <span class="badge bg-secondary">Couple Friendly</span>
-                  <p class="text-muted small">Near Calangute Beach, stunning pool area surrounded by lush greenery, rooms with pool views.</p>
-              </div>
-              <div class="text-md-end text-center">
-                  <span class="badge-custom">Very Good 4.0</span>
-                  <p class="small-fonts text-muted">(5516 Ratings)</p>
-                  <p class="text-decoration-line-through text-muted">₹2,700</p>
-                  <h6 class="text-danger fw-bold">₹1,796</h6>
-                  <p class="small-fonts text-muted">+ ₹551 taxes & fees Per Night</p>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
+                  function createTravellerForm(index, type) {
+                      return `
+                          <div class="accordion" id="accordion-${type}-${index}">
+                              <div class="accordion-item">
+                                  <h2 class="accordion-header">
+                                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${type}-${index}">
+                                          ${type} ${index}
+                                      </button>
+                                  </h2>
+                                  <div id="collapse-${type}-${index}" class="accordion-collapse collapse show">
+                                      <div class="accordion-body">
+                                          <div class="row">
+                                              <div class="col-md-3">
+                                                  <select class="form-control">
+                                                      <option>GENDER</option>
+                                                      <option>Male</option>
+                                                      <option>Female</option>
+                                                  </select>
+                                              </div>
+                                              <div class="col-md-5">
+                                                  <input type="text" class="form-control" placeholder="First & Middle Name">
+                                              </div>
+                                              <div class="col-md-4">
+                                                  <input type="text" class="form-control" placeholder="Last Name">
+                                              </div>
+                                          </div>
+                                          ${type === "Adult" ? `
+                                          <div class="mt-3">
+                                              <input type="email" class="form-control" placeholder="Email">
+                                              <small class="text-muted">Your ticket will be sent to this email address</small>
+                                          </div>
+                                          <div class="mt-3 row">
+                                              <div class="col-md-2">
+                                                  <select class="form-control" name="COUNTRY_NAME"><option value="">Code</option><option value="91_India">+91</option><option value="93_Afghanistan">+93</option><option value="213_Algeria">+213</option><option value="1_American Samoa">+1</option><option value="376_Andorra">+376</option><option value="244_Angola">+244</option><option value="1_Anguilla">+1</option><option value="672_Antarctica">+672</option><option value="1_Antigua and Barbuda">+1</option><option value="54_Argentina">+54</option><option value="374_Armenia">+374</option><option value="297_Aruba">+297</option><option value="61_Australia">+61</option><option value="43_Austria">+43</option><option value="994_Azerbaijan">+994</option><option value="1_Bahamas">+1</option><option value="973_Bahrain">+973</option><option value="880_Bangladesh">+880</option><option value="1_Barbados">+1</option><option value="32_Belgium">+32</option><option value="501_Belize">+501</option><option value="229_Benin">+229</option><option value="1_Bermuda">+1</option><option value="975_Bhutan">+975</option><option value="591_Bolivia">+591</option><option value="267_Botswana">+267</option><option value="55_Brazil">+55</option><option value="246_British Indian Ocean Territory">+246</option><option value="1_British Virgin Islands">+1</option><option value="673_Brunei">+673</option><option value="226_Burkina Faso">+226</option><option value="257_Burundi">+257</option><option value="855_Cambodia">+855</option><option value="237_Cameroon">+237</option><option value="1_Canada">+1</option><option value="238_Cape Verde">+238</option><option value="1_Cayman Islands">+1</option><option value="236_Central African Republic">+236</option><option value="235_Chad">+235</option><option value="56_Chile">+56</option><option value="86_China">+86</option><option value="61_Christmas Island">+61</option><option value="61_Cocos Islands">+61</option><option value="57_Colombia">+57</option><option value="269_Comoros">+269</option><option value="682_Cook Islands">+682</option><option value="506_Costa Rica">+506</option><option value="599_Curacao">+599</option><option value="357_Cyprus">+357</option><option value="420_Czech Republic">+420</option><option value="45_Denmark">+45</option><option value="253_Djibouti">+253</option><option value="1_Dominica">+1</option><option value="1809_Dominican Republic">+1809</option><option value="670_East Timor">+670</option><option value="593_Ecuador">+593</option><option value="20_Egypt">+20</option><option value="503_El Salvador">+503</option><option value="240_Equatorial Guinea">+240</option><option value="291_Eritrea">+291</option><option value="372_Estonia">+372</option><option value="251_Ethiopia">+251</option><option value="500_Falkland Islands">+500</option><option value="298_Faroe Islands">+298</option><option value="679_Fiji">+679</option><option value="358_Finland">+358</option><option value="33_France">+33</option><option value="689_French Polynesia">+689</option><option value="241_Gabon">+241</option><option value="220_Gambia">+220</option><option value="995_Georgia">+995</option><option value="49_Germany">+49</option><option value="233_Ghana">+233</option><option value="350_Gibraltar">+350</option><option value="30_Greece">+30</option><option value="299_Greenland">+299</option><option value="1_Grenada">+1</option><option value="1_Guam">+1</option><option value="502_Guatemala">+502</option><option value="1_Guernsey">+1</option><option value="224_Guinea">+224</option><option value="245_Guinea-Bissau">+245</option><option value="592_Guyana">+592</option><option value="509_Haiti">+509</option><option value="504_Honduras">+504</option><option value="852_Hong Kong">+852</option><option value="36_Hungary">+36</option><option value="354_Iceland">+354</option><option value="62_Indonesia">+62</option><option value="353_Ireland">+353</option><option value="1_Isle of Man">+1</option><option value="972_Israel">+972</option><option value="39_Italy">+39</option><option value="1_Jamaica">+1</option><option value="81_Japan">+81</option><option value="1_Jersey">+1</option><option value="962_Jordan">+962</option><option value="7_Kazakhstan">+7</option><option value="254_Kenya">+254</option><option value="686_Kiribati">+686</option><option value="965_Kuwait">+965</option><option value="996_Kyrgyzstan">+996</option><option value="856_Laos">+856</option><option value="371_Latvia">+371</option><option value="961_Lebanon">+961</option><option value="266_Lesotho">+266</option><option value="218_Libya">+218</option><option value="423_Liechtenstein">+423</option><option value="370_Lithuania">+370</option><option value="352_Luxembourg">+352</option><option value="853_Macau">+853</option><option value="261_Madagascar">+261</option><option value="265_Malawi">+265</option><option value="60_Malaysia">+60</option><option value="960_Maldives">+960</option><option value="223_Mali">+223</option><option value="356_Malta">+356</option><option value="692_Marshall Islands">+692</option><option value="222_Mauritania">+222</option><option value="230_Mauritius">+230</option><option value="262_Mayotte">+262</option><option value="52_Mexico">+52</option><option value="691_Micronesia">+691</option><option value="373_Moldova">+373</option><option value="377_Monaco">+377</option><option value="976_Mongolia">+976</option><option value="1_Montserrat">+1</option><option value="212_Morocco">+212</option><option value="258_Mozambique">+258</option><option value="95_Myanmar">+95</option><option value="264_Namibia">+264</option><option value="674_Nauru">+674</option><option value="977_Nepal">+977</option><option value="31_Netherlands">+31</option><option value="599_Netherlands Antilles">+599</option><option value="687_New Caledonia">+687</option><option value="64_New Zealand">+64</option><option value="505_Nicaragua">+505</option><option value="227_Niger">+227</option><option value="234_Nigeria">+234</option><option value="683_Niue">+683</option><option value="1_Northern Mariana Islands">+1</option><option value="47_Norway">+47</option><option value="968_Oman">+968</option><option value="92_Pakistan">+92</option><option value="680_Palau">+680</option><option value="970_Palestine">+970</option><option value="507_Panama">+507</option><option value="675_Papua New Guinea">+675</option><option value="595_Paraguay">+595</option><option value="51_Peru">+51</option><option value="63_Philippines">+63</option><option value="64_Pitcairn">+64</option><option value="48_Poland">+48</option><option value="351_Portugal">+351</option><option value="1_Puerto Rico">+1</option><option value="974_Qatar">+974</option><option value="242_Republic of the Congo">+242</option><option value="262_Reunion">+262</option><option value="40_Romania">+40</option><option value="7_Russia">+7</option><option value="250_Rwanda">+250</option><option value="590_Saint Barthelemy">+590</option><option value="290_Saint Helena">+290</option><option value="1_Saint Kitts and Nevis">+1</option><option value="1_Saint Lucia">+1</option><option value="590_Saint Martin">+590</option><option value="508_Saint Pierre and Miquelon">+508</option><option value="1_Saint Vincent and the Grenadines">+1</option><option value="685_Samoa">+685</option><option value="378_San Marino">+378</option><option value="239_Sao Tome and Principe">+239</option><option value="966_Saudi Arabia">+966</option><option value="221_Senegal">+221</option><option value="248_Seychelles">+248</option><option value="232_Sierra Leone">+232</option><option value="65_Singapore">+65</option><option value="1_Sint Maarten">+1</option><option value="421_Slovakia">+421</option><option value="677_Solomon Islands">+677</option><option value="252_Somalia">+252</option><option value="27_South Africa">+27</option><option value="82_South Korea">+82</option><option value="211_South Sudan">+211</option><option value="34_Spain">+34</option><option value="94_Sri Lanka">+94</option><option value="597_Suriname">+597</option><option value="47_Svalbard and Jan Mayen">+47</option><option value="268_Swaziland">+268</option><option value="46_Sweden">+46</option><option value="41_Switzerland">+41</option><option value="886_Taiwan">+886</option><option value="992_Tajikistan">+992</option><option value="255_Tanzania">+255</option><option value="66_Thailand">+66</option><option value="228_Togo">+228</option><option value="690_Tokelau">+690</option><option value="676_Tonga">+676</option><option value="1_Trinidad and Tobago">+1</option><option value="216_Tunisia">+216</option><option value="90_Turkey">+90</option><option value="993_Turkmenistan">+993</option><option value="1_Turks and Caicos Islands">+1</option><option value="688_Tuvalu">+688</option><option value="1_U.S. Virgin Islands">+1</option><option value="256_Uganda">+256</option><option value="971_United Arab Emirates">+971</option><option value="44_United Kingdom">+44</option><option value="1_United States">+1</option><option value="598_Uruguay">+598</option><option value="998_Uzbekistan">+998</option><option value="678_Vanuatu">+678</option><option value="379_Vatican">+379</option><option value="58_Venezuela">+58</option><option value="84_Vietnam">+84</option><option value="681_Wallis and Futuna">+681</option><option value="212_Western Sahara">+212</option><option value="967_Yemen">+967</option><option value="260_Zambia">+260</option></select>
+                                              </div>
+                                              <div class="col-md-10">
+                                                  <input type="text" class="form-control" placeholder="Mobile Number">
+                                              </div>
+                                          </div>
+                                          ` : ""}
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      `;
+                  }
 
+                  // Use a single operation to update the DOM instead of multiple +=
+                  let travellerFormsHTML = "";
 
+                  for (let i = 1; i <= travellers.adults; i++) {
+                      travellerFormsHTML += createTravellerForm(i, "Adult");
+                  }
+                  for (let i = 1; i <= travellers.children; i++) {
+                      travellerFormsHTML += createTravellerForm(i, "Child");
+                  }
+                  for (let i = 1; i <= travellers.infants; i++) {
+                      travellerFormsHTML += createTravellerForm(i, "Infant");
+                  }
 
-<div class="container mt-4 hotels-section">
-  <div class="row justify-content-center">
-      <div class="col-lg-12 col-md-10 col-sm-12">
-          <div class="hotel-card p-3 d-flex flex-column flex-md-row align-items-center">
-              <img src="assets/hotel-3.jpg" alt="Hotel" class="hotel-image me-md-3 mb-3 mb-md-0">
-              <div class="flex-grow-1">
-                  <h6 class="fw-bold">
-                    Radisson Blu Hotel New Delhi Dwarka <span class="text-warning">★★★☆☆</span></h6>
-                  <p class="hotels-text">Calangute | 6 minutes walk to Calangute Beach</p>
-                  <span class="badge bg-secondary">Couple Friendly</span>
-                  <p class="text-muted small">Near Calangute Beach, stunning pool area surrounded by lush greenery, rooms with pool views.</p>
-              </div>
-              <div class="text-md-end text-center">
-                  <span class="badge-custom">Very Good 4.0</span>
-                  <p class="small-fonts text-muted">(5516 Ratings)</p>
-                  <p class="text-decoration-line-through text-muted">₹2,700</p>
-                  <h6 class="text-danger fw-bold">₹1,796</h6>
-                  <p class="small-fonts text-muted">+ ₹551 taxes & fees Per Night</p>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
-
-
-
-<div class="container mt-4 hotels-section">
-  <div class="row justify-content-center">
-      <div class="col-lg-12 col-md-10 col-sm-12">
-          <div class="hotel-card p-3 d-flex flex-column flex-md-row align-items-center">
-              <img src="assets/hotel-3.jpg" alt="Hotel" class="hotel-image me-md-3 mb-3 mb-md-0">
-              <div class="flex-grow-1">
-                  <h6 class="fw-bold">
-                    Radisson Blu Hotel New Delhi Dwarka <span class="text-warning">★★★☆☆</span></h6>
-                  <p class="hotels-text">Calangute | 6 minutes walk to Calangute Beach</p>
-                  <span class="badge bg-secondary">Couple Friendly</span>
-                  <p class="text-muted small">Near Calangute Beach, stunning pool area surrounded by lush greenery, rooms with pool views.</p>
-              </div>
-              <div class="text-md-end text-center">
-                  <span class="badge-custom">Very Good 4.0</span>
-                  <p class="small-fonts text-muted">(5516 Ratings)</p>
-                  <p class="text-decoration-line-through text-muted">₹2,700</p>
-                  <h6 class="text-danger fw-bold">₹1,796</h6>
-                  <p class="small-fonts text-muted">+ ₹551 taxes & fees Per Night</p>
-              </div>
-          </div>
-      </div>
-  </div>
-</div>
+                  travellerContainer.innerHTML = travellerFormsHTML; // Efficient DOM update
+              });
+          </script>
 
         </main>
         <!-- Main Section Ending -->
 
+        <!-- Aside Section -->
+         <aside class="aside-section col-md-3 py-5">
+          <div class="container custom-bg mt-4" style="font-size: 14px;">
+            <!-- Header Section -->
+            <div class="container mt-4">
+              <div class="d-flex justify-content-between  mb-4">
+                  <h6 class="mb-0 fw-bold">Price Summary</h6>
+                  <div class="d-flex  gap-2">
+                      <a href="#" class="text-primary text-decoration-none fw-bold" style="font-size: 10px;">View Full Breakup</a>
+                      <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" 
+                          style="width: 24px; height: 24px; cursor: pointer;" 
+                          onclick="toggleDetails()">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="8" height="8">
+                              <path fill="currentColor" d="M16 26a3.07 3.07 0 0 1-2.305-1.04L.614 10.091A2.462 2.462 0 0 1 4.312 6.84l11.439 13.003a.334.334 0 0 0 .501 0L27.691 6.84a2.462 2.462 0 1 1 3.697 3.251L18.311 24.955A3.08 3.08 0 0 1 16.002 26z"/>
+                          </svg>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- Price Details (Initially Hidden) -->
+              <div id="price-details" class="mt-4 d-none">
+                  <div class="mb-4">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                          <div class="fw-bold">Day Use</div>
+                          <div class="fw-bold">₹4,500</div>
+                      </div>
+                  </div>
+          
+                  <div class="mb-4">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                          <div class="fw-bold">Total Discount</div>
+                          <div class="fw-bold text-success">-₹988</div>
+                      </div>
+                      <ul class="list-unstyled ms-3">
+                          <li class="d-flex justify-content-between">
+                              <span>GOSMARTDEAL</span>
+                              <span>₹988</span>
+                          </li>
+                      </ul>
+                  </div>
+          
+                  <div class="mb-4">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                          <div class="fw-bold">Price after Discount</div>
+                          <div class="fw-bold">₹3,512</div>
+                      </div>
+                  </div>
+          
+                  <div class="mb-4">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                          <div class="fw-bold">Taxes & Service Fees</div>
+                          <div class="fw-bold">₹1,174</div>
+                      </div>
+                      <ul class="list-unstyled ms-3">
+                          <li class="d-flex justify-content-between">
+                              <span>Hotelier Service Charge</span>
+                              <span>₹270</span>
+                          </li>
+                          <li class="d-flex justify-content-between">
+                              <span>Hotel GST</span>
+                              <span>₹540</span>
+                          </li>
+                          <li class="d-flex justify-content-between">
+                              <span>Service Fees</span>
+                              <span>₹364</span>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+          
+    
+            <!-- Price Breakdown -->
+            <div class="mb-3">
+                <div class="row mb-2">
+                    <div class="col-8">Day Use</div>
+                    <div class="col-4 text-end">₹4,500</div>
+                </div>
+    
+                <div class="row mb-2">
+                    <div class="col-8">
+                        Total Discount
+                        <div class="coupon-applied">
+                          <svg class="coupon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#2276e3">
+                            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0m3.73 4.171a.86.86 0 0 0-.788.357L7.507 9.213a.18.18 0 0 1-.126.07.17.17 0 0 1-.135-.05L5.622 7.846A.859.859 0 0 0 4.408 9.06l2.473 2.234c.16.162.38.252.607.252h.069a.86.86 0 0 0 .626-.348l4.144-5.655a.862.862 0 0 0-.596-1.372z"></path>
+                        </svg>
+                            <span class="fw-bold">GOSMARTDEAL</span>
+                            <span>applied</span>
+                        </div>
+                    </div>
+                    <div class="col-4 text-end discount-text">-₹988</div>
+                </div>
+    
+                <div class="border-divider"></div>
+    
+                <div class="row mb-2">
+                    <div class="col-8">Price after Discount</div>
+                    <div class="col-4 text-end">₹3,512</div>
+                </div>
+    
+                <div class="row mb-2">
+                    <div class="col-8">Taxes & Service Fees</div>
+                    <div class="col-4 text-end">₹1,174</div>
+                </div>
+    
+
+              
+                <div class="border-divider"></div>
+    
+                <div class="row mt-3">
+                    <div class="col-8 fw-bold total-amount">Total Amount to be paid</div>
+                    <div class="col-4 text-end fw-bold total-amount">₹4,686</div>
+                </div>
+            </div>
+        </div>
+    
+
+                <div class="container marginT20">
+                    <div class="gotribe-side-strip-wrapper">
+                        <h5>Earn goCash</h5>
+                        <div class="gotribe-side-strip">
+                            <img src="https://gos3.ibcdn.com/gocashimage-1625739820.png" alt="gotribe">
+                            <p>Get ₹100 goCash post this booking!</p>
+                        </div>
+                    </div>
+                </div>
+             
+            </div>
+         </aside>
     </div>
 </div>
-    
 </section>
-    <footer class="main-footer">
-        <div class="main-footer__top">
-          <div class="container">
-            <div
-              class="main-footer__top__inner wow fadeInUp"
-              data-wow-duration="1500ms"
-              data-wow-delay="200ms"
-              style="
-                visibility: hidden;
-                animation-duration: 1500ms;
-                animation-delay: 200ms;
-                animation-name: none;
-              "
-            >
-              <div class="footer-widget__logo logo-retina">
-                <a href="#"
-                  ><img
-                    src="assets/ghumojhumo.png"
-                    width="158"
-                    alt="gotur logo"
-                /></a>
-              </div>
-              <!-- /.footer-widget__logo -->
-              <ul class="list-unstyled footer-widget__list">
-                <li>
-                  <div class="footer-widget__list__icon">
-                    <i class="fa-solid fa-envelope"></i>
-                  </div>
-                  <!-- /.footer-widget__list__icon -->
-                  <div class="footer-widget__list__content">
-                    <span class="footer-widget__list__subtitle"
-                      >send email</span
-                    >
-                    <a href="mailto:info@company.com">info@company.com</a>
-                  </div>
-                  <!-- /.footer-widget__list__content -->
-                </li>
-                <li>
-                  <div class="footer-widget__list__icon">
-                    <i class="fas fa-phone"></i>
-                  </div>
-                  <!-- /.footer-widget__list__icon -->
-                  <div class="footer-widget__list__content">
-                    <span class="footer-widget__list__subtitle"
-                      >call agent</span
-                    >
-                    <a href="tel:+208-666-0112">+91 123 654 900</a>
-                  </div>
-                  <!-- /.footer-widget__list__content -->
-                </li>
-                <li>
-                  <div class="footer-widget__list__icon">
-                    <i class="fa fa-clock"></i>
-                  </div>
-                  <!-- /.footer-widget__list__icon -->
-                  <div class="footer-widget__list__content">
-                    <span class="footer-widget__list__subtitle"
-                      >opening time</span
-                    >
-                    <p>Hours: Mon-Fri: 8am – 7pm</p>
-                  </div>
-                  <!-- /.footer-widget__list__content -->
-                </li>
-              </ul>
-              <!-- /.list-unstyled -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-md-3 mb-3">
+            <div class="d-flex align-items-center mb-3">
+              <span class="text-primary fs-4 fw-bold">ghumo jhumo</span>
             </div>
-            <!-- /.main-footer__top__inner -->
-          </div>
-          <!-- /.container -->
-        </div>
-        <!-- /.main-footer__top -->
-        <div class="main-footer__middle">
-          <div class="container">
-            <div class="row gutter-y-40">
-              <div
-                class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-                data-wow-duration="1500ms"
-                data-wow-delay="00ms"
-                style="
-                  visibility: hidden;
-                  animation-duration: 1500ms;
-                  animation-delay: 0ms;
-                  animation-name: none;
-                "
-              >
-                <div class="footer-widget footer-widget--about">
-                  <h2 class="footer-widget__title">about Ghumo Jhumo</h2>
-                  <!-- /.footer-widget__title -->
-                  <p class="footer-widget__about-text">
-                    available, but the majority have suffered alteration in some
-                    form by injected humour, or
-                  </p>
-                  <!-- /.footer-widget__about-text -->
-                  <div class="footer-widget__social">
-                    <a href="https://facebook.com/">
-                      <i class="fab fa-facebook" aria-hidden="true"></i>
-                      <span class="sr-only">Facebook</span></a
-                    >
-                    <a href="https://twitter.com/">
-                      <i class="fab fa-twitter" aria-hidden="true"></i>
-                      <span class="sr-only">Twitter</span></a
-                    >
-                    <a href="https://instagram.com/">
-                      <i class="fab fa-instagram" aria-hidden="true"></i>
-                      <span class="sr-only">Linked In</span></a
-                    >
-                    <a href="https://youtube.com/">
-                      <i class="fab fa-youtube" aria-hidden="true"></i>
-                      <span class="sr-only">Youtube</span></a
-                    >
-                  </div>
-                  <!-- /.footer-widget__social -->
-                </div>
-                <!-- /.footer-widget -->
-              </div>
-              <!-- /.col-lg-4 -->
-
-              <div
-                class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-                data-wow-duration="1500ms"
-                data-wow-delay="200ms"
-                style="
-                  visibility: hidden;
-                  animation-duration: 1500ms;
-                  animation-delay: 200ms;
-                  animation-name: none;
-                "
-              >
-                <div class="footer-widget footer-widget--links">
-                  <h2 class="footer-widget__title">Destinations</h2>
-                  <!-- /.footer-widget__title -->
-                  <ul class="list-unstyled footer-widget__links">
-                    <li><a href="#">South America</a></li>
-                    <li><a href="#">Middle East</a></li>
-                    <li><a href="#">San Franc Rica</a></li>
-                    <li><a href="#">New York</a></li>
-                    <li><a href="#">Tokyo</a></li>
-                  </ul>
-                  <!-- /.list-unstyled footer-widget__links -->
-                </div>
-                <!-- /.footer-widget -->
-              </div>
-              <!-- /.col-lg-4 -->
-
-              <div
-                class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
-                data-wow-duration="1500ms"
-                data-wow-delay="400ms"
-                style="
-                  visibility: hidden;
-                  animation-duration: 1500ms;
-                  animation-delay: 400ms;
-                  animation-name: none;
-                "
-              >
-                <div class="footer-widget footer-widget--post">
-                  <h2 class="footer-widget__title">useful links</h2>
-                  <!-- /.footer-widget__title -->
-                  <ul class="list-unstyled footer-widget__links">
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Destination</a></li>
-                    <li><a href="#">News &amp; blog</a></li>
-                    <li><a href="#">Meet the Guide</a></li>
-                    <li><a href="#">Contacts</a></li>
-                  </ul>
-                  <!-- /.list-unstyled footer-widget__links -->
-                </div>
-                <!-- /.footer-widget -->
-              </div>
-              <!-- /.col-lg-6 -->
-
-              <div
-                class="col-md-6 col-lg-5 col-xl-3 wow fadeInUp"
-                data-wow-duration="1500ms"
-                data-wow-delay="600ms"
-                style="
-                  visibility: hidden;
-                  animation-duration: 1500ms;
-                  animation-delay: 600ms;
-                  animation-name: none;
-                "
-              >
-                <div class="footer-widget footer-widget--contact">
-                  <h2 class="footer-widget__title">Newsletter</h2>
-                  <!-- /.footer-widget__title -->
-                  <p class="footer-widget__contact-text">
-                    Sign up to searing weekly newsletter to get the latest
-                    updates.
-                  </p>
-                  <!-- /.footer-widget__about-text -->
-                  <form
-                    action="#"
-                    data-url="MAILCHIMP_FORM_URL"
-                    class="footer-widget__newsletter mc-form"
-                    novalidate="true"
-                  >
-                    <div class="form-group__form">
-                      <input
-                        type="email"
-                        name="EMAIL"
-                        placeholder="Your email address"
-                      />
-                      <button type="submit" class="gotur-btn">
-                        <i class="fa fa-arrow-right"></i>
-                      </button>
-                    </div>
-                    <!-- /.form-group -->
-                    <div class="form-group__check">
-                      <input type="checkbox" name="checkbox" id="check" />
-                      <label for="check"
-                        >I agree to the <a href="#">Privacy Policy.</a></label
-                      >
-                    </div>
-                    <!-- /.form-group -->
-                  </form>
-                  <!-- /.footer-widget__newsletter mc-form -->
-                  <div class="mc-form__response"></div>
-                  <!-- /.mc-form__response -->
-                </div>
-                <!-- /.footer-widget -->
-              </div>
-              <!-- /.col-lg-5 -->
-            </div>
-            <!-- /.row -->
-          </div>
-          <!-- /.container -->
-          <div class="main-footer__element-one">
-            <img src="assets/footer-shape-1-1.png" alt="" />
-          </div>
-          <!-- /.main-footer__element-one -->
-          <!-- <div class="main-footer__element-two">
-            <img src="assets/footer-shape-1-2.png" alt="" />
-          </div> -->
-          <!-- /.main-footer__element-one -->
-        </div>
-        <!-- /.main-footer__middle -->
-        <div class="main-footer__bottom">
-          <div class="container">
-            <div class="main-footer__bottom__inner">
-              <p class="main-footer__copyright">
-                © Copyright <span class="dynamic-year">2025</span> by Ghumo Jhumo
-              </p>
-              <a
-                href="#"
-                data-target="html"
-                class="scroll-to-target scroll-to-top show"
-              >
-                <span class="scroll-to-top__wrapper">
-                  <i class="fas fa-arrow-up"></i>
-                </span>
-              </a>
-              <div class="main-footer__bottom__pyment">
-                <a href="#"
-                  ><img src="assets/footer-card-1-1.png" alt="gotur pyment"
-                /></a>
-              </div>
-            </div>
-            <!-- /.main-footer__inner -->
-          </div>
-          <!-- /.container -->
-        </div>
-        <!-- /.main-footer__bottom -->
-      </footer>
-      <!-- /.main-footer -->
-    </div>
-    <!-- /.page-wrapper -->
-
-    <div class="mobile-nav__wrapper">
-      <div class="mobile-nav__overlay mobile-nav__toggler"></div>
-      <!-- /.mobile-nav__overlay -->
-      <div class="mobile-nav__content">
-        <span class="mobile-nav__close mobile-nav__toggler"
-          ><i class="fa fa-times"></i
-        ></span>
-        <div class="logo-box logo-retina">
-          <a href="#" aria-label="logo image"
-            ><img src="assets/logo-light.png" width="158" alt="logo"
-          /></a>
-        </div>
-        <!-- /.logo-box -->
-        <div class="mobile-nav__container">
-          <ul class="main-menu__list">
-            <li class="dropdown megamenu">
-              <a href="#"
-                >Home<button aria-label="dropdown toggler">
-                  <i class="fa fa-angle-down"></i></button
-              ></a>
-              <ul>
-                <li>
-                  <section class="home-showcase">
-                    <div class="container">
-                      <div class="home-showcase__inner">
-                        <div class="row">
-                          <div class="col-md-6 col-lg-3">
-                            <div class="demo-one__card">
-                              <div class="demo-one__image">
-                                <img
-                                  src="assets/home-showcase-1.jpg"
-                                  alt=" gotur image"
-                                />
-                                <div class="demo-one__btns">
-                                  <a href="#" class="gotur-btn demo-one__btn"
-                                    >Multi Page</a
-                                  ><!-- /.thm-btn demo-one__btn -->
-                                  <a href="#" class="gotur-btn demo-one__btn"
-                                    >One Page</a
-                                  ><!-- /.thm-btn demo-one__btn -->
-                                </div>
-                                <!-- /.demo-one__btns -->
-                              </div>
-                              <!-- /.demo-one__image -->
-                              <div class="demo-one__content">
-                                <h3 class="demo-one__title">
-                                  <a href="#">Home Page 01</a>
-                                </h3>
-                                <!-- /.demo-one__title -->
-                              </div>
-                              <!-- /.demo-one__content -->
-                            </div>
-                            <!-- /.demo-one__card -->
-                          </div>
-                          <!-- /.col-md-6 col-lg-3 -->
-                          <div class="col-md-6 col-lg-3">
-                            <div class="demo-one__card">
-                              <div class="demo-one__image">
-                                <img
-                                  src="assets/home-showcase-2.jpg"
-                                  alt="gotur image"
-                                />
-                                <div class="demo-one__btns">
-                                  <a href="#" class="gotur-btn demo-one__btn"
-                                    >Multi Page</a
-                                  ><!-- /.thm-btn demo-one__btn -->
-                                  <a href="#" class="gotur-btn demo-one__btn"
-                                    >One Page</a
-                                  ><!-- /.thm-btn demo-one__btn -->
-                                </div>
-                                <!-- /.demo-one__btns -->
-                              </div>
-                              <!-- /.demo-one__image -->
-                              <div class="demo-one__content">
-                                <h3 class="demo-one__title">
-                                  <a href="#">Home Page 02</a>
-                                </h3>
-                                <!-- /.demo-one__title -->
-                              </div>
-                              <!-- /.demo-one__content -->
-                            </div>
-                            <!-- /.demo-one__card -->
-                          </div>
-                          <!-- /.col-md-6 col-lg-3 -->
-                          <div class="col-md-6 col-lg-3">
-                            <div class="demo-one__card">
-                              <div class="demo-one__image">
-                                <img
-                                  src="assets/home-showcase-3.jpg"
-                                  alt="gotur image"
-                                />
-                                <div class="demo-one__btns">
-                                  <a href="#" class="gotur-btn demo-one__btn"
-                                    >Multi Page</a
-                                  ><!-- /.thm-btn demo-one__btn -->
-                                  <a href="#" class="gotur-btn demo-one__btn"
-                                    >One Page</a
-                                  ><!-- /.thm-btn demo-one__btn -->
-                                </div>
-                                <!-- /.demo-one__btns -->
-                              </div>
-                              <!-- /.demo-one__image -->
-                              <div class="demo-one__content">
-                                <h3 class="demo-one__title">
-                                  <a href="#">Home Page 03</a>
-                                </h3>
-                                <!-- /.demo-one__title -->
-                              </div>
-                              <!-- /.demo-one__content -->
-                            </div>
-                            <!-- /.demo-one__card -->
-                          </div>
-                          <!-- /.col-md-6 col-lg-3 -->
-                          <div class="col-md-6 col-lg-3">
-                            <div class="demo-one__card">
-                              <div class="demo-one__image">
-                                <img
-                                  src="assets/home-showcase-4.jpg"
-                                  alt="gotur image"
-                                />
-                                <div class="demo-one__btns">
-                                  <a href="#" class="gotur-btn demo-one__btn"
-                                    >Multi Page</a
-                                  ><!-- /.thm-btn demo-one__btn -->
-                                  <a href="#" class="gotur-btn demo-one__btn"
-                                    >One Page</a
-                                  ><!-- /.thm-btn demo-one__btn -->
-                                </div>
-                                <!-- /.demo-one__btns -->
-                              </div>
-                              <!-- /.demo-one__image -->
-                              <div class="demo-one__content">
-                                <h3 class="demo-one__title">
-                                  <a href="#">Home Page 04</a>
-                                </h3>
-                                <!-- /.demo-one__title -->
-                              </div>
-                              <!-- /.demo-one__content -->
-                            </div>
-                            <!-- /.demo-one__card -->
-                          </div>
-                          <!-- /.col-md-6 col-lg-3 -->
-                        </div>
-                        <!-- /.row -->
-                      </div>
-                      <!-- /.home-showcase__inner -->
-                    </div>
-                    <!-- /.container -->
-                  </section>
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <a href="#">about us</a>
-            </li>
-
-            <li class="dropdown">
-              <a href="#"
-                >Destination<button aria-label="dropdown toggler">
-                  <i class="fa fa-angle-down"></i></button
-              ></a>
-              <ul>
-                <li class="dropdown">
-                  <a href="#"
-                    >destination 01<button aria-label="dropdown toggler">
-                      <i class="fa fa-angle-down"></i></button
-                  ></a>
-                  <ul class="sub-menu">
-                    <li><a href="#">destination grid</a></li>
-                    <li><a href="#">destination Left</a></li>
-                    <li><a href="#">destination Right</a></li>
-                    <li><a href="#">destination Carousel</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="#"
-                    >destination 02<button aria-label="dropdown toggler">
-                      <i class="fa fa-angle-down"></i></button
-                  ></a>
-                  <ul class="sub-menu">
-                    <li><a href="#">destination grid</a></li>
-                    <li><a href="#">destination Left</a></li>
-                    <li><a href="#">destination Right</a></li>
-                    <li><a href="#">destination Carousel</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Destination Details</a></li>
-              </ul>
-            </li>
-
-            <li class="dropdown">
-              <a href="#"
-                >tours list<button aria-label="dropdown toggler">
-                  <i class="fa fa-angle-down"></i></button
-              ></a>
-              <ul>
-                <li class="dropdown">
-                  <a href="#"
-                    >Tour Listing 01<button aria-label="dropdown toggler">
-                      <i class="fa fa-angle-down"></i></button
-                  ></a>
-                  <ul class="sub-menu">
-                    <li><a href="#">Tour Grid</a></li>
-                    <li><a href="#">Tour Left</a></li>
-                    <li><a href="#">Tour Right</a></li>
-                    <li><a href="#">Tour Carousel</a></li>
-                  </ul>
-                </li>
-
-                <li class="dropdown">
-                  <a href="#"
-                    >Tour Listing 02<button aria-label="dropdown toggler">
-                      <i class="fa fa-angle-down"></i></button
-                  ></a>
-                  <ul class="sub-menu">
-                    <li><a href="#">Tour Grid</a></li>
-                    <li><a href="#">Tour Left</a></li>
-                    <li><a href="#">Tour Right</a></li>
-                    <li><a href="#">Tour Carousel</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="#"
-                    >Tour Listing List<button aria-label="dropdown toggler">
-                      <i class="fa fa-angle-down"></i></button
-                  ></a>
-                  <ul class="sub-menu">
-                    <li><a href="#">Tour Grid</a></li>
-                    <li><a href="#">Tour Left</a></li>
-                    <li><a href="#">Tour Right</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Listing Details 01</a></li>
-                <li><a href="#">Listing Details 02</a></li>
-              </ul>
-            </li>
-
-            <li class="dropdown">
-              <a href="#"
-                >pages<button aria-label="dropdown toggler">
-                  <i class="fa fa-angle-down"></i></button
-              ></a>
-              <ul>
-                <li><a href="#">Our Team</a></li>
-                <li><a href="#">Team Carousel</a></li>
-                <li><a href="#">Team Details</a></li>
-                <li><a href="#">Testimonials</a></li>
-                <li><a href="#">Testimonials Carousel</a></li>
-                <li><a href="#">Pricing Plan</a></li>
-                <li class="dropdown">
-                  <a href="#"
-                    >Gallery<button aria-label="dropdown toggler">
-                      <i class="fa fa-angle-down"></i></button
-                  ></a>
-                  <ul class="sub-menu">
-                    <li><a href="#">Gallery masonry</a></li>
-                    <li><a href="#">Gallery filter</a></li>
-                    <li><a href="#">Gallery Grid</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">FAQS</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">404 Error</a></li>
-              </ul>
-            </li>
-
-            <li class="dropdown">
-              <a href="#"
-                >Shop<button aria-label="dropdown toggler">
-                  <i class="fa fa-angle-down"></i></button
-              ></a>
-              <ul>
-                <li class="dropdown">
-                  <a href="#"
-                    >Products<button aria-label="dropdown toggler">
-                      <i class="fa fa-angle-down"></i></button
-                  ></a>
-                  <ul class="sub-menu">
-                    <li><a href="#">No sidebar</a></li>
-                    <li><a href="#">Left sidebar</a></li>
-                    <li><a href="#">Right sidebar</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="#"
-                    >Products list<button aria-label="dropdown toggler">
-                      <i class="fa fa-angle-down"></i></button
-                  ></a>
-                  <ul class="sub-menu">
-                    <li><a href="#">No sidebar</a></li>
-                    <li><a href="#">Left sidebar</a></li>
-                    <li><a href="#">Right sidebar</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Products carousel</a></li>
-                <li><a href="#">Product details</a></li>
-                <li><a href="#">Cart</a></li>
-                <li><a href="#">Checkout</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#"
-                >news<button aria-label="dropdown toggler">
-                  <i class="fa fa-angle-down"></i></button
-              ></a>
-              <ul>
-                <li class="dropdown">
-                  <a href="#"
-                    >news grid<button aria-label="dropdown toggler">
-                      <i class="fa fa-angle-down"></i></button
-                  ></a>
-                  <ul>
-                    <li><a href="#">No sidebar</a></li>
-                    <li><a href="#">Left sidebar</a></li>
-                    <li><a href="#">Right sidebar</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="#"
-                    >news list<button aria-label="dropdown toggler">
-                      <i class="fa fa-angle-down"></i></button
-                  ></a>
-                  <ul>
-                    <li><a href="#">No sidebar</a></li>
-                    <li><a href="#">Left sidebar</a></li>
-                    <li><a href="#">Right sidebar</a></li>
-                  </ul>
-                </li>
-                <li><a href="#">Blog carousel</a></li>
-                <li class="dropdown">
-                  <a href="#"
-                    >news details<button aria-label="dropdown toggler">
-                      <i class="fa fa-angle-down"></i></button
-                  ></a>
-                  <ul>
-                    <li><a href="#">No sidebar</a></li>
-                    <li><a href="#">Left sidebar</a></li>
-                    <li><a href="#">Right sidebar</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <!-- /.mobile-nav__container -->
-        <ul class="mobile-nav__contact list-unstyled">
-          <li>
-            <span class="mobile-nav__contact__icon">
-              <i class="fa fa-envelope"></i>
-            </span>
-            <a href="#">needhelp@gotur.com</a>
-          </li>
-          <li>
-            <span class="mobile-nav__contact__icon">
-              <i class="fa fa-phone-alt"></i>
-            </span>
-            <a href="#">+91 5698 0036 420</a>
-          </li>
-        </ul>
-        <!-- /.mobile-nav__contact -->
-        <div class="mobile-nav__social">
-          <a href="https://facebook.com/">
-            <i class="fab fa-facebook" aria-hidden="true"></i>
-            <span class="sr-only">Facebook</span></a
-          >
-          <a href="https://twitter.com/">
-            <i class="icon-twitter" aria-hidden="true"></i>
-            <span class="sr-only">Twitter</span></a
-          >
-          <a href="https://instagram.com/">
-            <i class="icon-linkedin" aria-hidden="true"></i>
-            <span class="sr-only">Linked In</span></a
-          >
-          <a href="https://youtube.com/">
-            <i class="fab fa-youtube" aria-hidden="true"></i>
-            <span class="sr-only">Youtube</span></a
-          >
-        </div>
-        <!-- /.mobile-nav__social -->
-      </div>
-      <!-- /.mobile-nav__content -->
-    </div>
-    <!-- /.mobile-nav__wrapper -->
-    <div class="search-popup">
-      <div class="search-popup__overlay search-toggler"></div>
-      <!-- /.search-popup__overlay -->
-      <div class="search-popup__content">
-        <form role="search" method="get" class="search-popup__form" action="#">
-          <input type="text" id="search" placeholder="Search Here..." />
-          <button type="submit" aria-label="search submit" class="gotur-btn">
-            <i class="fas fa-search"></i>
-
-          </button>
-        </form>
-      </div>
-      <!-- /.search-popup__content -->
-    </div>
-     
-    <!-- /.search-popup -->
-    <div class="header-right-sidebar">
-      <div
-        class="header-right-sidebar__overlay header-right-sidebar__toggler"
-      ></div>
-      <div class="header-right-sidebar__content">
-        <span class="header-right-sidebar__close header-right-sidebar__toggler"
-          ><i class="fa fa-times"></i
-        ></span>
-        <div class="header-right-sidebar__logo-box">
-          <a href="#" aria-label="logo image">
-            <img src="assets/logo-landing.png" width="158" alt="gotur" />
-          </a>
-        </div>
-        <div class="header-right-sidebar__container">
-          <div
-            class="header-right-sidebar__container__about wow fadeInUp animated"
-            data-wow-duration="1500ms"
-            data-wow-delay="300ms"
-            style="
-              visibility: visible;
-              animation-duration: 1500ms;
-              animation-delay: 300ms;
-              animation-name: fadeInUp;
-            "
-          >
-            <h3 class="header-right-sidebar__container__title">
-              We’re Number One Travel Adventure Company
-            </h3>
-            <p class="header-right-sidebar__container__text">
-              It is a long established fact that a reader will be distracted the
-              readable content of a page when looking at layout the point of
-              using lorem the is Ipsum less normal distribution of letters.
+            <p class="text-secondary">
+              Making travel simple, affordable, and enjoyable for everyone.
             </p>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-secondary"
+                ><i class="bi bi-facebook fs-5"></i
+              ></a>
+              <a href="#" class="text-secondary"
+                ><i class="bi bi-twitter fs-5"></i
+              ></a>
+              <a href="#" class="text-secondary"
+                ><i class="bi bi-instagram fs-5"></i
+              ></a>
+            </div>
           </div>
-          <div class="header-right-sidebar__container__contact">
-            <h3 class="header-right-sidebar__container__title">Contact Us</h3>
-            <ul class="header-right-sidebar__container__list list-unstyled">
-              <li
-                class="header-right-sidebar__container__list__item wow fadeInUp animated"
-                data-wow-duration="1500ms"
-                data-wow-delay="300ms"
-                style="
-                  visibility: visible;
-                  animation-duration: 1500ms;
-                  animation-delay: 300ms;
-                  animation-name: fadeInUp;
-                "
-              >
-                <div class="header-right-sidebar__container__icon">
-                  <i class="fa fa-envelope"></i>
-
-                </div>
-                <div class="header-right-sidebar__container__list__content">
-                  <span class="header-right-sidebar__container__list__title"
-                    >send email</span
-                  >
-                  <a href="#">info@company.com</a>
-                </div>
+          <div class="col-md-3">
+            <h5 class="fw-semibold mb-3">Company</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >About Us</a
+                >
               </li>
-              <li
-                class="header-right-sidebar__container__list__item wow fadeInUp animated"
-                data-wow-duration="1500ms"
-                data-wow-delay="500ms"
-                style="
-                  visibility: visible;
-                  animation-duration: 1500ms;
-                  animation-delay: 500ms;
-                  animation-name: fadeInUp;
-                "
-              >
-                <div class="header-right-sidebar__container__icon">
-                  <i class="fa-solid fa-phone"></i>
-                </div>
-                <div class="header-right-sidebar__container__list__content">
-                  <span class="header-right-sidebar__container__list__title"
-                    >call agent</span
-                  >
-                  <a href="tel:+91-123-654-900">+91 123 654 900</a>
-                </div>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Careers</a
+                >
               </li>
-              <li
-                class="header-right-sidebar__container__list__item wow fadeInUp animated"
-                data-wow-duration="1500ms"
-                data-wow-delay="700ms"
-                style="
-                  visibility: visible;
-                  animation-duration: 1500ms;
-                  animation-delay: 700ms;
-                  animation-name: fadeInUp;
-                "
-              >
-                <div class="header-right-sidebar__container__icon">
-                  <i class="fa fa-clock"></i>
-                </div>
-                <div class="header-right-sidebar__container__list__content">
-                  <span class="header-right-sidebar__container__list__title"
-                    >opening time</span
-                  >
-                  <p>Hours: Mon-Fri: 8am – 7pm</p>
-                </div>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none">Blog</a>
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Press</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Gift Cards</a
+                >
               </li>
             </ul>
           </div>
-          <div
-            class="header-right-sidebar__container__newsletter-box wow fadeInUp animated"
-            data-wow-duration="1500ms"
-            data-wow-delay="900ms"
-            style="
-              visibility: visible;
-              animation-duration: 1500ms;
-              animation-delay: 900ms;
-              animation-name: fadeInUp;
-            "
-          >
-            <h3 class="header-right-sidebar__container__title">
-              get notification
-            </h3>
-            <form
-              action="#"
-              data-url="MAILCHIMP_FORM_URL"
-              class="newsletter-box mc-form"
-              novalidate="true"
-            >
-              <input type="email" name="EMAIL" placeholder="Email" />
-              <button type="submit" class="gotur-btn gotur-btn--base">
-                subscribe now
-              </button>
-            </form>
-            <div class="mc-form__response"></div>
+          <div class="col-md-3">
+            <h5 class="fw-semibold mb-3">Support</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Contact Us</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Help Center</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >COVID-19 Updates</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Cancellation Options</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Safety Resource Center</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h5 class="fw-semibold mb-3">Legal</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Terms &amp; Conditions</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Cookie Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Accessibility</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-secondary text-decoration-none"
+                  >Reward Program Terms</a
+                >
+              </li>
+            </ul>
           </div>
         </div>
+        <div class="border-top border-secondary pt-3">
+          <p class="text-center text-secondary mb-0">
+            © 2025
+            <span>
+              <a
+                href="https://venusstudies.in/"
+                class="text-white text-decoration-none"
+                target="_blank"
+              >
+                Venus Studies
+              </a>
+            </span>
+            . All rights reserved.
+          </p>
+        </div>
       </div>
-      <!-- /.header-right-sidebar__content -->
-    </div>
+    </footer>
 
-    <div
-      id="scroll-top"
-      class="scroll-top active"
-      style="
-        background: conic-gradient(
-          var(--gotur-primary) 77%,
-          var(--gotur-white) 77%
-        );
-      "
-    >
-      <span id="scroll-top-value" class="scroll-top-value">77%</span>
-    </div>
-    <script>
-    $(document).ready(function () {
-    $(".toggle-icon").click(function () {
-        // Find the parent card body and the corresponding collapsible section
-        let parentCard = $(this).closest(".card-body");
-        let section = parentCard.find(".collapse");
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
 
-        // Hide all sections except the one being toggled
-        $(".collapse").not(section).removeClass("show");
+    <!-- Bootstrap Icons (Make sure to include Bootstrap and Bootstrap Icons in your project) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-        // Reset all icons except the clicked one
-        $(".toggle-icon").not(this).removeClass("fa-chevron-up").addClass("fa-chevron-down");
-
-        // Toggle the clicked section
-        section.toggleClass("show");
-
-        // Toggle the icon
-        $(this).toggleClass("fa-chevron-down fa-chevron-up");
-    });
-});
-
-
-  </script>
-  <!-- Bootstrap Bundle (JS + Popper.js) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="./jquery-3.7.1.min.js.download"></script>
-    <script src="./bootstrap.bundle.min.js.download"></script>
-    <script src="./bootstrap-select.min.js.download"></script>
-    <script src="./jarallax.min.js.download"></script>
-    <script src="./jquery-ui.js.download"></script>
-    <script src="./jquery.ajaxchimp.min.js.download"></script>
-    <script src="./jquery.appear.min.js.download"></script>
-    <script src="./jquery.circle-progress.min.js.download"></script>
-    <script src="./jquery.magnific-popup.min.js.download"></script>
-    <script src="./jquery.validate.min.js.download"></script>
-    <script src="./nouislider.min.js.download"></script>
-    <script src="./wNumb.min.js.download"></script>
-    <script src="./owl.carousel.min.js.download"></script>
-    <script src="./slick.min.js.download"></script>
-    <script src="./wow.js.download"></script>
-    <script src="./imagesloaded.min.js.download"></script>
-    <script src="./isotope.js.download"></script>
-    <script src="./countdown.min.js.download"></script>
-    <script src="./moment.min.js.download"></script>
-    <script src="./daterangepicker.js.download"></script>
-    <script src="./jquery.circleType.js.download"></script>
-    <script src="./jquery.lettering.min.js.download"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- GSAP -->
-    <script src="./gsap.js.download"></script>
-    <script src="./scrollTrigger.min.js.download"></script>
-    <script src="./splittext.min.js.download"></script>
-    <script src="./gotur-gsap.js.download"></script>
 
-<!-- Bootstrap JS (for toggling) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./ghumu-jhumu.js"></script>
-    <div class="daterangepicker ltr show-calendar opensright">
-      <div class="ranges"></div>
-      <div class="drp-calendar left">
-        <div class="calendar-table"></div>
-        <div class="calendar-time" style="display: none"></div>
-      </div>
-      <div class="drp-calendar right">
-        <div class="calendar-table"></div>
-        <div class="calendar-time" style="display: none"></div>
-      </div>
-      <div class="drp-buttons">
-        <span class="drp-selected"></span
-        ><button class="cancelBtn btn btn-sm btn-default" type="button">
-          Cancel</button
-        ><button
-          class="applyBtn btn btn-sm btn-primary"
-          disabled="disabled"
-          type="button"
-        >
-          Apply
-        </button>
-      </div>
-    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
 
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css"
+    />
+
+    <script src="app.js"></script>
+    <!-- <script src="fetch.js"></script> -->
   </body>
 </html>

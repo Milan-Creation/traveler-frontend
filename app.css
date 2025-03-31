@@ -267,11 +267,12 @@ button.chevron-down {
 }
 .cards {
   flex: 0 0 auto;
-  width: 150px;
+  width: 132px;
   text-align: center;
   padding: 15px;
   background-color: #f0f0f0;
   margin-right: 2px;
+  font-size: 12px;
 }
 .cards.active {
   background-color: #ffa565;
@@ -493,7 +494,7 @@ input[type="text"] {
   padding: 6px;
   width: 100%;
   border-radius: 4px;
-  padding: 20px;
+  padding: 8px;
 }
 
 input.form-control {
@@ -958,8 +959,7 @@ aside.col-md-3.aside-section {
 .flight-box {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background: var(--background-color);
+  /* justify-content: space-between; */
   padding: 10px 15px;
 }
 
@@ -1266,7 +1266,7 @@ button.btn-confirm-booking {
   background-color: #e8f5e9;
   color: var(--primary-color);
   font-size: 0.8rem;
-  padding: 4px 8px;
+  padding: 4px;
 }
 .offer-code {
   color: var(--primary-color);
@@ -1316,7 +1316,7 @@ button.btn-confirm-booking {
 .feature-item {
   text-align: center;
   padding: 20px;
-  border: 2px solid #e5e5e5;
+  border: 1px solid #e5e5e5;
 }
 
 .feature-img {
@@ -1529,10 +1529,15 @@ a.view-btn-hotels-book {
   position: relative;
   display: inline-block;
 }
-.dropdown-menu {
-  width: 30%;
-  max-height: 300px;
+.dropdown-menus {
+  min-width: 250px;
+  padding: 10px;
   overflow-y: auto;
+}
+.dropdown-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
 .room-item {
   padding: 10px;
@@ -1549,7 +1554,7 @@ a.view-btn-hotels-book {
 .badge-custom {
   background-color: #28a745;
   color: white;
-  font-size: 14px;
+  font-size: 10px;
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -1686,4 +1691,294 @@ a.view-btn-hotels-book {
 .star-icon {
   color: #FDBA00;
   margin-right: 8px;
+}
+a{
+  text-decoration: none;
+}
+
+.property-info {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.hotel-image {
+  width: 400px;
+  border-radius: 5px;
+}
+.rating {
+  color: #28a745;
+  font-weight: bold;
+}
+.highlight {
+  color: #28a745;
+  font-weight: bold;
+}
+.non-refundable {
+  color: red;
+  font-weight: bold;
+}
+
+
+.policy-section {
+  border-bottom: 1px solid #dee2e6;
+  padding: 1rem 0;
+  margin-bottom: 1.5rem;
+}
+
+.policy-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.policy-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 0.5rem;
+}
+
+.policy-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="%23898B91" d="M7.68 0a7.68 7.68 0 1 1 0 15.36A7.68 7.68 0 0 1 7.68 0m4.335 3.922-6.233 6.702-2.454-2.26a.436.436 0 0 0-.622.021.45.45 0 0 0 .022.632l2.556 2.358c.295.28.76.26 1.039-.032l6.326-6.8a.45.45 0 0 0-.011-.632.436.436 0 0 0-.623.011"/></svg>');
+}
+
+.section-header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #dee2e6;
+  padding-bottom: 0.5rem;
+}
+
+.non-refundable-alert {
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Custom orange color */
+.text-orange {
+  color: #FF6B35;
+}
+
+/* If you need to customize more elements */
+.card {
+  border-radius: 12px;
+}
+.tier-card {
+  background: url('https://go-assets.ibcdn.com/u/GI/images/1714556189147-TIER_INACTIVE.png') no-repeat;
+  padding: 1.5rem;
+}
+
+.tier-card .card-body {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.tier-card h5 {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.tier-card h6 {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.guest-details {
+  margin: 20px;
+}
+
+.table-container {
+  margin-bottom: 20px;
+}
+
+.detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+
+.detail-table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.detail-table th {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 2px solid #ddd;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.info-text {
+  margin: 5px 0;
+  padding: 8px 0;
+}
+
+.optional-note {
+  color: #666;
+  font-size: 0.9em;
+}
+
+
+.form-heading {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+.form-section {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+.form-label {
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+.form-control {
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+}
+.example-text {
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.billing-wrapper {
+  padding: 24px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.form-label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.form-control:focus + .form-label,
+.form-control:not(:placeholder-shown) + .form-label {
+  top: -8px;
+  left: 8px;
+  font-size: 12px;
+  background: white;
+  padding: 0 4px;
+  color: #007bff;
+}
+
+.state-selector {
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  padding: 8px 12px;
+  min-height: 48px;
+}
+
+.checkbox-label {
+  font-size: 14px;
+  margin-left: 8px;
+}
+
+.instruction-text {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.payment-container {
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+.alert-note {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.divider {
+  margin: 1.5rem 0;
+}
+.form-check-label {
+  font-weight: 500;
+}
+.login-btn {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 20px;
+  background-color:#ff6d38;
+  border: 0px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.custom-bg {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+}
+.total-amount {
+  color: #141823;
+  font-size: 14px;
+}
+.discount-text {
+  color: #18A160;
+}
+.border-divider {
+  border-top: 1px solid #dee2e6;
+  margin: 1rem 0;
+}
+.coupon-applied {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color:#18A160;
+  margin-top: 0.5rem;
+}
+
+ /* Custom CSS for color matching */
+ .text-success {
+  color: #18a160 !important;
+}
+
+/* Optional: Add more custom styles if needed */
+body {
+  font-family: Arial, sans-serif;
+  color: #141823;
+}
+
+
+li {
+  padding: 4px 0;
+  font-size: 14px;
 }
