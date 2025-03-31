@@ -455,12 +455,12 @@
                           <!-- GST Number and Company Name Row -->
                           <div class="row mb-4">
                               <div class="col-md-6 mb-3 mb-md-0">
-                                  <label class=" label">GST Number</label>
+                                  <label class="label">GST Number</label>
                                   <input type="text" class="form-control" placeholder="EG: 06BZAHM6385P6Z2">
                                   <small class="example-text">Example format: 06BZAHM6385P6Z2</small>
                               </div>
                               <div class="col-md-6">
-                                  <label class="form-label">Company Name</label>
+                                  <label class="label">Company Name</label>
                                   <input type="text" class="form-control" placeholder="Enter Company Name">
                               </div>
                           </div>
@@ -468,7 +468,7 @@
                           <!-- Business Email -->
                           <div class="row mb-4">
                               <div class="col-12">
-                                  <label class="form-label">Business Email ID</label>
+                                  <label class="label">Business Email ID</label>
                                   <input type="email" class="form-control" placeholder="Enter Email Address">
                               </div>
                           </div>
@@ -476,7 +476,7 @@
                           <!-- Company Address -->
                           <div class="row mb-4">
                               <div class="col-12">
-                                  <label class="form-label">Company Address</label>
+                                  <label class="label">Company Address</label>
                                   <input type="text" class="form-control" placeholder="Enter Company Address">
                               </div>
                           </div>
@@ -484,11 +484,11 @@
                           <!-- Phone Number and Admin Email -->
                           <div class="row">
                               <div class="col-md-6 mb-3 mb-md-0">
-                                  <label class="form-label">Company Phone Number</label>
+                                  <label class="label">Company Phone Number</label>
                                   <input type="tel" class="form-control" placeholder="Enter Phone Number">
                               </div>
                               <div class="col-md-6">
-                                  <label class="form-label">Admin Email ID</label>
+                                  <label class="label">Admin Email ID</label>
                                   <input type="email" class="form-control" placeholder="Enter Email Address">
                               </div>
                           </div>
@@ -574,81 +574,6 @@
                 </div>
             </div>
             </div>
- 
-          <script>
-              document.addEventListener("DOMContentLoaded", function () {
-                  const travellers = JSON.parse(localStorage.getItem("travellers")) || {
-                      adults: 1,
-                      children: 0,
-                      infants: 0
-                  };
-
-                  const travellerContainer = document.getElementById("traveller-forms");
-
-                  function createTravellerForm(index, type) {
-                      return `
-                          <div class="accordion" id="accordion-${type}-${index}">
-                              <div class="accordion-item">
-                                  <h2 class="accordion-header">
-                                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${type}-${index}">
-                                          ${type} ${index}
-                                      </button>
-                                  </h2>
-                                  <div id="collapse-${type}-${index}" class="accordion-collapse collapse show">
-                                      <div class="accordion-body">
-                                          <div class="row">
-                                              <div class="col-md-3">
-                                                  <select class="form-control">
-                                                      <option>GENDER</option>
-                                                      <option>Male</option>
-                                                      <option>Female</option>
-                                                  </select>
-                                              </div>
-                                              <div class="col-md-5">
-                                                  <input type="text" class="form-control" placeholder="First & Middle Name">
-                                              </div>
-                                              <div class="col-md-4">
-                                                  <input type="text" class="form-control" placeholder="Last Name">
-                                              </div>
-                                          </div>
-                                          ${type === "Adult" ? `
-                                          <div class="mt-3">
-                                              <input type="email" class="form-control" placeholder="Email">
-                                              <small class="text-muted">Your ticket will be sent to this email address</small>
-                                          </div>
-                                          <div class="mt-3 row">
-                                              <div class="col-md-2">
-                                                  <select class="form-control" name="COUNTRY_NAME"><option value="">Code</option><option value="91_India">+91</option><option value="93_Afghanistan">+93</option><option value="213_Algeria">+213</option><option value="1_American Samoa">+1</option><option value="376_Andorra">+376</option><option value="244_Angola">+244</option><option value="1_Anguilla">+1</option><option value="672_Antarctica">+672</option><option value="1_Antigua and Barbuda">+1</option><option value="54_Argentina">+54</option><option value="374_Armenia">+374</option><option value="297_Aruba">+297</option><option value="61_Australia">+61</option><option value="43_Austria">+43</option><option value="994_Azerbaijan">+994</option><option value="1_Bahamas">+1</option><option value="973_Bahrain">+973</option><option value="880_Bangladesh">+880</option><option value="1_Barbados">+1</option><option value="32_Belgium">+32</option><option value="501_Belize">+501</option><option value="229_Benin">+229</option><option value="1_Bermuda">+1</option><option value="975_Bhutan">+975</option><option value="591_Bolivia">+591</option><option value="267_Botswana">+267</option><option value="55_Brazil">+55</option><option value="246_British Indian Ocean Territory">+246</option><option value="1_British Virgin Islands">+1</option><option value="673_Brunei">+673</option><option value="226_Burkina Faso">+226</option><option value="257_Burundi">+257</option><option value="855_Cambodia">+855</option><option value="237_Cameroon">+237</option><option value="1_Canada">+1</option><option value="238_Cape Verde">+238</option><option value="1_Cayman Islands">+1</option><option value="236_Central African Republic">+236</option><option value="235_Chad">+235</option><option value="56_Chile">+56</option><option value="86_China">+86</option><option value="61_Christmas Island">+61</option><option value="61_Cocos Islands">+61</option><option value="57_Colombia">+57</option><option value="269_Comoros">+269</option><option value="682_Cook Islands">+682</option><option value="506_Costa Rica">+506</option><option value="599_Curacao">+599</option><option value="357_Cyprus">+357</option><option value="420_Czech Republic">+420</option><option value="45_Denmark">+45</option><option value="253_Djibouti">+253</option><option value="1_Dominica">+1</option><option value="1809_Dominican Republic">+1809</option><option value="670_East Timor">+670</option><option value="593_Ecuador">+593</option><option value="20_Egypt">+20</option><option value="503_El Salvador">+503</option><option value="240_Equatorial Guinea">+240</option><option value="291_Eritrea">+291</option><option value="372_Estonia">+372</option><option value="251_Ethiopia">+251</option><option value="500_Falkland Islands">+500</option><option value="298_Faroe Islands">+298</option><option value="679_Fiji">+679</option><option value="358_Finland">+358</option><option value="33_France">+33</option><option value="689_French Polynesia">+689</option><option value="241_Gabon">+241</option><option value="220_Gambia">+220</option><option value="995_Georgia">+995</option><option value="49_Germany">+49</option><option value="233_Ghana">+233</option><option value="350_Gibraltar">+350</option><option value="30_Greece">+30</option><option value="299_Greenland">+299</option><option value="1_Grenada">+1</option><option value="1_Guam">+1</option><option value="502_Guatemala">+502</option><option value="1_Guernsey">+1</option><option value="224_Guinea">+224</option><option value="245_Guinea-Bissau">+245</option><option value="592_Guyana">+592</option><option value="509_Haiti">+509</option><option value="504_Honduras">+504</option><option value="852_Hong Kong">+852</option><option value="36_Hungary">+36</option><option value="354_Iceland">+354</option><option value="62_Indonesia">+62</option><option value="353_Ireland">+353</option><option value="1_Isle of Man">+1</option><option value="972_Israel">+972</option><option value="39_Italy">+39</option><option value="1_Jamaica">+1</option><option value="81_Japan">+81</option><option value="1_Jersey">+1</option><option value="962_Jordan">+962</option><option value="7_Kazakhstan">+7</option><option value="254_Kenya">+254</option><option value="686_Kiribati">+686</option><option value="965_Kuwait">+965</option><option value="996_Kyrgyzstan">+996</option><option value="856_Laos">+856</option><option value="371_Latvia">+371</option><option value="961_Lebanon">+961</option><option value="266_Lesotho">+266</option><option value="218_Libya">+218</option><option value="423_Liechtenstein">+423</option><option value="370_Lithuania">+370</option><option value="352_Luxembourg">+352</option><option value="853_Macau">+853</option><option value="261_Madagascar">+261</option><option value="265_Malawi">+265</option><option value="60_Malaysia">+60</option><option value="960_Maldives">+960</option><option value="223_Mali">+223</option><option value="356_Malta">+356</option><option value="692_Marshall Islands">+692</option><option value="222_Mauritania">+222</option><option value="230_Mauritius">+230</option><option value="262_Mayotte">+262</option><option value="52_Mexico">+52</option><option value="691_Micronesia">+691</option><option value="373_Moldova">+373</option><option value="377_Monaco">+377</option><option value="976_Mongolia">+976</option><option value="1_Montserrat">+1</option><option value="212_Morocco">+212</option><option value="258_Mozambique">+258</option><option value="95_Myanmar">+95</option><option value="264_Namibia">+264</option><option value="674_Nauru">+674</option><option value="977_Nepal">+977</option><option value="31_Netherlands">+31</option><option value="599_Netherlands Antilles">+599</option><option value="687_New Caledonia">+687</option><option value="64_New Zealand">+64</option><option value="505_Nicaragua">+505</option><option value="227_Niger">+227</option><option value="234_Nigeria">+234</option><option value="683_Niue">+683</option><option value="1_Northern Mariana Islands">+1</option><option value="47_Norway">+47</option><option value="968_Oman">+968</option><option value="92_Pakistan">+92</option><option value="680_Palau">+680</option><option value="970_Palestine">+970</option><option value="507_Panama">+507</option><option value="675_Papua New Guinea">+675</option><option value="595_Paraguay">+595</option><option value="51_Peru">+51</option><option value="63_Philippines">+63</option><option value="64_Pitcairn">+64</option><option value="48_Poland">+48</option><option value="351_Portugal">+351</option><option value="1_Puerto Rico">+1</option><option value="974_Qatar">+974</option><option value="242_Republic of the Congo">+242</option><option value="262_Reunion">+262</option><option value="40_Romania">+40</option><option value="7_Russia">+7</option><option value="250_Rwanda">+250</option><option value="590_Saint Barthelemy">+590</option><option value="290_Saint Helena">+290</option><option value="1_Saint Kitts and Nevis">+1</option><option value="1_Saint Lucia">+1</option><option value="590_Saint Martin">+590</option><option value="508_Saint Pierre and Miquelon">+508</option><option value="1_Saint Vincent and the Grenadines">+1</option><option value="685_Samoa">+685</option><option value="378_San Marino">+378</option><option value="239_Sao Tome and Principe">+239</option><option value="966_Saudi Arabia">+966</option><option value="221_Senegal">+221</option><option value="248_Seychelles">+248</option><option value="232_Sierra Leone">+232</option><option value="65_Singapore">+65</option><option value="1_Sint Maarten">+1</option><option value="421_Slovakia">+421</option><option value="677_Solomon Islands">+677</option><option value="252_Somalia">+252</option><option value="27_South Africa">+27</option><option value="82_South Korea">+82</option><option value="211_South Sudan">+211</option><option value="34_Spain">+34</option><option value="94_Sri Lanka">+94</option><option value="597_Suriname">+597</option><option value="47_Svalbard and Jan Mayen">+47</option><option value="268_Swaziland">+268</option><option value="46_Sweden">+46</option><option value="41_Switzerland">+41</option><option value="886_Taiwan">+886</option><option value="992_Tajikistan">+992</option><option value="255_Tanzania">+255</option><option value="66_Thailand">+66</option><option value="228_Togo">+228</option><option value="690_Tokelau">+690</option><option value="676_Tonga">+676</option><option value="1_Trinidad and Tobago">+1</option><option value="216_Tunisia">+216</option><option value="90_Turkey">+90</option><option value="993_Turkmenistan">+993</option><option value="1_Turks and Caicos Islands">+1</option><option value="688_Tuvalu">+688</option><option value="1_U.S. Virgin Islands">+1</option><option value="256_Uganda">+256</option><option value="971_United Arab Emirates">+971</option><option value="44_United Kingdom">+44</option><option value="1_United States">+1</option><option value="598_Uruguay">+598</option><option value="998_Uzbekistan">+998</option><option value="678_Vanuatu">+678</option><option value="379_Vatican">+379</option><option value="58_Venezuela">+58</option><option value="84_Vietnam">+84</option><option value="681_Wallis and Futuna">+681</option><option value="212_Western Sahara">+212</option><option value="967_Yemen">+967</option><option value="260_Zambia">+260</option></select>
-                                              </div>
-                                              <div class="col-md-10">
-                                                  <input type="text" class="form-control" placeholder="Mobile Number">
-                                              </div>
-                                          </div>
-                                          ` : ""}
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      `;
-                  }
-
-                  // Use a single operation to update the DOM instead of multiple +=
-                  let travellerFormsHTML = "";
-
-                  for (let i = 1; i <= travellers.adults; i++) {
-                      travellerFormsHTML += createTravellerForm(i, "Adult");
-                  }
-                  for (let i = 1; i <= travellers.children; i++) {
-                      travellerFormsHTML += createTravellerForm(i, "Child");
-                  }
-                  for (let i = 1; i <= travellers.infants; i++) {
-                      travellerFormsHTML += createTravellerForm(i, "Infant");
-                  }
-
-                  travellerContainer.innerHTML = travellerFormsHTML; // Efficient DOM update
-              });
-          </script>
-
         </main>
         <!-- Main Section Ending -->
 
