@@ -1,0 +1,1612 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="bracket-web" />
+    <meta
+      name="description"
+      content="Gotur is a modern travel &amp; tour booking HTML Template. It is perfect for travel agencies, tour operators, trip holiday booking websites, adventure and booking companies looking for a unique and intuitive search function and all other travel &amp; tourism websites and businesses."
+    />
+    <title>Ghumo Jhumo</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link href="./css2" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- FontAwesome CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <!-- Bootstrap Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <link rel="stylesheet" href="./bootstrap-select.min.css" />
+    <link rel="stylesheet" href="./animate.min.css" />
+    <link rel="stylesheet" href="./all.min.css" />
+    <link rel="stylesheet" href="./jquery-ui.css" />
+    <link rel="stylesheet" href="./jarallax.css" />
+    <link rel="stylesheet" href="./jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="./nouislider.min.css" />
+    <link rel="stylesheet" href="./nouislider.pips.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./daterangepicker.css" />
+    <link rel="stylesheet" href="./owl.carousel.min.css" />
+    <link rel="stylesheet" href="./owl.theme.default.min.css" />
+    <link rel="stylesheet" href="./slick.css" />
+
+    <!-- template styles -->
+    <link rel="stylesheet" href="./ghumo.css" />
+  </head>
+
+  <body class="custom-cursor" style="">
+    <div
+      class="custom-cursor__cursor"
+      style="transform: translate3d(calc(-50% + 635px), calc(-50% + 19px), 0px)"
+    ></div>
+    <div class="custom-cursor__cursor-two" style="left: 635px; top: 19px"></div>
+
+    <div class="preloader" style="display: none">
+      <div
+        class="preloader__image"
+        style="background-image: url(assets/images/loader.png)"
+      ></div>
+    </div>
+    <!-- /.preloader -->
+    <div class="page-wrapper">
+      <div class="top-one top-one--two">
+        <div class="container-fluid">
+          <div class="top-one__inner">
+           
+            <!-- /.top-one__right -->
+          </div>
+          <!-- /.top-one__inner -->
+        </div>
+        <!-- /.container-fluid -->
+      </div>
+      <!-- /.top-one -->
+
+      <header
+        class="main-header main-header--one sticky-header sticky-header--normal active"
+      >
+        <div class="container-fluid">
+          <div class="main-header__inner">
+            <div class="main-header__logo logo-retina">
+              <a href="#"
+                ><img
+                  src="assets/ghumojhumo.png"
+                  alt="ghumojhumo"
+                  width="150px"
+                  /></a>
+            </div>
+            <!-- /.main-header__logo -->
+            <div class="main-header__right">
+              <nav class="main-header__nav main-menu">
+                <ul class="main-menu__list">
+                  <li class="dropdown megamenu">
+                    <span class="gap-3"><img src="assets/nav-icon-1.png"> </span>
+                    <a href="index.html" style="gap:20px; font-weight: 600;">Flights</a>
+                  </li>
+
+                  <li class="dropdown megamenu">
+                    <span><img src="assets/nav-icon-2.png"> </span>
+                    <a href="hotels.html" style="gap:20px; font-weight: 600;">Hotels</a>
+                  </li>
+
+                  <li class="dropdown megamenu">
+                    <span><img src="assets/nav-icon-3.png"> </span>
+                    <a href="cabs.html" style="font-weight: 600;">Cabs</a>
+                  </li>
+                </ul>
+              </nav>
+
+              <!-- /.main-header__nav -->
+              <div class="main-header__info">
+                <a href="#" class="search-toggler main-header__info__item">
+                  <i
+                    class="fa-solid fa-magnifying-glass"
+                    aria-hidden="true"
+                  ></i>
+                  <span class="sr-only">Search</span>
+                </a>
+                <a href="#" class="main-header__info__item">
+                  <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                  <span class="sr-only">Cart</span>
+                </a>
+              </div>
+              <div class="main-header__btn-popup main-header__element__btn">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+              <!-- /.mobile-nav__toggler -->
+
+              <!-- Trigger Link -->
+                <a href="#" class="gotur-btn main-header__btn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    Login or Create Account <i class="fa-solid fa-paper-plane"></i>
+                </a>
+
+                <!-- Modal -->
+                <div class="modal fade" id="loginModal" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-body p-0">
+                                <div class="row g-0">
+                                    <!-- Login Section -->
+                                    <div class="col-md-6">
+                                        <div class="p-5">
+                                            <h3 class="mb-4">Sign in</h3>
+                                            
+                                            <div class="social-login mb-4">
+                                                <a href="#" class="btn btn-outline-secondary w-100 mb-3">
+                                                    <i class="fab fa-google"></i> Continue with G+
+                                                </a>
+                                                <a href="#" class="btn btn-outline-secondary w-100">
+                                                    <i class="fab fa-linkedin"></i> Continue with in
+                                                </a>
+                                            </div>
+
+                                            <div class="divider mb-4">
+                                                <span class="text-muted">or use your account</span>
+                                            </div>
+
+                                            <form>
+                                                <div class="mb-3">
+                                                    <input type="email" class="form-control" placeholder="Email">
+                                                </div>
+                                                <div class="mb-4">
+                                                    <input type="password" class="form-control" placeholder="Password">
+                                                </div>
+                                                
+                                                <a href="#" class="d-block mb-4 text-decoration-none">Forgot your password?</a>
+                                                
+                                                <button class="w-100 mb-3 login-aside">SIGN IN</button>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                    <!-- Signup Section -->
+                                    <div class="col-md-6 login-aside text-white">
+                                        <div class="p-5 h-100 d-flex flex-column justify-content-center">
+                                            <h2 class="mb-4 text-white">Hello, Friend!</h2>
+                                            <p class="mb-4">Enter your personal details and start journey with us</p>
+                                            <a href="#" class="btn btn-outline-light">SIGN UP</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"></button>
+                        </div>
+                    </div>
+                </div>
+
+              <!-- Login Form -->
+              
+              <div class="mobile-nav__btn mobile-nav__toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <!-- /.mobile-nav__toggler -->
+            </div>
+            <!-- /.main-header__right -->
+          </div>
+          <!-- /.main-header__inner -->
+        </div>
+        <!-- /.container-fluid -->
+      </header>
+      <header
+        class="main-header main-header--one sticky-header sticky-header--normal sticky-header--cloned active"
+      >
+        <div class="container-fluid">
+          <div class="main-header__inner">
+            <div class="main-header__logo logo-retina">
+              <a href="#"
+                ><img
+                src="assets/ghumojhumo.png"
+                alt="gotur HTML"
+                width="180px"
+            /></a>
+            </div>
+            <!-- /.main-header__logo -->
+            <div class="main-header__right">
+              <nav class="main-header__nav main-menu">
+                <ul class="main-menu__list">
+                  <li class="dropdown megamenu">
+                    <span class="gap-3"><img src="assets/nav-icon-1.png"> </span>
+                    <a href="index.html" style="gap:20px; font-weight: 600;">Flights</a>
+                  </li>
+
+                  <li class="dropdown megamenu">
+                    <span><img src="assets/nav-icon-2.png"> </span>
+                    <a href="hotels.html" style="gap:20px; font-weight: 600;">Hotels</a>
+                  </li>
+
+                  <li class="dropdown megamenu">
+                    <span><img src="assets/nav-icon-3.png"> </span>
+                    <a href="cabs.html" style="font-weight: 600;">Cabs</a>
+                  </li>
+
+                  <!-- <li class="dropdown">
+                    <a href="#">Destination</a>
+                    <ul>
+                      <li class="dropdown">
+                        <a href="#">destination 01</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">destination grid</a></li>
+                          <li><a href="#">destination Left</a></li>
+                          <li><a href="#">destination Right</a></li>
+                          <li><a href="#">destination Carousel</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#">destination 02</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">destination grid</a></li>
+                          <li><a href="#">destination Left</a></li>
+                          <li><a href="#">destination Right</a></li>
+                          <li><a href="#">destination Carousel</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Destination Details</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown">
+                    <a href="#">tours list</a>
+                    <ul>
+                      <li class="dropdown">
+                        <a href="#">Tour Listing 01</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">Tour Grid</a></li>
+                          <li><a href="#">Tour Left</a></li>
+                          <li><a href="#">Tour Right</a></li>
+                          <li><a href="#">Tour Carousel</a></li>
+                        </ul>
+                      </li>
+
+                      <li class="dropdown">
+                        <a href="#">Tour Listing 02</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">Tour Grid</a></li>
+                          <li><a href="#">Tour Left</a></li>
+                          <li><a href="#">Tour Right</a></li>
+                          <li><a href="#">Tour Carousel</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#">Tour Listing List</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">Tour Grid</a></li>
+                          <li><a href="#">Tour Left</a></li>
+                          <li><a href="#">Tour Right</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Listing Details 01</a></li>
+                      <li><a href="#">Listing Details 02</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown">
+                    <a href="#">pages</a>
+                    <ul>
+                      <li><a href="#">Our Team</a></li>
+                      <li><a href="#">Team Carousel</a></li>
+                      <li><a href="#">Team Details</a></li>
+                      <li><a href="#">Testimonials</a></li>
+                      <li><a href="#">Testimonials Carousel</a></li>
+                      <li><a href="#">Pricing Plan</a></li>
+                      <li class="dropdown">
+                        <a href="#">Gallery</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">Gallery masonry</a></li>
+                          <li><a href="#">Gallery filter</a></li>
+                          <li><a href="#">Gallery Grid</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">FAQS</a></li>
+                      <li><a href="#">Login</a></li>
+                      <li><a href="#">404 Error</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="dropdown">
+                    <a href="#">Shop</a>
+                    <ul>
+                      <li class="dropdown">
+                        <a href="#">Products</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">No sidebar</a></li>
+                          <li><a href="#">Left sidebar</a></li>
+                          <li><a href="#">Right sidebar</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#">Products list</a>
+                        <ul class="sub-menu">
+                          <li><a href="#">No sidebar</a></li>
+                          <li><a href="#">Left sidebar</a></li>
+                          <li><a href="#">Right sidebar</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Products carousel</a></li>
+                      <li><a href="#">Product details</a></li>
+                      <li><a href="#">Cart</a></li>
+                      <li><a href="#">Checkout</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#">news</a>
+                    <ul>
+                      <li class="dropdown">
+                        <a href="#">news grid</a>
+                        <ul>
+                          <li><a href="#">No sidebar</a></li>
+                          <li><a href="#">Left sidebar</a></li>
+                          <li><a href="#">Right sidebar</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#">news list</a>
+                        <ul>
+                          <li><a href="#">No sidebar</a></li>
+                          <li><a href="#">Left sidebar</a></li>
+                          <li><a href="#">Right sidebar</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#">Blog carousel</a></li>
+                      <li class="dropdown">
+                        <a href="#">news details</a>
+                        <ul>
+                          <li><a href="#">No sidebar</a></li>
+                          <li><a href="#">Left sidebar</a></li>
+                          <li><a href="#">Right sidebar</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#">Contact</a>
+                  </li> -->
+                </ul>
+              </nav>
+              <!-- /.main-header__nav -->
+              <div class="main-header__info">
+                <a href="#" class="search-toggler main-header__info__item">
+                  <i
+                    class="fa-solid fa-magnifying-glass"
+                    aria-hidden="true"
+                  ></i>
+                  <span class="sr-only">Search</span>
+                </a>
+                <a href="#" class="main-header__info__item">
+                  <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                  <span class="sr-only">Cart</span>
+                </a>
+              </div>
+              <div class="main-header__btn-popup main-header__element__btn">
+                <i class="fa-solid fa-bars"></i>
+              </div>
+              <!-- /.mobile-nav__toggler -->
+              <a href="#" class="gotur-btn main-header__btn" data-bs-toggle="modal" data-bs-target="#loginModal">
+                Login or Create Account <i class="fa-solid fa-paper-plane"></i>
+              </a>
+
+              <div class="mobile-nav__btn mobile-nav__toggler">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <!-- /.mobile-nav__toggler -->
+            </div>
+            <!-- /.main-header__right -->
+          </div>
+          <!-- /.main-header__inner -->
+        </div>
+        <!-- /.container-fluid -->
+      </header>
+
+      <section class="main-slider-three" id="home">
+        <div class="container">
+          <div class="row justify-content-start">
+            <div class="col-xxl-6 col-lg-12">
+              <div class="main-slider-three__content">
+                <h5
+                  class="main-slider-three__sub-title main-three bw-split-in-left"
+                  style="perspective: 400px"
+                >
+                  Welocome to Ghumo Jhumo
+                </h5>
+                <h2
+                  class="main-slider-three__title main-three bw-split-in-left"
+                  style="perspective: 400px"
+                >
+                  We Take Care <br>Of Tour Trip
+                </h2>
+                <!-- slider-title -->
+                <div class="main-slider-three__button">
+                  <a href="#" class="gotur-btn gotur-btn--primary"
+                    >get in touch <i class="fa-solid fa-paper-plane"></i
+                  ></a>
+                </div>
+                <!-- /.main-slider-three__button -->
+              </div>
+              <!-- /.main-slider-three__content -->
+            </div>
+            <!-- /.col-xxl-10 col-lg-9 -->
+            <div class="col-xxl-6">
+              <div class="main-slider-three__thumb">
+                <img src="assets/hero-man-1-2.png" alt="thumb image" width="100%"/>
+              </div>
+              <!-- /.main-slider-three__thumb -->
+            </div>
+            <!-- /.col-xxl-6 col-lg-8 -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+ 
+        <!-- /.main-slider-three__action-form -->
+        <div class="main-slider-three__element">
+          <div class="main-slider-three__element__item">
+            <img src="assets/hero-shapr-1-1.png" alt="element" />
+          </div>
+          <!-- /.main-slider-three__element__item -->
+          <div class="main-slider-three__element__item-one">
+            <img src="assets/hero-shapr-1-2.png" alt="element" />
+          </div>
+          <!-- /.main-slider-three__element__item -->
+          <div class="main-slider-three__element__item-three">
+            <img src="assets/hero-shapr-1-2-a.png" alt="element" />
+          </div>
+          <!-- /.main-slider-three__element__item -->
+          <div class="main-slider-three__element__item-two">
+            <img src="assets/hero-shapr-1-3.png" alt="element" />
+          </div>
+          <!-- /.main-slider-three__element__item -->
+        </div>
+        <!-- /.main-slider-three__element -->
+        <div class="main-slider-three__element-two">
+          <img src="assets/why-choose-tree.png" alt="element" />
+        </div>
+        <!-- /.main-slider-three__element-two -->
+
+        <div class="main-slider-three__element-three">
+          <span class="main-slider-three__element-three-item"></span>
+          <span class="main-slider-three__element-three-item"></span>
+          <span class="main-slider-three__element-three-item"></span>
+        </div>
+        <!-- /.main-slider-three__element-three -->
+      </section>
+      <!-- /.main-slider-three -->
+
+      <!-- Form Section -->
+      <section>
+        <div class="main-slider-three__action-form">
+          <div class="container-fluid">
+            <div class="main-slider-three__form">
+              <div
+                class="banner-form wow fadeInUp animated"
+                data-wow-duration="1500ms"
+                data-wow-delay="300ms"
+                style="
+                  visibility: visible;
+                  animation-duration: 1500ms;
+                  animation-delay: 300ms;
+                  animation-name: fadeInUp;
+                "
+              >
+              <form onsubmit="searchFlights(event)" action="flight-search" method="POST">
+                <div class="container">
+                    <div class="search-widget">
+                        <div class="d-flex mb-4">
+                            <div class="radio-option">
+                                <div class="radio-input active"></div>
+                                <span class="option-label active">Outstation<br>One-way</span>
+                            </div>
+                            <div class="radio-option">
+                                <div class="radio-input"></div>
+                                <span class="option-label">Outstation<br>Round trip</span>
+                            </div>
+                            <div class="radio-option">
+                                <div class="radio-input"></div>
+                                <span class="option-label">Airport<br>transfer</span>
+                            </div>
+                            <div class="radio-option">
+                                <div class="radio-input"></div>
+                                <span class="option-label">Hourly Rental</span>
+                            </div>
+                        </div>
+            
+                        <div class="position-relative">
+                            <div class="input-group-custom">
+                                <label>From</label>
+                                <input type="text" placeholder="Enter Pickup location" value="Bangalore, Karnataka, India">
+                            </div>
+                            
+                            <div class="swap-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" fill="#647a97" width="24" height="24">
+                                    <path d="M28 14c0-7.732-6.268-14-14-14S0 6.268 0 14s6.268 14 14 14c7.729-.008 13.992-6.271 14-14zm-14.11-3.589c-.192.41-.604.672-1.057.672h-1.458a.292.292 0 00-.292.292v4.375a1.167 1.167 0 11-2.333 0v-4.375a.292.292 0 00-.292-.292H7a1.166 1.166 0 01-.896-1.913l2.917-3.5a1.166 1.166 0 011.793 0l2.916 3.5c.29.348.352.832.16 1.241zm.11 7.672c0-.644.522-1.166 1.167-1.166h1.458c.161 0 .292-.13.292-.292V12.25a1.167 1.167 0 112.333 0v4.375c0 .161.13.292.292.292H21a1.166 1.166 0 01.897 1.913l-2.916 3.5a1.168 1.168 0 01-1.794 0l-2.916-3.5a1.172 1.172 0 01-.271-.747z"/>
+                                </svg>
+                            </div>
+            
+                            <div class="input-group-custom">
+                                <label>To</label>
+                                <input type="text" placeholder="Enter Drop location" value="Mysuru, Karnataka, India">
+                            </div>
+                        </div>
+            
+                        <div class="add-stops">
+                            + Add Stops <span class="new-badge">New</span>
+                        </div>
+            
+                        <div class="date-time-group">
+                            <div class="date-time-item">
+                                <label class="d-block text-secondary" style="font-size: 14px;">Pickup Date</label>
+                                <span class="fw-bold">02 Apr' 25</span>
+                            </div>
+                            <div class="date-time-item">
+                                <label class="d-block text-secondary" style="font-size: 14px;">Pickup Time</label>
+                                <span class="fw-bold">10:00 AM</span>
+                            </div>
+                        </div>
+            
+                        <a href="cabs-booking.html" class="search-btn">SEARCH CABS</a>
+                    </div>
+                </div>
+            </form>
+
+
+            
+              </div>
+              <!-- banner-form -->
+            </div>
+            <!-- /.main-slider-four__form -->
+          </div>
+          <!-- /.container -->
+        </div>
+      </section>
+
+        <div class="container">
+            <div class="recent-searches-container mt-5 shadow-sm p-5">
+            <h4 class="mb-4 fw-bold">Recent Searches</h4>
+            
+            <div class="position-relative">
+                
+                <div class="scroll-container">
+                    <div class="d-flex flex-row">
+                        <!-- Recent Search Item -->
+                        <div class="recent-search-card">
+                            <p class="search-type">Cab</p>
+                            <div class="mb-3">
+                                <h4 class="location-title">Bangalore, Karnataka, India</h4>
+                                <h4 class="location-title">Mysuru, Karnataka, India</h4>
+                            </div>
+                            <div class="date-badge">Wed, 02 Apr</div>
+                        </div>
+
+                        <!-- Promo Card -->
+                        <div class="recent-search-card">
+                            <div class="offer-card">
+                                <p class="offer-text">Upto ₹1700* Off</p>
+                                <div class="text-muted small">Valid only on app</div>
+                            </div>
+                            <div class="qr-code-section">
+                                <img src="https://gos3.ibcdn.com/mweb2app-qr-recent-search-dweb-1673516405.jpeg" 
+                                    class="qr-code-image" 
+                                    alt="QR Code">
+                                <p class="text-muted small mb-0">Scan to download</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            
+            </div>
+            </div>
+        </div>
+
+        
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <div class="card shadow">
+                        <div class="card-body">
+                            <h4 class="mb-4 fw-bold">Online Cab Booking with ghumoJhumo</h4>
+        
+                            <div class="collapse" id="contentCollapse">
+                                <h5 class="mb-3 fw-bold">Why Choose GoIbibo?</h5>
+                                <p>Experience hassle-free cab bookings with India's leading travel platform.</p>
+        
+                                <div class="feature-section">
+                                    <h5 class="sub-heading fw-bold">Clean Cars</h5>
+                                    <p>Hygiene is our top priority with sanitized vehicles and COVID-safe protocols.</p>
+        
+                                    <h5 class="sub-heading fw-bold">Transparent Billing</h5>
+                                    <p>No hidden charges with multiple payment options available.</p>
+        
+                                    <h5 class="sub-heading fw-bold">Expert Drivers</h5>
+                                    <p>Professional and courteous chauffeurs for a smooth journey.</p>
+                                </div>
+        
+                                <h4 class="mt-5 mb-3 fw-bold">How to Book</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="card mb-3">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Step 1: Enter Details</h5>
+                                                <p>Provide pickup location, destination, and travel date</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card mb-3">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Step 2: Choose Vehicle</h5>
+                                                <p>Select from hatchbacks, sedans, SUVs or luxury cars</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="alert alert-info mt-4">
+                                    <h4>Special Offers!</h4>
+                                    <p>Get 15% off on your first booking using code: GOCAB15</p>
+                                </div>
+                            </div>
+        
+                            <div class="text-center mt-4">
+                                <p id="toggleButton" class="text-primary" data-bs-toggle="collapse" 
+                                data-bs-target="#contentCollapse" aria-expanded="false" aria-controls="contentCollapse">
+                                    Read More
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+        <!-- Frequently Asked Questions Section -->
+        <div class="faq-section">
+            <div class="container">
+                <h2 class="mb-5 text-center">Cabs Booking FAQ's</h2>
+                
+                <div class="accordion" id="faqAccordion">
+                    <!-- FAQ Items -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                                How can I book cheap cabs online?
+                            </button>
+                        </h2>
+                        <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Golbibo helps you with online cab booking at the best prices, comparatively much lower than the local vendors. Also you can use promo codes and offers on the Golbibo website & app on online cab booking to get extra discounts.
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Repeat similar structure for other questions -->
+                    <!-- Add remaining questions following the same pattern -->
+                    <!-- Example for second question -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+                                What are the advantages of online taxi booking?
+                            </button>
+                        </h2>
+                        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Online taxi booking not only helps you with best prices but also helps you with the convenience of paying through multiple payment options (like Debit Card, Credit Card, eWallets etc.). You can easily compare prices and choose various categories of cabs like Hatchback cars, Sedan and SUV.
+                            </div>
+                        </div>
+                    </div>
+        
+                    <!-- Add remaining questions following the same structure -->
+                    <!-- Continue adding all other questions from the content -->
+                    
+                </div>
+            </div>
+        </div>
+        
+      
+      <footer class="main-footer">
+        <div class="main-footer__top">
+          <div class="container">
+            <div
+              class="main-footer__top__inner wow fadeInUp"
+              data-wow-duration="1500ms"
+              data-wow-delay="200ms"
+              style="
+                visibility: hidden;
+                animation-duration: 1500ms;
+                animation-delay: 200ms;
+                animation-name: none;
+              "
+            >
+              <div class="footer-widget__logo logo-retina">
+                <a href="#"
+                  ><img
+                    src="assets/ghumojhumo.png"
+                    width="158"
+                    alt="gotur logo"
+                /></a>
+              </div>
+              <!-- /.footer-widget__logo -->
+              <ul class="list-unstyled footer-widget__list">
+                <li>
+                  <div class="footer-widget__list__icon">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <!-- /.footer-widget__list__icon -->
+                  <div class="footer-widget__list__content">
+                    <span class="footer-widget__list__subtitle"
+                      >send email</span
+                    >
+                    <a href="mailto:info@company.com">info@company.com</a>
+                  </div>
+                  <!-- /.footer-widget__list__content -->
+                </li>
+                <li>
+                  <div class="footer-widget__list__icon">
+                    <i class="fas fa-phone"></i>
+                  </div>
+                  <!-- /.footer-widget__list__icon -->
+                  <div class="footer-widget__list__content">
+                    <span class="footer-widget__list__subtitle"
+                      >call agent</span
+                    >
+                    <a href="tel:+208-666-0112">+91 123 654 900</a>
+                  </div>
+                  <!-- /.footer-widget__list__content -->
+                </li>
+                <li>
+                  <div class="footer-widget__list__icon">
+                    <i class="fa fa-clock"></i>
+                  </div>
+                  <!-- /.footer-widget__list__icon -->
+                  <div class="footer-widget__list__content">
+                    <span class="footer-widget__list__subtitle"
+                      >opening time</span
+                    >
+                    <p>Hours: Mon-Fri: 8am – 7pm</p>
+                  </div>
+                  <!-- /.footer-widget__list__content -->
+                </li>
+              </ul>
+              <!-- /.list-unstyled -->
+            </div>
+            <!-- /.main-footer__top__inner -->
+          </div>
+          <!-- /.container -->
+        </div>
+        <!-- /.main-footer__top -->
+        <div class="main-footer__middle">
+          <div class="container">
+            <div class="row gutter-y-40">
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
+                data-wow-duration="1500ms"
+                data-wow-delay="00ms"
+                style="
+                  visibility: hidden;
+                  animation-duration: 1500ms;
+                  animation-delay: 0ms;
+                  animation-name: none;
+                "
+              >
+                <div class="footer-widget footer-widget--about">
+                  <h2 class="footer-widget__title">about Ghumo Jhumo</h2>
+                  <!-- /.footer-widget__title -->
+                  <p class="footer-widget__about-text">
+                    available, but the majority have suffered alteration in some
+                    form by injected humour, or
+                  </p>
+                  <!-- /.footer-widget__about-text -->
+                  <div class="footer-widget__social">
+                    <a href="https://facebook.com/">
+                      <i class="fab fa-facebook" aria-hidden="true"></i>
+                      <span class="sr-only">Facebook</span></a
+                    >
+                    <a href="https://twitter.com/">
+                      <i class="fab fa-twitter" aria-hidden="true"></i>
+                      <span class="sr-only">Twitter</span></a
+                    >
+                    <a href="https://instagram.com/">
+                      <i class="fab fa-instagram" aria-hidden="true"></i>
+                      <span class="sr-only">Linked In</span></a
+                    >
+                    <a href="https://youtube.com/">
+                      <i class="fab fa-youtube" aria-hidden="true"></i>
+                      <span class="sr-only">Youtube</span></a
+                    >
+                  </div>
+                  <!-- /.footer-widget__social -->
+                </div>
+                <!-- /.footer-widget -->
+              </div>
+              <!-- /.col-lg-4 -->
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
+                data-wow-duration="1500ms"
+                data-wow-delay="200ms"
+                style="
+                  visibility: hidden;
+                  animation-duration: 1500ms;
+                  animation-delay: 200ms;
+                  animation-name: none;
+                "
+              >
+                <div class="footer-widget footer-widget--links">
+                  <h2 class="footer-widget__title">Destinations</h2>
+                  <!-- /.footer-widget__title -->
+                  <ul class="list-unstyled footer-widget__links">
+                    <li><a href="#">South America</a></li>
+                    <li><a href="#">Middle East</a></li>
+                    <li><a href="#">San Franc Rica</a></li>
+                    <li><a href="#">New York</a></li>
+                    <li><a href="#">Tokyo</a></li>
+                  </ul>
+                  <!-- /.list-unstyled footer-widget__links -->
+                </div>
+                <!-- /.footer-widget -->
+              </div>
+              <!-- /.col-lg-4 -->
+
+              <div
+                class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
+                data-wow-duration="1500ms"
+                data-wow-delay="400ms"
+                style="
+                  visibility: hidden;
+                  animation-duration: 1500ms;
+                  animation-delay: 400ms;
+                  animation-name: none;
+                "
+              >
+                <div class="footer-widget footer-widget--post">
+                  <h2 class="footer-widget__title">useful links</h2>
+                  <!-- /.footer-widget__title -->
+                  <ul class="list-unstyled footer-widget__links">
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Destination</a></li>
+                    <li><a href="#">News &amp; blog</a></li>
+                    <li><a href="#">Meet the Guide</a></li>
+                    <li><a href="#">Contacts</a></li>
+                  </ul>
+                  <!-- /.list-unstyled footer-widget__links -->
+                </div>
+                <!-- /.footer-widget -->
+              </div>
+              <!-- /.col-lg-6 -->
+
+              <div
+                class="col-md-6 col-lg-5 col-xl-3 wow fadeInUp"
+                data-wow-duration="1500ms"
+                data-wow-delay="600ms"
+                style="
+                  visibility: hidden;
+                  animation-duration: 1500ms;
+                  animation-delay: 600ms;
+                  animation-name: none;
+                "
+              >
+                <div class="footer-widget footer-widget--contact">
+                  <h2 class="footer-widget__title">Newsletter</h2>
+                  <!-- /.footer-widget__title -->
+                  <p class="footer-widget__contact-text">
+                    Sign up to searing weekly newsletter to get the latest
+                    updates.
+                  </p>
+                  <!-- /.footer-widget__about-text -->
+                  <form
+                    action="#"
+                    data-url="MAILCHIMP_FORM_URL"
+                    class="footer-widget__newsletter mc-form"
+                    novalidate="true"
+                  >
+                    <div class="form-group__form">
+                      <input
+                        type="email"
+                        name="EMAIL"
+                        placeholder="Your email address"
+                      />
+                      <button type="submit" class="gotur-btn">
+                        <i class="fa fa-arrow-right"></i>
+                      </button>
+                    </div>
+                    <!-- /.form-group -->
+                    <div class="form-group__check">
+                      <input type="checkbox" name="checkbox" id="check" />
+                      <label for="check"
+                        >I agree to the <a href="#">Privacy Policy.</a></label
+                      >
+                    </div>
+                    <!-- /.form-group -->
+                  </form>
+                  <!-- /.footer-widget__newsletter mc-form -->
+                  <div class="mc-form__response"></div>
+                  <!-- /.mc-form__response -->
+                </div>
+                <!-- /.footer-widget -->
+              </div>
+              <!-- /.col-lg-5 -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container -->
+          <div class="main-footer__element-one">
+            <img src="assets/footer-shape-1-1.png" alt="" />
+          </div>
+          <!-- /.main-footer__element-one -->
+          <div class="main-footer__element-two">
+            <img src="assets/footer-shape-1-2.png" alt="" />
+          </div>
+          <!-- /.main-footer__element-one -->
+        </div>
+        <!-- /.main-footer__middle -->
+        <div class="main-footer__bottom">
+          <div class="container">
+            <div class="main-footer__bottom__inner">
+              <p class="main-footer__copyright">
+                © Copyright <span class="dynamic-year">2025</span> by Ghumo Jhumo
+              </p>
+              <a
+                href="#"
+                data-target="html"
+                class="scroll-to-target scroll-to-top show"
+              >
+                <span class="scroll-to-top__wrapper">
+                  <i class="fas fa-arrow-up"></i>
+                </span>
+              </a>
+              <div class="main-footer__bottom__pyment">
+                <a href="#"
+                  ><img src="assets/footer-card-1-1.png" alt="gotur pyment"
+                /></a>
+              </div>
+            </div>
+            <!-- /.main-footer__inner -->
+          </div>
+          <!-- /.container -->
+        </div>
+        <!-- /.main-footer__bottom -->
+      </footer>
+      <!-- /.main-footer -->
+    </div>
+    <!-- /.page-wrapper -->
+
+    <div class="mobile-nav__wrapper">
+      <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+      <!-- /.mobile-nav__overlay -->
+      <div class="mobile-nav__content">
+        <span class="mobile-nav__close mobile-nav__toggler"
+          ><i class="fa fa-times"></i
+        ></span>
+        <div class="logo-box logo-retina">
+          <a href="#" aria-label="logo image"
+            ><img src="assets/ghumojhumo.png" width="158" alt="logo"
+          /></a>
+        </div>
+        <!-- /.logo-box -->
+        <div class="mobile-nav__container">
+          <ul class="main-menu__list">
+            <li class="dropdown megamenu">
+              <a href="#"
+                >Home<button aria-label="dropdown toggler">
+                  <i class="fa fa-angle-down"></i></button
+              ></a>
+              <ul>
+                <li>
+                  <section class="home-showcase">
+                    <div class="container">
+                      <div class="home-showcase__inner">
+                        <div class="row">
+                          <div class="col-md-6 col-lg-3">
+                            <div class="demo-one__card">
+                              <div class="demo-one__image">
+                                <img
+                                  src="assets/home-showcase-1.jpg"
+                                  alt=" gotur image"
+                                />
+                                <div class="demo-one__btns">
+                                  <a href="#" class="gotur-btn demo-one__btn"
+                                    >Multi Page</a
+                                  ><!-- /.thm-btn demo-one__btn -->
+                                  <a href="#" class="gotur-btn demo-one__btn"
+                                    >One Page</a
+                                  ><!-- /.thm-btn demo-one__btn -->
+                                </div>
+                                <!-- /.demo-one__btns -->
+                              </div>
+                              <!-- /.demo-one__image -->
+                              <div class="demo-one__content">
+                                <h3 class="demo-one__title">
+                                  <a href="#">Home Page 01</a>
+                                </h3>
+                                <!-- /.demo-one__title -->
+                              </div>
+                              <!-- /.demo-one__content -->
+                            </div>
+                            <!-- /.demo-one__card -->
+                          </div>
+                          <!-- /.col-md-6 col-lg-3 -->
+                          <div class="col-md-6 col-lg-3">
+                            <div class="demo-one__card">
+                              <div class="demo-one__image">
+                                <img
+                                  src="assets/home-showcase-2.jpg"
+                                  alt="gotur image"
+                                />
+                                <div class="demo-one__btns">
+                                  <a href="#" class="gotur-btn demo-one__btn"
+                                    >Multi Page</a
+                                  ><!-- /.thm-btn demo-one__btn -->
+                                  <a href="#" class="gotur-btn demo-one__btn"
+                                    >One Page</a
+                                  ><!-- /.thm-btn demo-one__btn -->
+                                </div>
+                                <!-- /.demo-one__btns -->
+                              </div>
+                              <!-- /.demo-one__image -->
+                              <div class="demo-one__content">
+                                <h3 class="demo-one__title">
+                                  <a href="#">Home Page 02</a>
+                                </h3>
+                                <!-- /.demo-one__title -->
+                              </div>
+                              <!-- /.demo-one__content -->
+                            </div>
+                            <!-- /.demo-one__card -->
+                          </div>
+                          <!-- /.col-md-6 col-lg-3 -->
+                          <div class="col-md-6 col-lg-3">
+                            <div class="demo-one__card">
+                              <div class="demo-one__image">
+                                <img
+                                  src="assets/home-showcase-3.jpg"
+                                  alt="gotur image"
+                                />
+                                <div class="demo-one__btns">
+                                  <a href="#" class="gotur-btn demo-one__btn"
+                                    >Multi Page</a
+                                  ><!-- /.thm-btn demo-one__btn -->
+                                  <a href="#" class="gotur-btn demo-one__btn"
+                                    >One Page</a
+                                  ><!-- /.thm-btn demo-one__btn -->
+                                </div>
+                                <!-- /.demo-one__btns -->
+                              </div>
+                              <!-- /.demo-one__image -->
+                              <div class="demo-one__content">
+                                <h3 class="demo-one__title">
+                                  <a href="#">Home Page 03</a>
+                                </h3>
+                                <!-- /.demo-one__title -->
+                              </div>
+                              <!-- /.demo-one__content -->
+                            </div>
+                            <!-- /.demo-one__card -->
+                          </div>
+                          <!-- /.col-md-6 col-lg-3 -->
+                          <div class="col-md-6 col-lg-3">
+                            <div class="demo-one__card">
+                              <div class="demo-one__image">
+                                <img
+                                  src="assets/home-showcase-4.jpg"
+                                  alt="gotur image"
+                                />
+                                <div class="demo-one__btns">
+                                  <a href="#" class="gotur-btn demo-one__btn"
+                                    >Multi Page</a
+                                  ><!-- /.thm-btn demo-one__btn -->
+                                  <a href="#" class="gotur-btn demo-one__btn"
+                                    >One Page</a
+                                  ><!-- /.thm-btn demo-one__btn -->
+                                </div>
+                                <!-- /.demo-one__btns -->
+                              </div>
+                              <!-- /.demo-one__image -->
+                              <div class="demo-one__content">
+                                <h3 class="demo-one__title">
+                                  <a href="#">Home Page 04</a>
+                                </h3>
+                                <!-- /.demo-one__title -->
+                              </div>
+                              <!-- /.demo-one__content -->
+                            </div>
+                            <!-- /.demo-one__card -->
+                          </div>
+                          <!-- /.col-md-6 col-lg-3 -->
+                        </div>
+                        <!-- /.row -->
+                      </div>
+                      <!-- /.home-showcase__inner -->
+                    </div>
+                    <!-- /.container -->
+                  </section>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#">about us</a>
+            </li>
+
+            <li class="dropdown">
+              <a href="#"
+                >Destination<button aria-label="dropdown toggler">
+                  <i class="fa fa-angle-down"></i></button
+              ></a>
+              <ul>
+                <li class="dropdown">
+                  <a href="#"
+                    >destination 01<button aria-label="dropdown toggler">
+                      <i class="fa fa-angle-down"></i></button
+                  ></a>
+                  <ul class="sub-menu">
+                    <li><a href="#">destination grid</a></li>
+                    <li><a href="#">destination Left</a></li>
+                    <li><a href="#">destination Right</a></li>
+                    <li><a href="#">destination Carousel</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#"
+                    >destination 02<button aria-label="dropdown toggler">
+                      <i class="fa fa-angle-down"></i></button
+                  ></a>
+                  <ul class="sub-menu">
+                    <li><a href="#">destination grid</a></li>
+                    <li><a href="#">destination Left</a></li>
+                    <li><a href="#">destination Right</a></li>
+                    <li><a href="#">destination Carousel</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Destination Details</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#"
+                >tours list<button aria-label="dropdown toggler">
+                  <i class="fa fa-angle-down"></i></button
+              ></a>
+              <ul>
+                <li class="dropdown">
+                  <a href="#"
+                    >Tour Listing 01<button aria-label="dropdown toggler">
+                      <i class="fa fa-angle-down"></i></button
+                  ></a>
+                  <ul class="sub-menu">
+                    <li><a href="#">Tour Grid</a></li>
+                    <li><a href="#">Tour Left</a></li>
+                    <li><a href="#">Tour Right</a></li>
+                    <li><a href="#">Tour Carousel</a></li>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#"
+                    >Tour Listing 02<button aria-label="dropdown toggler">
+                      <i class="fa fa-angle-down"></i></button
+                  ></a>
+                  <ul class="sub-menu">
+                    <li><a href="#">Tour Grid</a></li>
+                    <li><a href="#">Tour Left</a></li>
+                    <li><a href="#">Tour Right</a></li>
+                    <li><a href="#">Tour Carousel</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#"
+                    >Tour Listing List<button aria-label="dropdown toggler">
+                      <i class="fa fa-angle-down"></i></button
+                  ></a>
+                  <ul class="sub-menu">
+                    <li><a href="#">Tour Grid</a></li>
+                    <li><a href="#">Tour Left</a></li>
+                    <li><a href="#">Tour Right</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Listing Details 01</a></li>
+                <li><a href="#">Listing Details 02</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#"
+                >pages<button aria-label="dropdown toggler">
+                  <i class="fa fa-angle-down"></i></button
+              ></a>
+              <ul>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Team Carousel</a></li>
+                <li><a href="#">Team Details</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Testimonials Carousel</a></li>
+                <li><a href="#">Pricing Plan</a></li>
+                <li class="dropdown">
+                  <a href="#"
+                    >Gallery<button aria-label="dropdown toggler">
+                      <i class="fa fa-angle-down"></i></button
+                  ></a>
+                  <ul class="sub-menu">
+                    <li><a href="#">Gallery masonry</a></li>
+                    <li><a href="#">Gallery filter</a></li>
+                    <li><a href="#">Gallery Grid</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">FAQS</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">404 Error</a></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a href="#"
+                >Shop<button aria-label="dropdown toggler">
+                  <i class="fa fa-angle-down"></i></button
+              ></a>
+              <ul>
+                <li class="dropdown">
+                  <a href="#"
+                    >Products<button aria-label="dropdown toggler">
+                      <i class="fa fa-angle-down"></i></button
+                  ></a>
+                  <ul class="sub-menu">
+                    <li><a href="#">No sidebar</a></li>
+                    <li><a href="#">Left sidebar</a></li>
+                    <li><a href="#">Right sidebar</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#"
+                    >Products list<button aria-label="dropdown toggler">
+                      <i class="fa fa-angle-down"></i></button
+                  ></a>
+                  <ul class="sub-menu">
+                    <li><a href="#">No sidebar</a></li>
+                    <li><a href="#">Left sidebar</a></li>
+                    <li><a href="#">Right sidebar</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Products carousel</a></li>
+                <li><a href="#">Product details</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#">Checkout</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#"
+                >news<button aria-label="dropdown toggler">
+                  <i class="fa fa-angle-down"></i></button
+              ></a>
+              <ul>
+                <li class="dropdown">
+                  <a href="#"
+                    >news grid<button aria-label="dropdown toggler">
+                      <i class="fa fa-angle-down"></i></button
+                  ></a>
+                  <ul>
+                    <li><a href="#">No sidebar</a></li>
+                    <li><a href="#">Left sidebar</a></li>
+                    <li><a href="#">Right sidebar</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#"
+                    >news list<button aria-label="dropdown toggler">
+                      <i class="fa fa-angle-down"></i></button
+                  ></a>
+                  <ul>
+                    <li><a href="#">No sidebar</a></li>
+                    <li><a href="#">Left sidebar</a></li>
+                    <li><a href="#">Right sidebar</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Blog carousel</a></li>
+                <li class="dropdown">
+                  <a href="#"
+                    >news details<button aria-label="dropdown toggler">
+                      <i class="fa fa-angle-down"></i></button
+                  ></a>
+                  <ul>
+                    <li><a href="#">No sidebar</a></li>
+                    <li><a href="#">Left sidebar</a></li>
+                    <li><a href="#">Right sidebar</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.mobile-nav__container -->
+        <ul class="mobile-nav__contact list-unstyled">
+          <li>
+            <span class="mobile-nav__contact__icon">
+              <i class="fa fa-envelope"></i>
+            </span>
+            <a href="#">needhelp@gotur.com</a>
+          </li>
+          <li>
+            <span class="mobile-nav__contact__icon">
+              <i class="fa fa-phone-alt"></i>
+            </span>
+            <a href="#">+91 5698 0036 420</a>
+          </li>
+        </ul>
+        <!-- /.mobile-nav__contact -->
+        <div class="mobile-nav__social">
+          <a href="https://facebook.com/">
+            <i class="fab fa-facebook" aria-hidden="true"></i>
+            <span class="sr-only">Facebook</span></a
+          >
+          <a href="https://twitter.com/">
+            <i class="icon-twitter" aria-hidden="true"></i>
+            <span class="sr-only">Twitter</span></a
+          >
+          <a href="https://instagram.com/">
+            <i class="icon-linkedin" aria-hidden="true"></i>
+            <span class="sr-only">Linked In</span></a
+          >
+          <a href="https://youtube.com/">
+            <i class="fab fa-youtube" aria-hidden="true"></i>
+            <span class="sr-only">Youtube</span></a
+          >
+        </div>
+        <!-- /.mobile-nav__social -->
+      </div>
+      <!-- /.mobile-nav__content -->
+    </div>
+    <!-- /.mobile-nav__wrapper -->
+    <div class="search-popup">
+      <div class="search-popup__overlay search-toggler"></div>
+      <!-- /.search-popup__overlay -->
+      <div class="search-popup__content">
+        <form role="search" method="get" class="search-popup__form" action="#">
+          <input type="text" id="search" placeholder="Search Here..." />
+          <button type="submit" aria-label="search submit" class="gotur-btn">
+            <i class="fas fa-search"></i>
+
+          </button>
+        </form>
+      </div>
+      <!-- /.search-popup__content -->
+    </div>
+     
+    <!-- /.search-popup -->
+    <div class="header-right-sidebar">
+      <div
+        class="header-right-sidebar__overlay header-right-sidebar__toggler"
+      ></div>
+      <div class="header-right-sidebar__content">
+        <span class="header-right-sidebar__close header-right-sidebar__toggler"
+          ><i class="fa fa-times"></i
+        ></span>
+        <div class="header-right-sidebar__logo-box">
+          <a href="#" aria-label="logo image">
+            <img src="assets/logo-landing.png" width="158" alt="gotur" />
+          </a>
+        </div>
+        <div class="header-right-sidebar__container">
+          <div
+            class="header-right-sidebar__container__about wow fadeInUp animated"
+            data-wow-duration="1500ms"
+            data-wow-delay="300ms"
+            style="
+              visibility: visible;
+              animation-duration: 1500ms;
+              animation-delay: 300ms;
+              animation-name: fadeInUp;
+            "
+          >
+            <h3 class="header-right-sidebar__container__title">
+              We’re Number One Travel Adventure Company
+            </h3>
+            <p class="header-right-sidebar__container__text">
+              It is a long established fact that a reader will be distracted the
+              readable content of a page when looking at layout the point of
+              using lorem the is Ipsum less normal distribution of letters.
+            </p>
+          </div>
+          <div class="header-right-sidebar__container__contact">
+            <h3 class="header-right-sidebar__container__title">Contact Us</h3>
+            <ul class="header-right-sidebar__container__list list-unstyled">
+              <li
+                class="header-right-sidebar__container__list__item wow fadeInUp animated"
+                data-wow-duration="1500ms"
+                data-wow-delay="300ms"
+                style="
+                  visibility: visible;
+                  animation-duration: 1500ms;
+                  animation-delay: 300ms;
+                  animation-name: fadeInUp;
+                "
+              >
+                <div class="header-right-sidebar__container__icon">
+                  <i class="fa fa-envelope"></i>
+
+                </div>
+                <div class="header-right-sidebar__container__list__content">
+                  <span class="header-right-sidebar__container__list__title"
+                    >send email</span
+                  >
+                  <a href="#">info@company.com</a>
+                </div>
+              </li>
+              <li
+                class="header-right-sidebar__container__list__item wow fadeInUp animated"
+                data-wow-duration="1500ms"
+                data-wow-delay="500ms"
+                style="
+                  visibility: visible;
+                  animation-duration: 1500ms;
+                  animation-delay: 500ms;
+                  animation-name: fadeInUp;
+                "
+              >
+                <div class="header-right-sidebar__container__icon">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="header-right-sidebar__container__list__content">
+                  <span class="header-right-sidebar__container__list__title"
+                    >call agent</span
+                  >
+                  <a href="tel:+91-123-654-900">+91 123 654 900</a>
+                </div>
+              </li>
+              <li
+                class="header-right-sidebar__container__list__item wow fadeInUp animated"
+                data-wow-duration="1500ms"
+                data-wow-delay="700ms"
+                style="
+                  visibility: visible;
+                  animation-duration: 1500ms;
+                  animation-delay: 700ms;
+                  animation-name: fadeInUp;
+                "
+              >
+                <div class="header-right-sidebar__container__icon">
+                  <i class="fa fa-clock"></i>
+                </div>
+                <div class="header-right-sidebar__container__list__content">
+                  <span class="header-right-sidebar__container__list__title"
+                    >opening time</span
+                  >
+                  <p>Hours: Mon-Fri: 8am – 7pm</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="header-right-sidebar__container__newsletter-box wow fadeInUp animated"
+            data-wow-duration="1500ms"
+            data-wow-delay="900ms"
+            style="
+              visibility: visible;
+              animation-duration: 1500ms;
+              animation-delay: 900ms;
+              animation-name: fadeInUp;
+            "
+          >
+            <h3 class="header-right-sidebar__container__title">
+              get notification
+            </h3>
+            <form
+              action="#"
+              data-url="MAILCHIMP_FORM_URL"
+              class="newsletter-box mc-form"
+              novalidate="true"
+            >
+              <input type="email" name="EMAIL" placeholder="Email" />
+              <button type="submit" class="gotur-btn gotur-btn--base">
+                subscribe now
+              </button>
+            </form>
+            <div class="mc-form__response"></div>
+          </div>
+        </div>
+      </div>
+      <!-- /.header-right-sidebar__content -->
+    </div>
+
+    <div
+      id="scroll-top"
+      class="scroll-top active"
+      style="
+        background: conic-gradient(
+          var(--gotur-primary) 77%,
+          var(--gotur-white) 77%
+        );
+      "
+    >
+      <span id="scroll-top-value" class="scroll-top-value">77%</span>
+    </div>
+
+    <script src="./jquery-3.7.1.min.js.download"></script>
+    <script src="./bootstrap.bundle.min.js.download"></script>
+    <script src="./bootstrap-select.min.js.download"></script>
+    <script src="./jarallax.min.js.download"></script>
+    <script src="./jquery-ui.js.download"></script>
+    <script src="./jquery.ajaxchimp.min.js.download"></script>
+    <script src="./jquery.appear.min.js.download"></script>
+    <script src="./jquery.circle-progress.min.js.download"></script>
+    <script src="./jquery.magnific-popup.min.js.download"></script>
+    <script src="./jquery.validate.min.js.download"></script>
+    <script src="./nouislider.min.js.download"></script>
+    <script src="./wNumb.min.js.download"></script>
+    <script src="./owl.carousel.min.js.download"></script>
+    <script src="./slick.min.js.download"></script>
+    <script src="./wow.js.download"></script>
+    <script src="./imagesloaded.min.js.download"></script>
+    <script src="./isotope.js.download"></script>
+    <script src="./countdown.min.js.download"></script>
+    <script src="./moment.min.js.download"></script>
+    <script src="./daterangepicker.js.download"></script>
+    <script src="./jquery.circleType.js.download"></script>
+    <script src="./jquery.lettering.min.js.download"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP -->
+    <script src="./gsap.js.download"></script>
+    <script src="./scrollTrigger.min.js.download"></script>
+    <script src="./splittext.min.js.download"></script>
+    <script src="./gotur-gsap.js.download"></script>
+
+
+    <script src="./ghumu-jhumu.js"></script>
+    <div class="daterangepicker ltr show-calendar opensright">
+      <div class="ranges"></div>
+      <div class="drp-calendar left">
+        <div class="calendar-table"></div>
+        <div class="calendar-time" style="display: none"></div>
+      </div>
+      <div class="drp-calendar right">
+        <div class="calendar-table"></div>
+        <div class="calendar-time" style="display: none"></div>
+      </div>
+      <div class="drp-buttons">
+        <span class="drp-selected"></span
+        ><button class="cancelBtn btn btn-sm btn-default" type="button">
+          Cancel</button
+        ><button
+          class="applyBtn btn btn-sm btn-primary"
+          disabled="disabled"
+          type="button"
+        >
+          Apply
+        </button>
+      </div>
+    </div>
+
+    <!-- For Read More Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var toggleButton = document.getElementById("toggleButton");
+            var contentCollapse = document.getElementById("contentCollapse");
+    
+            // Use Bootstrap's collapse event listener to handle the state change
+            contentCollapse.addEventListener("shown.bs.collapse", function () {
+                toggleButton.textContent = "Read Less";
+            });
+    
+            contentCollapse.addEventListener("hidden.bs.collapse", function () {
+                toggleButton.textContent = "Read More";
+            });
+        });
+    </script>
+
+  </body>
+</html>

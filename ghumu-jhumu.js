@@ -301,12 +301,6 @@
     mobileNavContainer.innerHTML = navContent;
   }
 
-  if ($(".sticky-header").length) {
-    $(".sticky-header")
-      .clone()
-      .insertAfter(".sticky-header")
-      .addClass("sticky-header--cloned");
-  }
 
   if ($(".mobile-nav__container .main-menu__list").length) {
     let dropdownAnchor = $(
@@ -920,3 +914,13 @@
     });
   }
 })(jQuery);
+
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector(".sticky-header--cloned");
+
+  window.addEventListener("scroll", function () {
+      if (window.scrollY > 100 && header && !header.classList.contains("active")) {
+          header.classList.add("active");
+      }
+  });
+});
