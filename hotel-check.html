@@ -9,7 +9,7 @@
       name="description"
       content="Gotur is a modern travel &amp; tour booking HTML Template. It is perfect for travel agencies, tour operators, trip holiday booking websites, adventure and booking companies looking for a unique and intuitive search function and all other travel &amp; tourism websites and businesses."
     />
-    <title>Hotel Check</title>
+    <title>Hotels Check</title>
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
@@ -18,17 +18,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- FontAwesome CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Bootstrap Link -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-
+    <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="./bootstrap.min.css" />
     <link rel="stylesheet" href="./bootstrap-select.min.css" />
     <link rel="stylesheet" href="./animate.min.css" />
@@ -46,10 +46,9 @@
 
     <!-- template styles -->
     <link rel="stylesheet" href="ghumo.css" />
-    <link rel="stylesheet" href="app.css" />
-
   </head>
 
+ 
   <body class="custom-cursor" style="">
     <div
       class="custom-cursor__cursor"
@@ -65,127 +64,65 @@
     </div>
     <!-- /.preloader -->
     <div class="page-wrapper">
-      <div class="top-one top-one--two">
-        <div class="container-fluid">
-          <div class="top-one__inner">
-            <ul class="list-unstyled top-one__info">
-              <li class="top-one__info__item">
-                <i class="fa-solid fa-phone"></i>
-                <a href="tel:+6108-666-0112">+0000-666-0000</a>
-              </li>
-              <!-- /.top-one__info__item -->
-              <li class="top-one__info__item">
-                <i class="fa-solid fa-envelope"></i>
-                <a href="mailto:info@gmail.com">info@gmail.com</a>
-              </li>
-              <!-- /.top-one__info__item -->
-            </ul>
-            <!-- /.list-unstyled top-one__info -->
-            <div class="top-one__right">
-              <div class="top-one__info__item">
-                <i class="fa-solid fa-map-marker-alt"></i>
-                <a href="https://www.google.com/maps"
-                  >184 Main Collins Street Victoria 8007</a
-                >
-              </div>
-              <!-- /.top-one__info__item -->
-              <div class="top-one__social">
-                <a href="https://facebook.com/">
-                  <i class="fa-brands fa-facebook" aria-hidden="true"></i>
-                  <span class="sr-only">Facebook</span></a
-                >
-                <a href="https://twitter.com/">
-                  <i class="fa-brands fa-twitter" aria-hidden="true"></i>
-
-                  <span class="sr-only">Twitter</span></a
-                >
-                <a href="https://instagram.com/">
-                  <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-
-                  <span class="sr-only">Linked In</span></a
-                >
-                <a href="https://youtube.com/">
-                  <i class="fa-brands fa-youtube" aria-hidden="true"></i>
-                  <span class="sr-only">Youtube</span></a
-                >
-              </div>
-              <!-- /.top-one__social -->
-            </div>
-            <!-- /.top-one__right -->
-          </div>
-          <!-- /.top-one__inner -->
-        </div>
-        <!-- /.container-fluid -->
-      </div>
+    
       <!-- /.top-one -->
-      <header
-      class="main-header main-header--one sticky-header sticky-header--normal active"
-    >
-      <div class="container-fluid">
-        <div class="main-header__inner">
-          <div class="main-header__logo logo-retina">
-            <a href="index.html"
-              ><img
-                src="assets/ghumojhumo.png"
-                alt="gotur HTML"
-                width="150px"
-                /></a>
-          </div>
-          <!-- /.main-header__logo -->
-          <div class="main-header__right">
-            <nav class="main-header__nav main-menu">
-              <ul class="main-menu__list">
-                <li class="dropdown megamenu">
-                  <span class="gap-3"><img src="assets/nav-icon-1.png"> </span>
-                  <a href="index.html" style="gap:20px; font-weight: 600;">Flights</a>
+      <header class="bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md bg-white shadow-sm py-3 header">
+          <div class="container">
+            <a class="navbar-brand gradient-text" href="index.html">
+              <img src="assets/ghumojhumo.png" alt="Logo" />
+            </a>
+            <!-- Toggle button -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar items -->
+            <div
+              class="collapse navbar-collapse justify-content-between"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav mx-auto text-center" style="gap: 20px">
+                <li class="nav-item">
+                  <a class="nav-link text-dark fw-medium" href="index.html">
+                    <img src="assets/nav-icon-1.png" alt="Flights" />
+                    <span class="hero-nav"> Flights</span>
+                  </a>
                 </li>
-
-                <li class="dropdown megamenu">
-                  <span><img src="assets/nav-icon-2.png"> </span>
-                  <a href="hotels.html" style="gap:20px; font-weight: 600;">Hotels</a>
+                <li class="nav-item">
+                  <a class="nav-link text-dark fw-medium" href="hotels.html">
+                    <img src="assets/nav-icon-2.png" alt="Hotels" />
+                    <span class="hero-nav"> Hotels</span>
+                  </a>
                 </li>
-
-                <li class="dropdown megamenu">
-                  <span><img src="assets/nav-icon-3.png"> </span>
-                  <a href="#" style="font-weight: 600;">Transfer</a>
+                <li class="nav-item">
+                  <a class="nav-link text-dark fw-medium" href="cabs.html">
+                    <img src="assets/nav-icon-3.png" alt="Cabs" />
+                    <span class="hero-nav"> Cabs </span>
+                  </a>
                 </li>
               </ul>
-            </nav>
-
-            <!-- /.main-header__nav -->
-            <div class="main-header__info">
-              <a href="#" class="search-toggler main-header__info__item">
-                <i
-                  class="fa-solid fa-magnifying-glass"
-                  aria-hidden="true"
-                ></i>
-                <span class="sr-only">Search</span>
-              </a>
-              <a href="#" class="main-header__info__item">
-                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
-                <span class="sr-only">Cart</span>
-              </a>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn-signup text-decoration-none">
+                  <img src="assets/Group 7.png" alt="Login" />
+                  Login or Create Account
+                  <button class="chevron-down">
+                    <i class="bi bi-chevron-down"></i>
+                  </button>
+                </a>
+              </div>
             </div>
-            <div class="main-header__btn-popup main-header__element__btn">
-              <i class="fa-solid fa-bars"></i>
-            </div>
-            <!-- /.mobile-nav__toggler -->
-            <a href="#" class="gotur-btn main-header__btn"
-              >Login in or Create Account <i class="fa-solid fa-paper-plane"></i
-            ></a>
-            <div class="mobile-nav__btn mobile-nav__toggler">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-            <!-- /.mobile-nav__toggler -->
           </div>
-          <!-- /.main-header__right -->
-        </div>
-        <!-- /.main-header__inner -->
-      </div>
-      <!-- /.container-fluid -->
-    </header>
+        </nav>
+      </header>
+    
     <header
       class="main-header main-header--one sticky-header sticky-header--normal sticky-header--cloned active"
     >
@@ -206,7 +143,7 @@
               <ul class="main-menu__list">
                 <li class="dropdown megamenu">
                   <span class="gap-3"><img src="assets/nav-icon-1.png"> </span>
-                  <a href="#" style="gap:20px; font-weight: 600;">Flights</a>
+                  <a href="index.html" style="gap:20px; font-weight: 600;">Flights</a>
                 </li>
 
                 <li class="dropdown megamenu">
@@ -216,7 +153,7 @@
 
                 <li class="dropdown megamenu">
                   <span><img src="assets/nav-icon-3.png"> </span>
-                  <a href="#" style="font-weight: 600;">Transfer</a>
+                  <a href="cabs.html" style="font-weight: 600;">Cabs</a>
                 </li>
 
                 <!-- <li class="dropdown">
@@ -396,165 +333,21 @@
       </div>
       <!-- /.container-fluid -->
     </header>
-
-    <section class="main-slider-three" id="home">
-      <div class="container">
-        <div class="row justify-content-start">
-          <div class="col-xxl-6 col-lg-12">
-            <div class="main-slider-three__content">
-              <h5
-                class="main-slider-three__sub-title main-three bw-split-in-left"
-                style="perspective: 400px"
-              >
-                Welocome to Ghumo Jhumo
-              </h5>
-              <h2
-                class="main-slider-three__title main-three bw-split-in-left"
-                style="perspective: 400px"
-              >
-                  Book Hotels and Homestays
-              </h2>
-              <!-- slider-title -->
-              <div class="main-slider-three__button">
-                <a href="#" class="gotur-btn gotur-btn--primary"
-                  >get in touch <i class="fa-solid fa-paper-plane"></i
-                ></a>
-              </div>
-              <!-- /.main-slider-three__button -->
-            </div>
-            <!-- /.main-slider-three__content -->
-          </div>
-          <!-- /.col-xxl-10 col-lg-9 -->
-          <div class="col-xxl-6">
-            <div class="main-slider-three__thumb">
-              <a href="index.html">
-                <img src="assets/hero-man-1-3.png" alt="thumb image" width="800px"/>
-              </a>
-            </div>
-            <!-- /.main-slider-three__thumb -->
-          </div>
-          <!-- /.col-xxl-6 col-lg-8 -->
+    
+    <section class="position-relative text-white text-center hero-section-4">
+      <!-- <div class="containers">
+        <div class="title py-5">Booking Travel</div>
+        <div class="logo-container">
+          <img src="assets/images.jpeg" alt="Logo" class="logo" width="100px" />
         </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container -->
-   
-      <!-- /.main-slider-three__action-form -->
-      <div class="main-slider-three__element">
-        <div class="main-slider-three__element__item">
-          <img src="assets/hero-shapr-1-1.png" alt="element" />
-        </div>
-        <!-- /.main-slider-three__element__item -->
-        <div class="main-slider-three__element__item-one">
-          <img src="assets/hero-shapr-1-2.png" alt="element" />
-        </div>
-        <!-- /.main-slider-three__element__item -->
-        <div class="main-slider-three__element__item-three">
-          <img src="assets/hero-shapr-1-2-a.png" alt="element" />
-        </div>
-        <!-- /.main-slider-three__element__item -->
-        <div class="main-slider-three__element__item-two">
-          <img src="assets/hero-shapr-1-3.png" alt="element" />
-        </div>
-        <!-- /.main-slider-three__element__item -->
-      </div>
-      <!-- /.main-slider-three__element -->
-      <div class="main-slider-three__element-two">
-        <img src="assets/why-choose-tree.png" alt="element" />
-      </div>
-      <!-- /.main-slider-three__element-two -->
-
-      <div class="main-slider-three__element-three">
-        <span class="main-slider-three__element-three-item"></span>
-        <span class="main-slider-three__element-three-item"></span>
-        <span class="main-slider-three__element-three-item"></span>
-      </div>
-      <!-- /.main-slider-three__element-three -->
+      </div> -->
     </section>
-    <!-- /.main-slider-three -->
       
     <section class="section-background-color">
-
-          <!-- Form Section -->
-          <section>
-            <div class="main-slider-three__action-form">
-              <div class="container-fluid">
-                <div class="main-slider-three__form">
-                  <div class="main-slider-three__action-form">
-                    <div class="container">
-                      <div class="main-slider-three__form">
-                        <div
-                          class="banner-form wow fadeInUp animated"
-                          data-wow-duration="1500ms"
-                          data-wow-delay="300ms"
-                          style="
-                            visibility: visible;
-                            animation-duration: 1500ms;
-                            animation-delay: 300ms;
-                            animation-name: fadeInUp;
-                          "
-                        >
-                        <form onsubmit="searchFlights(event)" action="flight-search" method="POST">
-                        <div class="container mt-5 position-relative">
-                          <div class="booking-container">
-                              <div class="tab-content mt-4">
-                                
-                                  <div class="tab-pane fade show active" id="flights">
-                                      <div class="row g-3">
-                                       
-                                          <div class="col-md-4 input-box">
-                                              <label>From</label>
-                                              <select id="fromCitySelect" name="form-control" class="citySelect form-select p-3">
-                                                <option value="Delhi" selected disabled>e.g. - Area, Landmark or Property Name</option>
-                                              </select>
-                                            <small class="text-muted">DEL, Delhi Airport India</small>
-                                          </div>
-                                       
-                                          <div class="col-md-2 input-box">
-                                              <label>Departure</label>
-                                              <input type="text" class="datetimepicker form-control" id="departure"
-                                              name="departure" placeholder="Friday, 9 May 2025"/>
-                                          </div>
-            
-                                          <div class="col-md-2 input-box">
-                                            <label>Return</label>
-                                            <input type="text" class="datetimepicker form-control" id="return" name="return" placeholder="Tap to add return date"/>
-                                          </div>
-            
-                                        <div class="col-md-2 input-box">
-                                            <label>Travellers & Class</label>
-                                            <input type="text" class="form-control" placeholder="0 Adult, 1 Child">
-                                        </div>
-                                      </div>
-                                      
-                                      </div>
-                                      <a href="hotels-booking.html" class="search-flight-btn text-decoration-none text-white">
-                                        Search Flights
-                                      </a>
-                                  </div>
-                           
-                          </div>
-                      </div>
-                      </form>
-                        </div>
-                        <!-- banner-form -->
-                      </div>
-                      <!-- /.main-slider-four__form -->
-                    </div>
-                    <!-- /.container -->
-                  </div>
-                  <!-- banner-form -->
-                </div>
-                <!-- /.main-slider-four__form -->
-              </div>
-              <!-- /.container -->
-            </div>
-          </section>
-
           <!-- Hotel Header -->
-          <section>
+          <section class="section-position">
 
-            <div class="container mt-4">
+            <div class="container ">
                 <!-- Header -->
                 <div class="hotel-header">
                     <h2>Lemon Tree Premier Delhi Airport</h2>
@@ -629,11 +422,10 @@
 
                 </div>
             </div>
-        </section>
 
         <!-- About Section -->
         <section>
-            <div class="container py-5 mt-5" style="border: 1px solid #f1f1f1;">
+            <div class="container" style="border: 1px solid #f1f1f1;">
                 <h2 class="property-highlights-header">About the Hotel</h2>
                 
                 <div class="property-highlights-body">
@@ -788,7 +580,7 @@
                         </ul>
                         <p class="text-muted" style="font-size: 12px;"><strong>344 sq.ft | 1 King or 2 Twin Beds | Max 2 Guests</strong></p>
 
-                        <div class="modal fade" id="hotelModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal " id="hotelModal" tabindex="-1" aria-hidden="true">
                           <div class="modal-dialog">
                               <div class="modal-content p-3">
                                   <div class="modal-header border-bottom pb-2">
@@ -818,7 +610,7 @@
 
                               <!-- Modal Trigger -->
                                   <!-- Modal -->
-                          <div class="modal fade" id="hotelRoomModal" tabindex="-1" aria-labelledby="hotelRoomModalLabel" aria-hidden="true">
+                          <div class="modal " id="hotelRoomModal" tabindex="-1" aria-labelledby="hotelRoomModalLabel" aria-hidden="true">
                               <div class="modal-dialog modal-lg">
                                   <div class="modal-content">
                                       <div class="modal-header">
@@ -918,7 +710,7 @@
                         </ul>
                         <p class="text-muted" style="font-size: 12px;"><strong>344 sq.ft | 1 King or 2 Twin Beds | Max 2 Guests</strong></p>
 
-                        <div class="modal fade" id="hotelModal" tabindex="-1" aria-hidden="true">
+                        <div class="modal " id="hotelModal" tabindex="-1" aria-hidden="true">
                           <div class="modal-dialog">
                               <div class="modal-content p-3">
                                   <div class="modal-header border-bottom pb-2">
@@ -947,7 +739,7 @@
                         <p style="color:#2274e0; font-weight: 600; font-size: 14px;"  data-bs-toggle="modal" data-bs-target="#hotelModal"> View plan details & policies </p>
                               <!-- Modal Trigger -->
                                   <!-- Modal -->
-                          <div class="modal fade" id="hotelRoomModal" tabindex="-1" aria-labelledby="hotelRoomModalLabel" aria-hidden="true">
+                          <div class="modal " id="hotelRoomModal" tabindex="-1" aria-labelledby="hotelRoomModalLabel" aria-hidden="true">
                               <div class="modal-dialog modal-lg">
                                   <div class="modal-content">
                                       <div class="modal-header">
@@ -1047,7 +839,7 @@
                               </ul>
                               <p class="text-muted" style="font-size: 12px;"><strong>344 sq.ft | 1 King or 2 Twin Beds | Max 2 Guests</strong></p>
       
-                              <div class="modal fade" id="hotelModal" tabindex="-1" aria-hidden="true">
+                              <div class="modal " id="hotelModal" tabindex="-1" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content p-3">
                                         <div class="modal-header border-bottom pb-2">
@@ -1077,7 +869,7 @@
       
                                     <!-- Modal Trigger -->
                                         <!-- Modal -->
-                                <div class="modal fade" id="hotelRoomModal" tabindex="-1" aria-labelledby="hotelRoomModalLabel" aria-hidden="true">
+                                <div class="modal " id="hotelRoomModal" tabindex="-1" aria-labelledby="hotelRoomModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-lg">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -1630,13 +1422,14 @@
   </section>
 
         </section>
+      </section>
 
 
           <footer class="main-footer">
             <div class="main-footer__top">
               <div class="container">
                 <div
-                  class="main-footer__top__inner wow fadeInUp"
+                  class="main-footer__top__inner wow InUp"
                   data-wow-duration="1500ms"
                   data-wow-delay="200ms"
                   style="
@@ -1707,7 +1500,7 @@
               <div class="container">
                 <div class="row gutter-y-40">
                   <div
-                    class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
+                    class="col-md-6 col-lg-4 col-xl-3 wow InUp"
                     data-wow-duration="1500ms"
                     data-wow-delay="00ms"
                     style="
@@ -1750,7 +1543,7 @@
                   <!-- /.col-lg-4 -->
     
                   <div
-                    class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
+                    class="col-md-6 col-lg-4 col-xl-3 wow InUp"
                     data-wow-duration="1500ms"
                     data-wow-delay="200ms"
                     style="
@@ -1777,7 +1570,7 @@
                   <!-- /.col-lg-4 -->
     
                   <div
-                    class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
+                    class="col-md-6 col-lg-4 col-xl-3 wow InUp"
                     data-wow-duration="1500ms"
                     data-wow-delay="400ms"
                     style="
@@ -1804,7 +1597,7 @@
                   <!-- /.col-lg-6 -->
     
                   <div
-                    class="col-md-6 col-lg-5 col-xl-3 wow fadeInUp"
+                    class="col-md-6 col-lg-5 col-xl-3 wow InUp"
                     data-wow-duration="1500ms"
                     data-wow-delay="600ms"
                     style="
@@ -2317,14 +2110,14 @@
             </div>
             <div class="header-right-sidebar__container">
               <div
-                class="header-right-sidebar__container__about wow fadeInUp animated"
+                class="header-right-sidebar__container__about wow InUp animated"
                 data-wow-duration="1500ms"
                 data-wow-delay="300ms"
                 style="
                   visibility: visible;
                   animation-duration: 1500ms;
                   animation-delay: 300ms;
-                  animation-name: fadeInUp;
+                  animation-name: InUp;
                 "
               >
                 <h3 class="header-right-sidebar__container__title">
@@ -2340,14 +2133,14 @@
                 <h3 class="header-right-sidebar__container__title">Contact Us</h3>
                 <ul class="header-right-sidebar__container__list list-unstyled">
                   <li
-                    class="header-right-sidebar__container__list__item wow fadeInUp animated"
+                    class="header-right-sidebar__container__list__item wow InUp animated"
                     data-wow-duration="1500ms"
                     data-wow-delay="300ms"
                     style="
                       visibility: visible;
                       animation-duration: 1500ms;
                       animation-delay: 300ms;
-                      animation-name: fadeInUp;
+                      animation-name: InUp;
                     "
                   >
                     <div class="header-right-sidebar__container__icon">
@@ -2362,14 +2155,14 @@
                     </div>
                   </li>
                   <li
-                    class="header-right-sidebar__container__list__item wow fadeInUp animated"
+                    class="header-right-sidebar__container__list__item wow InUp animated"
                     data-wow-duration="1500ms"
                     data-wow-delay="500ms"
                     style="
                       visibility: visible;
                       animation-duration: 1500ms;
                       animation-delay: 500ms;
-                      animation-name: fadeInUp;
+                      animation-name: InUp;
                     "
                   >
                     <div class="header-right-sidebar__container__icon">
@@ -2383,14 +2176,14 @@
                     </div>
                   </li>
                   <li
-                    class="header-right-sidebar__container__list__item wow fadeInUp animated"
+                    class="header-right-sidebar__container__list__item wow InUp animated"
                     data-wow-duration="1500ms"
                     data-wow-delay="700ms"
                     style="
                       visibility: visible;
                       animation-duration: 1500ms;
                       animation-delay: 700ms;
-                      animation-name: fadeInUp;
+                      animation-name: InUp;
                     "
                   >
                     <div class="header-right-sidebar__container__icon">
@@ -2406,14 +2199,14 @@
                 </ul>
               </div>
               <div
-                class="header-right-sidebar__container__newsletter-box wow fadeInUp animated"
+                class="header-right-sidebar__container__newsletter-box wow InUp animated"
                 data-wow-duration="1500ms"
                 data-wow-delay="900ms"
                 style="
                   visibility: visible;
                   animation-duration: 1500ms;
                   animation-delay: 900ms;
-                  animation-name: fadeInUp;
+                  animation-name: InUp;
                 "
               >
                 <h3 class="header-right-sidebar__container__title">

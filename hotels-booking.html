@@ -1,59 +1,34 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>Hotels Booking</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="bracket-web" />
     <meta
-      name="csrf-token"
-      content="nkmCAFhw23zdM2ayPRGbwnoqimmXgrlqh0oemr8L"
+      name="description"
+      content="Gotur is a modern travel &amp; tour booking HTML Template. It is perfect for travel agencies, tour operators, trip holiday booking websites, adventure and booking companies looking for a unique and intuitive search function and all other travel &amp; tourism websites and businesses."
     />
-    <meta name="hasadminToken" content="1" />
-    
-    <!-- Bootstrap CSS -->
+    <title>Hotels Bookings</title>
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <link
-      rel="icon"
-      type="image/png"
-      href="http://localhost:8000/img/favicon.png"
-    />
-    <!-- Icons Links -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-    />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- css Link -->
-    <link rel="stylesheet" href="app.css" />
-    <link rel="preload" href="app.js" as="script" />
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
     <link href="./css2" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- FontAwesome CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Bootstrap Link -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-
+    <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="./bootstrap.min.css" />
     <link rel="stylesheet" href="./bootstrap-select.min.css" />
     <link rel="stylesheet" href="./animate.min.css" />
@@ -71,74 +46,299 @@
 
     <!-- template styles -->
     <link rel="stylesheet" href="ghumo.css" />
-    <link rel="stylesheet" href="app.css" />
 
     <script>
       function toggleDetails() {
-          let details = document.getElementById("price-details");
+          var details = document.getElementById("price-details");
           details.classList.toggle("d-none");
-          details.classList.toggle("d-block");
       }
   </script>
-
   </head>
 
-  <body>
-    <header class="bg-white shadow-sm">
-      <nav class="navbar navbar-expand-md bg-white shadow-sm py-3 header">
-        <div class="container">
-          <a class="navbar-brand gradient-text" href="index.html">
-            <img src="assets/ghumojhumo.png" alt="Logo" />
-          </a>
-          <!-- Toggle button -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <!-- Navbar items -->
-          <div
-            class="collapse navbar-collapse justify-content-between"
-            id="navbarNav"
-          >
-            <ul class="navbar-nav mx-auto text-center" style="gap: 20px">
-              <li class="nav-item">
-                <a class="nav-link text-dark fw-medium" href="index.html">
-                  <img src="assets/nav-icon-1.png" alt="Flights" />
-                  <span class="hero-nav"> Flights</span>
+ 
+  <body class="custom-cursor" style="">
+    <div
+      class="custom-cursor__cursor"
+      style="transform: translate3d(calc(-50% + 635px), calc(-50% + 19px), 0px)"
+    ></div>
+    <div class="custom-cursor__cursor-two" style="left: 635px; top: 19px"></div>
+
+    <div class="preloader" style="display: none">
+      <div
+        class="preloader__image"
+        style="background-image: url(assets/images/loader.png)"
+      ></div>
+    </div>
+    <!-- /.preloader -->
+    <div class="page-wrapper">
+    
+      <!-- /.top-one -->
+      <header class="bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md bg-white shadow-sm py-3 header">
+          <div class="container">
+            <a class="navbar-brand gradient-text" href="index.html">
+              <img src="assets/ghumojhumo.png" alt="Logo" />
+            </a>
+            <!-- Toggle button -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar items -->
+            <div
+              class="collapse navbar-collapse justify-content-between"
+              id="navbarNav"
+            >
+              <ul class="navbar-nav mx-auto text-center" style="gap: 20px">
+                <li class="nav-item">
+                  <a class="nav-link text-dark fw-medium" href="index.html">
+                    <img src="assets/nav-icon-1.png" alt="Flights" />
+                    <span class="hero-nav"> Flights</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark fw-medium" href="booking.html">
+                    <img src="assets/nav-icon-2.png" alt="Hotels" />
+                    <span class="hero-nav"> Hotels</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark fw-medium" href="cabs.html">
+                    <img src="assets/nav-icon-3.png" alt="Cabs" />
+                    <span class="hero-nav"> Cabs </span>
+                  </a>
+                </li>
+              </ul>
+              <div class="d-flex gap-2">
+                <a href="#" class="btn-signup text-decoration-none">
+                  <img src="assets/Group 7.png" alt="Login" />
+                  Login or Create Account
+                  <button class="chevron-down">
+                    <i class="bi bi-chevron-down"></i>
+                  </button>
                 </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark fw-medium" href="booking.html">
-                  <img src="assets/nav-icon-2.png" alt="Hotels" />
-                  <span class="hero-nav"> Hotels</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-dark fw-medium" href="#">
-                  <img src="assets/nav-icon-3.png" alt="Transfer" />
-                  <span class="hero-nav"> Transfer</span>
-                </a>
-              </li>
-            </ul>
-            <div class="d-flex gap-2">
-              <a href="#" class="btn-signup text-decoration-none">
-                <img src="assets/Group 7.png" alt="Login" />
-                Login or Create Account
-                <button class="chevron-down">
-                  <i class="bi bi-chevron-down"></i>
-                </button>
-              </a>
+              </div>
             </div>
           </div>
+        </nav>
+      </header>
+    
+    <header
+      class="main-header main-header--one sticky-header sticky-header--normal sticky-header--cloned active"
+    >
+      <div class="container-fluid">
+        <div class="main-header__inner">
+          <div class="main-header__logo logo-retina">
+            <a href="index.html"
+              ><img
+              src="assets/ghumojhumo.png"
+              alt="gotur HTML"
+              width="150px"
+              height="70px"
+          /></a>
+          </div>
+          <!-- /.main-header__logo -->
+          <div class="main-header__right">
+            <nav class="main-header__nav main-menu">
+              <ul class="main-menu__list">
+                <li class="dropdown megamenu">
+                  <span class="gap-3"><img src="assets/nav-icon-1.png"> </span>
+                  <a href="index.html" style="gap:20px; font-weight: 600;">Flights</a>
+                </li>
+
+                <li class="dropdown megamenu">
+                  <span><img src="assets/nav-icon-2.png"> </span>
+                  <a href="hotels.html" style="gap:20px; font-weight: 600;">Hotels</a>
+                </li>
+
+                <li class="dropdown megamenu">
+                  <span><img src="assets/nav-icon-3.png"> </span>
+                  <a href="cabs.html" style="font-weight: 600;">Cabs</a>
+                </li>
+
+                <!-- <li class="dropdown">
+                  <a href="#">Destination</a>
+                  <ul>
+                    <li class="dropdown">
+                      <a href="#">destination 01</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">destination grid</a></li>
+                        <li><a href="#">destination Left</a></li>
+                        <li><a href="#">destination Right</a></li>
+                        <li><a href="#">destination Carousel</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#">destination 02</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">destination grid</a></li>
+                        <li><a href="#">destination Left</a></li>
+                        <li><a href="#">destination Right</a></li>
+                        <li><a href="#">destination Carousel</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Destination Details</a></li>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#">tours list</a>
+                  <ul>
+                    <li class="dropdown">
+                      <a href="#">Tour Listing 01</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">Tour Grid</a></li>
+                        <li><a href="#">Tour Left</a></li>
+                        <li><a href="#">Tour Right</a></li>
+                        <li><a href="#">Tour Carousel</a></li>
+                      </ul>
+                    </li>
+
+                    <li class="dropdown">
+                      <a href="#">Tour Listing 02</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">Tour Grid</a></li>
+                        <li><a href="#">Tour Left</a></li>
+                        <li><a href="#">Tour Right</a></li>
+                        <li><a href="#">Tour Carousel</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#">Tour Listing List</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">Tour Grid</a></li>
+                        <li><a href="#">Tour Left</a></li>
+                        <li><a href="#">Tour Right</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Listing Details 01</a></li>
+                    <li><a href="#">Listing Details 02</a></li>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#">pages</a>
+                  <ul>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Team Carousel</a></li>
+                    <li><a href="#">Team Details</a></li>
+                    <li><a href="#">Testimonials</a></li>
+                    <li><a href="#">Testimonials Carousel</a></li>
+                    <li><a href="#">Pricing Plan</a></li>
+                    <li class="dropdown">
+                      <a href="#">Gallery</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">Gallery masonry</a></li>
+                        <li><a href="#">Gallery filter</a></li>
+                        <li><a href="#">Gallery Grid</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">FAQS</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">404 Error</a></li>
+                  </ul>
+                </li>
+
+                <li class="dropdown">
+                  <a href="#">Shop</a>
+                  <ul>
+                    <li class="dropdown">
+                      <a href="#">Products</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">No sidebar</a></li>
+                        <li><a href="#">Left sidebar</a></li>
+                        <li><a href="#">Right sidebar</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#">Products list</a>
+                      <ul class="sub-menu">
+                        <li><a href="#">No sidebar</a></li>
+                        <li><a href="#">Left sidebar</a></li>
+                        <li><a href="#">Right sidebar</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Products carousel</a></li>
+                    <li><a href="#">Product details</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">Checkout</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown">
+                  <a href="#">news</a>
+                  <ul>
+                    <li class="dropdown">
+                      <a href="#">news grid</a>
+                      <ul>
+                        <li><a href="#">No sidebar</a></li>
+                        <li><a href="#">Left sidebar</a></li>
+                        <li><a href="#">Right sidebar</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#">news list</a>
+                      <ul>
+                        <li><a href="#">No sidebar</a></li>
+                        <li><a href="#">Left sidebar</a></li>
+                        <li><a href="#">Right sidebar</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">Blog carousel</a></li>
+                    <li class="dropdown">
+                      <a href="#">news details</a>
+                      <ul>
+                        <li><a href="#">No sidebar</a></li>
+                        <li><a href="#">Left sidebar</a></li>
+                        <li><a href="#">Right sidebar</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Contact</a>
+                </li> -->
+              </ul>
+            </nav>
+            <!-- /.main-header__nav -->
+            <div class="main-header__info">
+              <a href="#" class="search-toggler main-header__info__item">
+                <i
+                  class="fa-solid fa-magnifying-glass"
+                  aria-hidden="true"
+                ></i>
+                <span class="sr-only">Search</span>
+              </a>
+              <a href="#" class="main-header__info__item">
+                <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                <span class="sr-only">Cart</span>
+              </a>
+            </div>
+            <div class="main-header__btn-popup main-header__element__btn">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+            <!-- /.mobile-nav__toggler -->
+            <a href="#" class="gotur-btn main-header__btn"
+              >Login in or Create Account  <i class="fa-solid fa-paper-plane"></i
+            ></a>
+            <div class="mobile-nav__btn mobile-nav__toggler">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <!-- /.mobile-nav__toggler -->
+          </div>
+          <!-- /.main-header__right -->
         </div>
-      </nav>
+        <!-- /.main-header__inner -->
+      </div>
+      <!-- /.container-fluid -->
     </header>
 
     <section class="position-relative text-white text-center hero-section-2">
@@ -153,7 +353,7 @@
     <section class="section-background-color">
 
     <div class="container">
-      <div class="row d-flex">
+      <div class="row d-flex section-position">
         <!-- Start Main Section -->
         <main class="col-md-9 main-section py-5">
             <div class="container mt-4" style="font-size: 13px;">
@@ -197,7 +397,7 @@
                     </div>
                     
                     <!-- Modal -->
-                    <div class="modal fade" id="policyModals" tabindex="-1" aria-labelledby="policyModalLabel" aria-hidden="true">
+                    <div class="modal " id="policyModals" tabindex="-1" aria-labelledby="policyModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
@@ -288,7 +488,7 @@
                         </a>
 
                         <!-- Benefits Modal -->
-                        <div class="modal fade" id="benefitsModal" tabindex="-1" aria-labelledby="benefitsModalLabel" aria-hidden="true">
+                        <div class="modal " id="benefitsModal" tabindex="-1" aria-labelledby="benefitsModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header border-0 pb-0">
@@ -616,23 +816,23 @@
          <aside class="aside-section col-md-3 py-5">
           <div class="container custom-bg mt-4" style="font-size: 14px;">
             <!-- Header Section -->
-            <div class="container mt-4">
+            <div class=" mt-4">
               <div class="d-flex mb-4">
-                  <h6 class="mb-0 fw-bold">Price Summary</h6>
-                  <div class="d-flex">
-                      <a href="#" class="text-primary text-decoration-none fw-bold" style="font-size: 12px;">View Full Breakup</a>
-                      <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" 
-                          style="width: 24px; height: 20px; " 
-                          onclick="toggleDetails()">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="10">
-                              <path fill="currentColor" d="M16 26a3.07 3.07 0 0 1-2.305-1.04L.614 10.091A2.462 2.462 0 0 1 4.312 6.84l11.439 13.003a.334.334 0 0 0 .501 0L27.691 6.84a2.462 2.462 0 1 1 3.697 3.251L18.311 24.955A3.08 3.08 0 0 1 16.002 26z"/>
-                          </svg>
-                      </div>
-                  </div>
+                  <h5 class=" fw-bold">Price Summary</h5>
+                    <div class="d-flex">
+                        <a href="#" class="text-primary text-decoration-none fw-bold" style="font-size: 14px;">View Full Breakup</a>
+                          <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" 
+                              style="width: 24px; height: 20px; " 
+                              onclick="toggleDetails()">
+                              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="10">
+                                  <path fill="currentColor" d="M16 26a3.07 3.07 0 0 1-2.305-1.04L.614 10.091A2.462 2.462 0 0 1 4.312 6.84l11.439 13.003a.334.334 0 0 0 .501 0L27.691 6.84a2.462 2.462 0 1 1 3.697 3.251L18.311 24.955A3.08 3.08 0 0 1 16.002 26z"/>
+                              </svg>
+                          </div>
+                    </div>
               </div>
           
               <!-- Price Details (Initially Hidden) -->
-              <div id="price-details" class="mt-4 d-none shadow-sm p-2">
+              <div id="price-details" class="mt-4 d-none shadow-sm my-4 p-2">
                   <div class="mb-4">
                       <div class="d-flex justify-content-between align-items-center mb-2">
                           <div class="fw-bold">Day Use</div>
@@ -750,7 +950,7 @@
   <div class="main-footer__top">
     <div class="container">
       <div
-        class="main-footer__top__inner wow fadeInUp"
+        class="main-footer__top__inner wow InUp"
         data-wow-duration="1500ms"
         data-wow-delay="200ms"
         style="
@@ -821,7 +1021,7 @@
     <div class="container">
       <div class="row gutter-y-40">
         <div
-          class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
+          class="col-md-6 col-lg-4 col-xl-3 wow InUp"
           data-wow-duration="1500ms"
           data-wow-delay="00ms"
           style="
@@ -864,7 +1064,7 @@
         <!-- /.col-lg-4 -->
 
         <div
-          class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
+          class="col-md-6 col-lg-4 col-xl-3 wow InUp"
           data-wow-duration="1500ms"
           data-wow-delay="200ms"
           style="
@@ -891,7 +1091,7 @@
         <!-- /.col-lg-4 -->
 
         <div
-          class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
+          class="col-md-6 col-lg-4 col-xl-3 wow InUp"
           data-wow-duration="1500ms"
           data-wow-delay="400ms"
           style="
@@ -918,7 +1118,7 @@
         <!-- /.col-lg-6 -->
 
         <div
-          class="col-md-6 col-lg-5 col-xl-3 wow fadeInUp"
+          class="col-md-6 col-lg-5 col-xl-3 wow InUp"
           data-wow-duration="1500ms"
           data-wow-delay="600ms"
           style="
@@ -1431,14 +1631,14 @@
   </div>
   <div class="header-right-sidebar__container">
     <div
-      class="header-right-sidebar__container__about wow fadeInUp animated"
+      class="header-right-sidebar__container__about wow InUp animated"
       data-wow-duration="1500ms"
       data-wow-delay="300ms"
       style="
         visibility: visible;
         animation-duration: 1500ms;
         animation-delay: 300ms;
-        animation-name: fadeInUp;
+        animation-name: InUp;
       "
     >
       <h3 class="header-right-sidebar__container__title">
@@ -1454,14 +1654,14 @@
       <h3 class="header-right-sidebar__container__title">Contact Us</h3>
       <ul class="header-right-sidebar__container__list list-unstyled">
         <li
-          class="header-right-sidebar__container__list__item wow fadeInUp animated"
+          class="header-right-sidebar__container__list__item wow InUp animated"
           data-wow-duration="1500ms"
           data-wow-delay="300ms"
           style="
             visibility: visible;
             animation-duration: 1500ms;
             animation-delay: 300ms;
-            animation-name: fadeInUp;
+            animation-name: InUp;
           "
         >
           <div class="header-right-sidebar__container__icon">
@@ -1476,14 +1676,14 @@
           </div>
         </li>
         <li
-          class="header-right-sidebar__container__list__item wow fadeInUp animated"
+          class="header-right-sidebar__container__list__item wow InUp animated"
           data-wow-duration="1500ms"
           data-wow-delay="500ms"
           style="
             visibility: visible;
             animation-duration: 1500ms;
             animation-delay: 500ms;
-            animation-name: fadeInUp;
+            animation-name: InUp;
           "
         >
           <div class="header-right-sidebar__container__icon">
@@ -1497,14 +1697,14 @@
           </div>
         </li>
         <li
-          class="header-right-sidebar__container__list__item wow fadeInUp animated"
+          class="header-right-sidebar__container__list__item wow InUp animated"
           data-wow-duration="1500ms"
           data-wow-delay="700ms"
           style="
             visibility: visible;
             animation-duration: 1500ms;
             animation-delay: 700ms;
-            animation-name: fadeInUp;
+            animation-name: InUp;
           "
         >
           <div class="header-right-sidebar__container__icon">
@@ -1520,14 +1720,14 @@
       </ul>
     </div>
     <div
-      class="header-right-sidebar__container__newsletter-box wow fadeInUp animated"
+      class="header-right-sidebar__container__newsletter-box wow InUp animated"
       data-wow-duration="1500ms"
       data-wow-delay="900ms"
       style="
         visibility: visible;
         animation-duration: 1500ms;
         animation-delay: 900ms;
-        animation-name: fadeInUp;
+        animation-name: InUp;
       "
     >
       <h3 class="header-right-sidebar__container__title">
