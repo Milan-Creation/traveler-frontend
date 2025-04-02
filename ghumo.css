@@ -17935,6 +17935,7 @@ a + .listing-card-four__btns__hover {
   color: var(--gotur-white, #fff);
   opacity: 0.7;
   transition: all 0.4s ease-in-out;
+  text-decoration: none;
 }
 .footer-widget__social a:hover {
   transform: translateY(-3px);
@@ -17958,6 +17959,7 @@ a + .listing-card-four__btns__hover {
 .footer-widget__links li a {
   color: inherit;
   position: relative;
+  text-decoration: none;
 }
 .footer-widget__links li a::after {
   content: "";
@@ -18064,9 +18066,9 @@ a + .listing-card-four__btns__hover {
   line-height: 175%;
 }
 .footer-widget__newsletter .form-group__check label a {
-  text-decoration: underline;
   color: rgba(var(--gotur-white-rgb, 255, 255, 255), 1);
   margin-left: 8px;
+  text-decoration: none;
 }
 .footer-widget__newsletter .form-group__check label::before {
   content: "";
@@ -18193,6 +18195,7 @@ a + .listing-card-four__btns__hover {
 .footer-widget__list a {
   background: linear-gradient(to right, currentcolor 0%, currentcolor 100%) 0px 95%/0px 1px no-repeat;
   transition: all 500ms ease;
+  text-decoration: none;
 }
 .footer-widget__list a:hover {
   background-size: 100% 1px;

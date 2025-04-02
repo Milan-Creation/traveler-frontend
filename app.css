@@ -183,6 +183,38 @@ button.chevron-down {
   width: 100%;
 }
 
+.hero-section-3{
+  background-image: url("assets/hotels-details.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  width: 100%;
+}
+
+.hero-section-4{
+  background-image: url("assets/hotels-check.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  width: 100%;
+}
+
+.hero-section-5{
+  background-image: url("assets/Tickets.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+  width: 100%;
+}
+
+.section-position{
+  position: relative;
+  bottom: 200px;
+}
+
 .hero-section {
   background: linear-gradient(
     to right,
@@ -2616,7 +2648,6 @@ li {
 }
 
 .traveller-card {
-  border: 1px solid #dee2e6;
   border-radius: 8px;
   margin: 20px 0;
 }
@@ -2699,9 +2730,145 @@ li {
   padding-left: 1.5rem;
 }
 
-.card-body li::before {
-  content: '•';
+.price-filter-container {
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.chart-bar {
+  background: #e0e0e0;
+  width: 24px;
+  margin: 0 2px;
+  border-radius: 2px;
+  transition: height 0.3s ease;
+}
+
+.chart-bar:hover {
+  background: #40a9ff;
+}
+
+.price-slider {
+  height: 2px;
+  background: #e0e0e0;
+  margin: 20px 0;
+}
+
+.slider-handle {
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border: 2px solid #40a9ff;
+  border-radius: 50%;
   position: absolute;
-  left: 0;
-  color: #666;
+  top: -7px;
+  cursor: pointer;
+}
+
+.price-inputs {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.price-inputs select {
+  flex: 1;
+}
+
+.price-slider {
+  height: 2px;
+  background: #e0e0e0;
+  margin: 20px 0;
+  position: relative;
+  width: 80%;
+}
+
+.slider-handle {
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border: 2px solid #40a9ff;
+  border-radius: 50%;
+  position: absolute;
+  top: -7px;
+  cursor: pointer;
+  touch-action: none;
+  user-select: none;
+}
+
+.slider-range {
+  position: absolute;
+  height: 2px;
+  background: #F7921E;
+  top: 0;
+}
+
+.payment-box {
+  border-radius: 10px;
+  background: #fff;
+}
+.payment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.payment-header span {
+  font-weight: 600;
+}
+.payment-option label {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.payment-option input[type="radio"] {
+  display: none;
+}
+.payment-option input[type="radio"]:checked + label {
+  border-color: #F7921E;
+  background: #fcf8f4;
+}
+.pay-btn {
+  width: 100%;
+  margin-top: 15px;
+  background-color: #F7921E;
+  border: none;
+  padding: 10px;
+  color: #fff;
+}
+
+.gocash-container {
+  background: #fff;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+.gocash-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.gocash-title img {
+  width: 30px;
+}
+.toggle-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+.balance {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
 }
