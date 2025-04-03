@@ -18650,6 +18650,7 @@ input.form-control {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   cursor: pointer;
   z-index: 2;
+  border:none;
 }
 
 .add-stops {
@@ -18801,4 +18802,30 @@ input.form-control {
   background: #fff;
   padding: 15px 0;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.radio-option input:checked + .radio-input {
+  background: #007bff;
+  border-color: #007bff;
+}
+
+.radio-option input:checked ~ .option-label {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.swap-icon {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.swap-icon:hover {
+  transform: rotate(180deg);
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
 }

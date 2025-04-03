@@ -503,59 +503,72 @@
                   animation-name: fadeInUp;
                 "
               >
-              <form onsubmit="searchFlights(event)" action="flight-search" method="POST">
+              <form id="flightSearchForm" onsubmit="searchFlights(event)" action="flight-search" method="POST">
                 <div class="container">
                     <div class="search-widget">
-                        <div class="d-flex mb-4">
-                            <div class="radio-option">
-                                <div class="radio-input active"></div>
-                                <span class="option-label active">Outstation<br>One-way</span>
-                            </div>
-                            <div class="radio-option">
+                        <div class="d-flex mb-4 radio-group">
+                            <!-- Radio Inputs for Trip Type -->
+                            <label class="radio-option">
+                                <input type="radio" name="tripType" value="outstation-one-way" checked hidden>
+                                <div class="radio-input"></div>
+                                <span class="option-label">Outstation<br>One-way</span>
+                            </label>
+                            
+                            <label class="radio-option">
+                                <input type="radio" name="tripType" value="outstation-round-trip" hidden>
                                 <div class="radio-input"></div>
                                 <span class="option-label">Outstation<br>Round trip</span>
-                            </div>
-                            <div class="radio-option">
+                            </label>
+                            
+                            <label class="radio-option">
+                                <input type="radio" name="tripType" value="airport-transfer" hidden>
                                 <div class="radio-input"></div>
                                 <span class="option-label">Airport<br>transfer</span>
-                            </div>
-                            <div class="radio-option">
+                            </label>
+                            
+                            <label class="radio-option">
+                                <input type="radio" name="tripType" value="hourly-rental" hidden>
                                 <div class="radio-input"></div>
                                 <span class="option-label">Hourly Rental</span>
-                            </div>
+                            </label>
                         </div>
             
                         <div class="position-relative">
+                            <!-- Location Inputs -->
                             <div class="input-group-custom">
                                 <label>From</label>
-                                <input type="text" placeholder="Enter Pickup location" value="Bangalore, Karnataka, India">
+                                <input type="text" name="from" placeholder="Enter Pickup location" 
+                                       value="Bangalore, Karnataka, India" required>
                             </div>
                             
-                            <div class="swap-icon">
+                            <button type="button" class="swap-icon" onclick="swapLocations()">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 28" fill="#647a97" width="24" height="24">
                                     <path d="M28 14c0-7.732-6.268-14-14-14S0 6.268 0 14s6.268 14 14 14c7.729-.008 13.992-6.271 14-14zm-14.11-3.589c-.192.41-.604.672-1.057.672h-1.458a.292.292 0 00-.292.292v4.375a1.167 1.167 0 11-2.333 0v-4.375a.292.292 0 00-.292-.292H7a1.166 1.166 0 01-.896-1.913l2.917-3.5a1.166 1.166 0 011.793 0l2.916 3.5c.29.348.352.832.16 1.241zm.11 7.672c0-.644.522-1.166 1.167-1.166h1.458c.161 0 .292-.13.292-.292V12.25a1.167 1.167 0 112.333 0v4.375c0 .161.13.292.292.292H21a1.166 1.166 0 01.897 1.913l-2.916 3.5a1.168 1.168 0 01-1.794 0l-2.916-3.5a1.172 1.172 0 01-.271-.747z"/>
                                 </svg>
-                            </div>
+                            </button>
             
                             <div class="input-group-custom">
                                 <label>To</label>
-                                <input type="text" placeholder="Enter Drop location" value="Mysuru, Karnataka, India">
+                                <input type="text" name="to" placeholder="Enter Drop location" 
+                                       value="Mysuru, Karnataka, India" required>
                             </div>
                         </div>
             
-                        <div class="add-stops">
-                            + Add Stops <span class="new-badge">New</span>
+                        <div class="add-stops text-decoration-none border-0">
+                            <button type="button" class="btn-link border-0 text-decoration-none" onclick="addStop()">
+                                + Add Stops <span class="new-badge">New</span>
+                            </button>
                         </div>
             
+                        <!-- Date/Time Inputs -->
                         <div class="date-time-group">
                             <div class="date-time-item">
-                                <label class="d-block text-secondary" style="font-size: 14px;">Pickup Date</label>
-                                <input type="date" class="border-0">
+                                <label>Pickup Date</label>
+                                <input type="date" name="pickupDate" class="border-0" required>
                             </div>
                             <div class="date-time-item">
-                                <label class="d-block text-secondary" style="font-size: 14px;">Pickup Time</label>
-                                <input type="time" class="fw-bold border-0" value="02 Apr' 25">
-                                <!-- <span class="fw-bold">10:00 AM</span> -->
+                                <label>Pickup Time</label>
+                                <input type="time" name="pickupTime" class="border-0" required>
                             </div>
                         </div>
             
@@ -564,8 +577,6 @@
                 </div>
             </form>
 
-
-            
               </div>
               <!-- banner-form -->
             </div>
@@ -576,7 +587,7 @@
       </section>
 
         <div class="container">
-            <div class="recent-searches-container mt-5 shadow-sm p-5">
+            <div class="recent-searches-container mt-5 p-5">
             <h4 class="mb-4 fw-bold">Recent Searches</h4>
             
             <div class="position-relative">
@@ -613,12 +624,11 @@
             </div>
             </div>
         </div>
-
         
         <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-md-12">
-                    <div class="card shadow">
+                    <div class="p-2 shadow-sm">
                         <div class="card-body">
                             <h4 class="mb-4 fw-bold">Online Cab Booking with ghumoJhumo</h4>
         
@@ -1609,5 +1619,36 @@
         });
     </script>
 
+            <script>
+              function searchFlights(event) {
+                  event.preventDefault();
+                  const formData = new FormData(document.getElementById('flightSearchForm'));
+                  
+                  // Add your form handling logic here
+                  console.log(Object.fromEntries(formData));
+                  // Add AJAX request or form submission logic
+              }
+          
+              function swapLocations() {
+                  const fromInput = document.querySelector('input[name="from"]');
+                  const toInput = document.querySelector('input[name="to"]');
+                  [fromInput.value, toInput.value] = [toInput.value, fromInput.value];
+              }
+          
+              function addStop() {
+                  // Implement add stops functionality
+                  console.log('Add stops clicked');
+              }
+          
+              // Radio button interaction
+              document.querySelectorAll('.radio-ption input').forEach(radio => {
+                  radio.addEventListener('change', () => {
+                      document.querySelectorAll('.radio-option').forEach(option => {
+                          option.classList.remove('active');
+                      });
+                      radio.closest('.radio-option').classList.add('active');
+                  });
+              });
+          </script>
   </body>
 </html>
