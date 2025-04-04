@@ -5637,6 +5637,9 @@ body.megamenu-popup-active .mobile-nav__content {
     display: none;
   }
 }
+select.form-control {
+  padding: 20px;
+}
 .main-slider-two__element-four {
   position: absolute;
   bottom: 0;
@@ -5778,6 +5781,8 @@ body.megamenu-popup-active .mobile-nav__content {
 @media (max-width: 767px) {
   .main-slider-three__sub-title {
     font-size: 30px;
+    line-height: 10px;
+
   }
 }
 .main-slider-three__title {
@@ -5797,7 +5802,7 @@ body.megamenu-popup-active .mobile-nav__content {
 }
 @media (max-width: 767px) {
   .main-slider-three__title {
-    font-size: 70px;
+    font-size: 40px;
     line-height: 110%;
   }
 }
@@ -18410,7 +18415,6 @@ input.form-control {
   --bs-form-select-bg-img: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e);
   display: block;
   width: 100%;
-  padding: .375rem 2.25rem .375rem .75rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -18426,7 +18430,7 @@ input.form-control {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 20px;
+  padding: 18px;
 }
 
 .travel-container {
@@ -18575,7 +18579,7 @@ input.form-control {
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-  margin: -5rem auto;
+  /* margin: -5rem auto; */
 }
 
 .radio-option {
@@ -18720,7 +18724,13 @@ input.form-control {
   font-size: 16px;
   margin-bottom: 4px;
 }
-
+@media (max-width: 576px) {
+  .location-title {
+    font-weight: 600;
+    font-size: 11px;
+    margin-bottom: 4px;
+  }
+}
 .date-badge {
   background: #f5f5f5;
   border-radius: 4px;
