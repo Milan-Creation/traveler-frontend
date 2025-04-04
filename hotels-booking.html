@@ -356,92 +356,86 @@
       <div class="row d-flex section-position">
         <!-- Start Main Section -->
         <main class="col-md-9 main-section py-5">
-            <div class="container mt-4" style="font-size: 13px;">
-                <div class="property-info p-4">
-                    <div class="d-flex align-items-center">
-                        <img src="assets/hotel-2.jpg" alt="Hotel Image" class="hotel-image me-3">
-                        <div>
-                            <i class="bi bi-star-fill star-icon"></i>
-                            <i class="bi bi-star-fill star-icon"></i>
-                            <i class="bi bi-star-fill star-icon"></i>
-                            <i class="bi bi-star-fill star-icon"></i>
-                            <i class="bi bi-star-fill star-icon"></i>
-
-                            <h5>Radisson Blu Plaza Delhi Airport</h5>
-                            <p><i class="bi bi-geo-alt"></i> National Highway 8</p>
-                            <span class="rating">4.3/5</span> <small>3084 Ratings</small>
-                        </div>
+          <div class="container mt-4" style="font-size: 13px;">
+            <div class="property-info p-4">
+                <div class="d-flex flex-column flex-md-row align-items-center">
+                    <img src="assets/hotel-2.jpg" alt="Hotel Image" class="hotel-image me-md-3 mb-3 mb-md-0" style="width: 100%; max-width: 150px;">
+                    <div class="text-center text-md-start">
+                        <i class="bi bi-star-fill star-icon"></i>
+                        <i class="bi bi-star-fill star-icon"></i>
+                        <i class="bi bi-star-fill star-icon"></i>
+                        <i class="bi bi-star-fill star-icon"></i>
+                        <i class="bi bi-star-fill star-icon"></i>
+                        <h5 class="mt-2">Radisson Blu Plaza Delhi Airport</h5>
+                        <p><i class="bi bi-geo-alt"></i> National Highway 8</p>
+                        <span class="rating">4.3/5</span> <small>3084 Ratings</small>
                     </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-md-4">
-                            <p><strong>Check-In:</strong> Sat, 05 Apr, 2025 (11:00 AM)</p>
-                            <p><strong>Check-Out:</strong> Sat, 05 Apr, 2025 (4:30 PM)</p>
-                        </div>
-                        <div class="col-md-4">
-                            <p><strong>Guests:</strong> 2 Guests | 1 Room</p>
-                        </div>
+                </div>
+                <hr>
+                <div class="row text-center text-md-start">
+                    <div class="col-12 col-md-4">
+                        <p><strong>Check-In:</strong> Sat, 05 Apr, 2025 (11:00 AM)</p>
+                        <p><strong>Check-Out:</strong> Sat, 05 Apr, 2025 (4:30 PM)</p>
                     </div>
-                    <div class="alert alert-success">Great Choice! You are saving ₹1000 with your booking</div>
-                    <div class="border p-3 rounded mb-2">
-                        <p><strong>1x Day Use Room</strong> (Check-in and Check-out on same day)</p>
-                        <p><strong>Room Type:</strong> Room Only <span class="non-refundable">Non-Refundable</span></p>
-                        <p><strong>Includes:</strong></p>
-                        <ul>
-                            <li>INR 500 credit on Spa services</li>
-                            <li>Free Pickup and Drop to Worldmark Aerocity (subject to availability)</li>
-                        </ul>
-                        <a href="#" class="text-primary text-decoration-none" data-bs-toggle="modal" data-bs-target="#policyModals" style="font-size: 13px; font-weight: 600; cursor: pointer;">
-                            View Booking & Cancellation Policy
-                        </a>
+                    <div class="col-12 col-md-4">
+                        <p><strong>Guests:</strong> 2 Guests | 1 Room</p>
                     </div>
-                    
-                    <!-- Modal -->
-                    <div class="modal " id="policyModals" tabindex="-1" aria-labelledby="policyModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="policyModalLabel">Booking & Cancellation Policy</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
+                </div>
+                <div class="alert alert-success text-center">Great Choice! You are saving ₹1000 with your booking</div>
+                <div class="border p-3 rounded mb-2">
+                    <p><strong>1x Day Use Room</strong> (Check-in and Check-out on same day)</p>
+                    <p><strong>Room Type:</strong> Room Only <span class="non-refundable">Non-Refundable</span></p>
+                    <p><strong>Includes:</strong></p>
+                    <ul>
+                        <li>INR 500 credit on Spa services</li>
+                        <li>Free Pickup and Drop to Worldmark Aerocity (subject to availability)</li>
+                    </ul>
+                    <a href="#" class="text-primary text-decoration-none d-block text-center text-md-start" data-bs-toggle="modal" data-bs-target="#policyModals" style="font-size: 13px; font-weight: 600; cursor: pointer;">
+                        View Booking & Cancellation Policy
+                    </a>
+                </div>
+        
+                <!-- Modal -->
+                <div class="modal fade" id="policyModals" tabindex="-1" aria-labelledby="policyModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="policyModalLabel">Booking & Cancellation Policy</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
                                 <!-- Must Read Section -->
-                                 
-                                    <div class="policy-section">
-                                        <h3 class="section-header">Must read</h3>
-                                        <ul class="policy-list">
-                                            <li class="policy-item">Primary guest should be at least 18 years of age</li>
-                                            <li class="policy-item">Passport, Aadhar, Driving License and Govt. ID are accepted as ID proof(s)</li>
-                                            <li class="policy-item">Pets are not allowed</li>
-                                            <li class="policy-item">Outside food is not allowed</li>
-                                            <!-- Add other list items similarly -->
-                                        </ul>
-                                    </div>
-                    
-                            <!-- Guest Profile Section -->
-                            <div class="policy-section">
-                                <h3 class="section-header">Guest Profile</h3>
-                                <ul class="policy-list">
-                                    <li class="policy-item">Unmarried couples allowed</li>
-                                    <li class="policy-item">Primary guest should be at least 18 years of age</li>
-                                </ul>
-                            </div>
-                    
-                            <!-- Other Sections (repeat same structure) -->
-                            <!-- Add all other sections following the same pattern -->
-                    
-                            <!-- Non-refundable Policy -->
-                            <div class="non-refundable-alert">
-                                <p class="mb-0"><strong>This booking is non-refundable and the tariff cannot be cancelled with zero fee.</strong></p>
+                                <div class="policy-section">
+                                    <h3 class="section-header">Must Read</h3>
+                                    <ul class="policy-list">
+                                        <li class="policy-item">Primary guest should be at least 18 years of age</li>
+                                        <li class="policy-item">Passport, Aadhar, Driving License and Govt. ID are accepted as ID proof(s)</li>
+                                        <li class="policy-item">Pets are not allowed</li>
+                                        <li class="policy-item">Outside food is not allowed</li>
+                                    </ul>
+                                </div>
+        
+                                <!-- Guest Profile Section -->
+                                <div class="policy-section">
+                                    <h3 class="section-header">Guest Profile</h3>
+                                    <ul class="policy-list">
+                                        <li class="policy-item">Unmarried couples allowed</li>
+                                        <li class="policy-item">Primary guest should be at least 18 years of age</li>
+                                    </ul>
+                                </div>
+        
+                                <!-- Non-refundable Policy -->
+                                <div class="non-refundable-alert">
+                                    <p class="mb-0"><strong>This booking is non-refundable and the tariff cannot be cancelled with zero fee.</strong></p>
+                                </div>
                             </div>
                         </div>
-                      </div>
                     </div>
                 </div>
-                   
-                </div>
+        
             </div>
-
+        </div>
+        
             <!-- Cancellation & Date Change Policy -->
 
             <div class="container mt-4" style="font-size: 12px;">
@@ -630,120 +624,125 @@
 
             <!-- Form Section -->
             <section class="bg-white p-2">
-                <div class="guest-details">
-                    <h3 class="fw-bold"> GUEST DETAILS</h3>
-                  
-                    <div class="table-container form-section" style="display: flex; gap: 10px; align-items: center;">
-                      <div>
-                        <label for="title" class="label">Title</label>
-                        <select class="input-field">
-                          <option value="mr">Mr</option>
-                          <option value="mrs">Mrs</option>
-                          <option value="ms">Ms</option>
-                          <option value="dr">Dr</option>
-                          <option value="prof">Prof</option>
-                        </select>
-                      </div>
-                    
-                      <div>
-                        <label for="first-name" class="label">First Name</label>
-                        <input type="text" class="input-field" value="Deepak Rajput">
-                      </div>
-                    
-                      <div>
-                        <label for="last-name" class="label">Last Name</label>
-                        <input type="text" class="input-field" placeholder="Enter Last Name">
-                      </div>
-                    </div>
-                    
-                    <div class="form-section py-4">
-                      <span class="label">Email Address (Your booking voucher will be sent to this email address)</span>
-                      <input type="text" class="input-field" placeholder="milancreation1401@gmail.com">
-                    </div>
-
-                    <div class="form-section" style="display: flex; gap: 10px; align-items: center;">
-                      <label class="label col-lg-2"> Mobile Number </label><br>
-                      <select class="info-text"> 
-                        <option value="+91">+91 India</option>
-                        <option value="+1">+1 USA</option>
-                        <option value="+44">+44 UK</option>
-                        <option value="+61">+61 Australia</option>
-                        <option value="+81">+81 Japan</option>
+              <div class="guest-details">
+                <h3 class="fw-bold mb-4">GUEST DETAILS</h3>
+            
+                <!-- Title/Name Section -->
+                <div class="row g-3 mb-4">
+                  <div class="col-12 col-md-2">
+                    <label class="form-label">Title</label>
+                    <select class="form-select p-3">
+                      <option value="mr">Mr</option>
+                      <option value="mrs">Mrs</option>
+                      <option value="ms">Ms</option>
+                      <option value="dr">Dr</option>
+                      <option value="prof">Prof</option>
+                    </select>
+                  </div>
+                  <div class="col-12 col-md-5">
+                    <label class="form-label">First Name</label>
+                    <input type="text" class="form-control" value="Deepak Rajput">
+                  </div>
+                  <div class="col-12 col-md-5">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" class="form-control" placeholder="Enter Last Name">
+                  </div>
+                </div>
+            
+                <!-- Email Section -->
+                <div class="row mb-4">
+                  <div class="col-12">
+                    <label class="form-label">Email Address (Your booking voucher will be sent to this email address)</label>
+                    <input type="email" class="form-control" placeholder="milancreation1401@gmail.com">
+                  </div>
+                </div>
+            
+                <!-- Mobile Number Section -->
+                <div class="row g-3 mb-4">
+                  <div class="col-12 col-md-4">
+                    <label class="form-label">Mobile Number</label>
+                    <div class="input-group">
+                      <select class="form-select">
+                        <option value="+91">+91</option>
+                        <option value="+1">+1</option>
+                        <option value="+44">+44</option>
                       </select>
-                    
-                      <input type="text" class="info-text" placeholder="123 0000 000">
+                      <input type="tel" class="form-control px-5" placeholder="123 0000 000">
                     </div>
-                    
-                    <div class="form-section col-lg-5 py-4" style="display: flex; align-items: center; gap:8px;">
-                      <input type="checkbox" id="gstCheckbox">
-                      <span class="label pt-2">Enter GST Details (Optional)</span>
                   </div>
-                  
-                  <div class="container py-5" id="businessProfile" style="display: none;">
-                      <div class="form-section">                        
-                          <div class="row mb-4">
-                              <div class="col-12">
-                                  <h5 class=" fw-bold">BUSINESS PROFILE</h5>
-                              </div>
-                          </div>
-                  
-                          <!-- GST Number and Company Name Row -->
-                          <div class="row mb-4">
-                              <div class="col-md-6 mb-3 mb-md-0">
-                                  <label class="label">GST Number</label>
-                                  <input type="text" class="form-control" placeholder="EG: 06BZAHM6385P6Z2">
-                                  <small class="example-text">Example format: 06BZAHM6385P6Z2</small>
-                              </div>
-                              <div class="col-md-6">
-                                  <label class="label">Company Name</label>
-                                  <input type="text" class="form-control" placeholder="Enter Company Name">
-                              </div>
-                          </div>
-                  
-                          <!-- Business Email -->
-                          <div class="row mb-4">
-                              <div class="col-12">
-                                  <label class="label">Business Email ID</label>
-                                  <input type="email" class="form-control" placeholder="Enter Email Address">
-                              </div>
-                          </div>
-                  
-                          <!-- Company Address -->
-                          <div class="row mb-4">
-                              <div class="col-12">
-                                  <label class="label">Company Address</label>
-                                  <input type="text" class="form-control" placeholder="Enter Company Address">
-                              </div>
-                          </div>
-                  
-                          <!-- Phone Number and Admin Email -->
-                          <div class="row">
-                              <div class="col-md-6 mb-3 mb-md-0">
-                                  <label class="label">Company Phone Number</label>
-                                  <input type="tel" class="form-control" placeholder="Enter Phone Number">
-                              </div>
-                              <div class="col-md-6">
-                                  <label class="label">Admin Email ID</label>
-                                  <input type="email" class="form-control" placeholder="Enter Email Address">
-                              </div>
-                          </div>
-                      </div>
+                </div>
+            
+                <!-- GST Checkbox -->
+                <div class="row mb-3">
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gstCheckbox">
+                      <label class="form-check-label" for="gstCheckbox">
+                        Enter GST Details (Optional)
+                      </label>
+                    </div>
                   </div>
-                  
-                  <script>
-                      document.getElementById("gstCheckbox").addEventListener("change", function() {
-                          var businessProfile = document.getElementById("businessProfile");
-                          businessProfile.style.display = this.checked ? "block" : "none";
-                      });
-                  </script>
-                
+                </div>
+            
+                <!-- Business Profile Section -->
+                <div class="container-fluid py-3" id="businessProfile" style="display: none;">
+                  <div class="row">
+                    <div class="col-12">
+                      <h5 class="fw-bold mb-4">BUSINESS PROFILE</h5>
+                    </div>
                   </div>
-              
+            
+                  <div class="row g-3 mb-4">
+                    <div class="col-12 col-md-6">
+                      <label class="form-label">GST Number</label>
+                      <input type="text" class="form-control" placeholder="EG: 06BZAHM6385P6Z2">
+                      <small class="form-text text-muted">Example format: 06BZAHM6385P6Z2</small>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label class="form-label">Company Name</label>
+                      <input type="text" class="form-control" placeholder="Enter Company Name">
+                    </div>
+                  </div>
+            
+                  <div class="row mb-4">
+                    <div class="col-12">
+                      <label class="form-label">Business Email ID</label>
+                      <input type="email" class="form-control" placeholder="Enter Email Address">
+                    </div>
+                  </div>
+            
+                  <div class="row mb-4">
+                    <div class="col-12">
+                      <label class="form-label">Company Address</label>
+                      <input type="text" class="form-control" placeholder="Enter Company Address">
+                    </div>
+                  </div>
+            
+                  <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                      <label class="form-label">Company Phone Number</label>
+                      <input type="tel" class="form-control" placeholder="Enter Phone Number">
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <label class="form-label">Admin Email ID</label>
+                      <input type="email" class="form-control" placeholder="Enter Email Address">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <script>
+                document.getElementById("gstCheckbox").addEventListener("change", function() {
+                  var businessProfile = document.getElementById("businessProfile");
+                  businessProfile.style.display = this.checked ? "block" : "none";
+                });
+              </script>
             </section>
 
+            
             <!-- Pincode and state  -->
-            <div class="container">
-              <div class="billing-wrapper shadow-sm">
+            <div class="container  shadow-sm">
+              <div class="billing-wrapper">
                   <h2 class="h4 mb-3">Your pincode and state</h2>
                   <p class="instruction-text">(Required for GST purpose on your tax invoice. You can edit this anytime later in your profile section.)</p>
                   
@@ -820,7 +819,7 @@
               <div class="d-flex mb-4">
                   <h5 class=" fw-bold">Price Summary</h5>
                     <div class="d-flex">
-                        <a href="#" class="text-primary text-decoration-none fw-bold" style="font-size: 14px;">View Full Breakup</a>
+                        <a href="#" class="text-primary text-decoration-none fw-bold view-full-btn" style="font-size: 14px;">View Full Breakup</a>
                           <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" 
                               style="width: 24px; height: 20px; " 
                               onclick="toggleDetails()">
@@ -883,7 +882,6 @@
               </div>
           </div>
           
-    
             <!-- Price Breakdown -->
             <div class="mb-3">
                 <div class="row mb-2">
@@ -927,7 +925,6 @@
                 </div>
             </div>
         </div>
-    
 
                 <div class="container marginT20">
                     <div class="gotribe-side-strip-wrapper">
@@ -1222,7 +1219,7 @@
   ></span>
   <div class="logo-box logo-retina">
     <a href="#" aria-label="logo image"
-      ><img src="assets/logo-light.png" width="158" alt="logo"
+      ><img src="assets/ghumojhumo.png" width="158" alt="logo"
     /></a>
   </div>
   <!-- /.logo-box -->
@@ -1625,8 +1622,8 @@
     ><i class="fa fa-times"></i
   ></span>
   <div class="header-right-sidebar__logo-box">
-    <a href="#" aria-label="logo image">
-      <img src="assets/logo-landing.png" width="158" alt="gotur" />
+    <a href="index.html" class="text-decoration-none">
+      <h3 class="fw-bold text-white"> Ghumo Jhumo</h3>
     </a>
   </div>
   <div class="header-right-sidebar__container">
