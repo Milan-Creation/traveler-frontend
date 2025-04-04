@@ -2937,8 +2937,35 @@ button.btn.btn-outline-primary.dropdown-toggle {
 
 }
 
-
 .form-select {
-
   padding: 18px;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.profile-info p {
+  margin: 0;
+}
+
+.progress-container {
+  margin-top: 10px;
+}
+
+.edit-btn {
+  margin-top: 10px;
 }

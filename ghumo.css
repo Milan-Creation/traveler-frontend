@@ -5781,8 +5781,7 @@ select.form-control {
 @media (max-width: 767px) {
   .main-slider-three__sub-title {
     font-size: 30px;
-    line-height: 10px;
-
+    line-height: 30px;
   }
 }
 .main-slider-three__title {
