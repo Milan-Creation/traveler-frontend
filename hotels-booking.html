@@ -5,10 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="bracket-web" />
-    <meta
-      name="description"
-      content="Gotur is a modern travel &amp; tour booking HTML Template. It is perfect for travel agencies, tour operators, trip holiday booking websites, adventure and booking companies looking for a unique and intuitive search function and all other travel &amp; tourism websites and businesses."
-    />
+
     <title>Hotels Bookings</title>
 
     <!-- fonts -->
@@ -359,7 +356,7 @@
           <div class="container mt-4" style="font-size: 13px;">
             <div class="property-info p-4">
                 <div class="d-flex flex-column flex-md-row align-items-center">
-                    <img src="assets/hotel-2.jpg" alt="Hotel Image" class="hotel-image me-md-3 mb-3 mb-md-0" style="width: 100%; max-width: 150px;">
+                    <img src="assets/hotel-2.jpg" alt="Hotel Image" class="hotel-image me-md-3 mb-3 mb-md-0" style="">
                     <div class="text-center text-md-start">
                         <i class="bi bi-star-fill star-icon"></i>
                         <i class="bi bi-star-fill star-icon"></i>
@@ -623,126 +620,54 @@
             </div>
 
             <!-- Form Section -->
-            <section class="bg-white p-2">
-              <div class="guest-details">
-                <h3 class="fw-bold mb-4">GUEST DETAILS</h3>
-            
-                <!-- Title/Name Section -->
-                <div class="row g-3 mb-4">
-                  <div class="col-12 col-md-2">
-                    <label class="form-label">Title</label>
-                    <select class="form-select p-3">
-                      <option value="mr">Mr</option>
-                      <option value="mrs">Mrs</option>
-                      <option value="ms">Ms</option>
-                      <option value="dr">Dr</option>
-                      <option value="prof">Prof</option>
-                    </select>
-                  </div>
-                  <div class="col-12 col-md-5">
-                    <label class="form-label">First Name</label>
-                    <input type="text" class="form-control" value="Deepak Rajput">
-                  </div>
-                  <div class="col-12 col-md-5">
-                    <label class="form-label">Last Name</label>
-                    <input type="text" class="form-control" placeholder="Enter Last Name">
-                  </div>
-                </div>
-            
-                <!-- Email Section -->
-                <div class="row mb-4">
-                  <div class="col-12">
-                    <label class="form-label">Email Address (Your booking voucher will be sent to this email address)</label>
-                    <input type="email" class="form-control" placeholder="milancreation1401@gmail.com">
-                  </div>
-                </div>
-            
-                <!-- Mobile Number Section -->
-                <div class="row g-3 mb-4">
-                  <div class="col-12 col-md-4">
-                    <label class="form-label">Mobile Number</label>
-                    <div class="input-group">
-                      <select class="form-select">
-                        <option value="+91">+91</option>
-                        <option value="+1">+1</option>
-                        <option value="+44">+44</option>
-                      </select>
-                      <input type="tel" class="form-control px-5" placeholder="123 0000 000">
-                    </div>
-                  </div>
-                </div>
-            
-                <!-- GST Checkbox -->
-                <div class="row mb-3">
-                  <div class="col-12">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="gstCheckbox">
-                      <label class="form-check-label" for="gstCheckbox">
-                        Enter GST Details (Optional)
-                      </label>
-                    </div>
-                  </div>
-                </div>
-            
-                <!-- Business Profile Section -->
-                <div class="container-fluid py-3" id="businessProfile" style="display: none;">
-                  <div class="row">
-                    <div class="col-12">
-                      <h5 class="fw-bold mb-4">BUSINESS PROFILE</h5>
-                    </div>
-                  </div>
-            
-                  <div class="row g-3 mb-4">
-                    <div class="col-12 col-md-6">
-                      <label class="form-label">GST Number</label>
-                      <input type="text" class="form-control" placeholder="EG: 06BZAHM6385P6Z2">
-                      <small class="form-text text-muted">Example format: 06BZAHM6385P6Z2</small>
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <label class="form-label">Company Name</label>
-                      <input type="text" class="form-control" placeholder="Enter Company Name">
-                    </div>
-                  </div>
-            
-                  <div class="row mb-4">
-                    <div class="col-12">
-                      <label class="form-label">Business Email ID</label>
-                      <input type="email" class="form-control" placeholder="Enter Email Address">
-                    </div>
-                  </div>
-            
-                  <div class="row mb-4">
-                    <div class="col-12">
-                      <label class="form-label">Company Address</label>
-                      <input type="text" class="form-control" placeholder="Enter Company Address">
-                    </div>
-                  </div>
-            
-                  <div class="row g-3">
-                    <div class="col-12 col-md-6">
-                      <label class="form-label">Company Phone Number</label>
-                      <input type="tel" class="form-control" placeholder="Enter Phone Number">
-                    </div>
-                    <div class="col-12 col-md-6">
-                      <label class="form-label">Admin Email ID</label>
-                      <input type="email" class="form-control" placeholder="Enter Email Address">
-                    </div>
-                  </div>
-                </div>
+            <div class="traveller-card container">
+              <div class="card-header d-flex justify-content-between align-items-center">
+                  <h3 class="mb-0">Traveller Details</h3>
               </div>
-            
-              <script>
-                document.getElementById("gstCheckbox").addEventListener("change", function() {
-                  var businessProfile = document.getElementById("businessProfile");
-                  businessProfile.style.display = this.checked ? "block" : "none";
-                });
-              </script>
-            </section>
-
+     
+              <div id="travellerContent">
+                  <div class="form-section">
+                      <div class="row g-3">
+                          <div class="col-md-6">
+                              <label class="form-label">Gender</label>
+                              <select class="form-select" style="padding: 18px;">
+                                  <option value="M">Male</option>
+                                  <option value="F">Female</option>
+                                  <option value="O">Other</option>
+                              </select>
+                          </div>
+                          
+                          <div class="col-md-6">
+                              <label class="form-label">Full Name</label>
+                              <input type="text" class="form-control" placeholder="Enter Full Name">
+                          </div>
+          
+                          <div class="col-12">
+                              <label class="form-label">Mobile Number</label>
+                              <div class="input-group">
+                                  <select class="form-select country-code-select">
+                                      <option value="+91">India (+91)</option>
+                                      <!-- Add more country codes as needed -->
+                                  </select>
+                                  <input type="tel" class="form-control" placeholder="Enter Mobile Number">
+                              </div>
+                          </div>
+          
+                          <div class="col-12">
+                              <label class="form-label">Email Address</label>
+                              <input type="email" class="form-control" placeholder="Enter Email">
+                              <div class="sub-text mt-1">
+                                  Your E-ticket and updates will be sent here
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
             
             <!-- Pincode and state  -->
-            <div class="container  shadow-sm">
-              <div class="billing-wrapper">
+            <div class="container">
+              <div class="billing-wrapper shadow-sm">
                   <h2 class="h4 mb-3">Your pincode and state</h2>
                   <p class="instruction-text">(Required for GST purpose on your tax invoice. You can edit this anytime later in your profile section.)</p>
                   
@@ -781,8 +706,8 @@
           </div>
 
             <!-- IMPORTANT INFORMATION -->
-            <div class="container mt-4 border rounded">
-              <div class="payment-container">
+            <div class="container mt-4">
+              <div class="payment-container shadow-sm">
                 <h5 class="mb-3 fw-bold">SELECT PAYMENT OPTION</h5>
                 
                 <div class="alert-note">
@@ -947,7 +872,7 @@
   <div class="main-footer__top">
     <div class="container">
       <div
-        class="main-footer__top__inner wow InUp"
+        class="main-footer__top__inner wow fadeInUp"
         data-wow-duration="1500ms"
         data-wow-delay="200ms"
         style="
@@ -962,7 +887,7 @@
             ><img
               src="assets/ghumojhumo.png"
               width="158"
-              alt="gotur logo"
+              alt="ghumojhumo logo"
           /></a>
         </div>
         <!-- /.footer-widget__logo -->
@@ -1018,7 +943,7 @@
     <div class="container">
       <div class="row gutter-y-40">
         <div
-          class="col-md-6 col-lg-4 col-xl-3 wow InUp"
+          class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
           data-wow-duration="1500ms"
           data-wow-delay="00ms"
           style="
@@ -1061,7 +986,7 @@
         <!-- /.col-lg-4 -->
 
         <div
-          class="col-md-6 col-lg-4 col-xl-3 wow InUp"
+          class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
           data-wow-duration="1500ms"
           data-wow-delay="200ms"
           style="
@@ -1088,7 +1013,7 @@
         <!-- /.col-lg-4 -->
 
         <div
-          class="col-md-6 col-lg-4 col-xl-3 wow InUp"
+          class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp"
           data-wow-duration="1500ms"
           data-wow-delay="400ms"
           style="
@@ -1115,7 +1040,7 @@
         <!-- /.col-lg-6 -->
 
         <div
-          class="col-md-6 col-lg-5 col-xl-3 wow InUp"
+          class="col-md-6 col-lg-5 col-xl-3 wow fadeInUp"
           data-wow-duration="1500ms"
           data-wow-delay="600ms"
           style="
@@ -1173,9 +1098,6 @@
       <img src="assets/footer-shape-1-1.png" alt="" />
     </div>
     <!-- /.main-footer__element-one -->
-    <!-- <div class="main-footer__element-two">
-      <img src="assets/footer-shape-1-2.png" alt="" />
-    </div> -->
     <!-- /.main-footer__element-one -->
   </div>
   <!-- /.main-footer__middle -->
@@ -1196,7 +1118,7 @@
         </a>
         <div class="main-footer__bottom__pyment">
           <a href="#"
-            ><img src="assets/footer-card-1-1.png" alt="gotur pyment"
+            ><img src="assets/footer-card-1-1.png" alt="ghumojhumo pyment"
           /></a>
         </div>
       </div>
@@ -1241,7 +1163,7 @@
                         <div class="demo-one__image">
                           <img
                             src="assets/home-showcase-1.jpg"
-                            alt=" gotur image"
+                            alt="ghumo image"
                           />
                           <div class="demo-one__btns">
                             <a href="#" class="gotur-btn demo-one__btn"
@@ -1270,7 +1192,7 @@
                         <div class="demo-one__image">
                           <img
                             src="assets/home-showcase-2.jpg"
-                            alt="gotur image"
+                            alt="ghumo image"
                           />
                           <div class="demo-one__btns">
                             <a href="#" class="gotur-btn demo-one__btn"
@@ -1328,7 +1250,7 @@
                         <div class="demo-one__image">
                           <img
                             src="assets/home-showcase-4.jpg"
-                            alt="gotur image"
+                            alt="ghumojhumo image"
                           />
                           <div class="demo-one__btns">
                             <a href="#" class="gotur-btn demo-one__btn"
@@ -1564,7 +1486,7 @@
       <span class="mobile-nav__contact__icon">
         <i class="fa fa-envelope"></i>
       </span>
-      <a href="#">needhelp@gotur.com</a>
+      <a href="#">needhelp@ghumojhumo.com</a>
     </li>
     <li>
       <span class="mobile-nav__contact__icon">
@@ -1622,20 +1544,20 @@
     ><i class="fa fa-times"></i
   ></span>
   <div class="header-right-sidebar__logo-box">
-    <a href="index.html" class="text-decoration-none">
-      <h3 class="fw-bold text-white"> Ghumo Jhumo</h3>
+    <a href="#" aria-label="logo image">
+        <h3 class="fw-bold text-white"> Ghumo Jhumo </h3>
     </a>
   </div>
   <div class="header-right-sidebar__container">
     <div
-      class="header-right-sidebar__container__about wow InUp animated"
+      class="header-right-sidebar__container__about wow fadeInUp animated"
       data-wow-duration="1500ms"
       data-wow-delay="300ms"
       style="
         visibility: visible;
         animation-duration: 1500ms;
         animation-delay: 300ms;
-        animation-name: InUp;
+        animation-name: fadeInUp;
       "
     >
       <h3 class="header-right-sidebar__container__title">
@@ -1651,14 +1573,14 @@
       <h3 class="header-right-sidebar__container__title">Contact Us</h3>
       <ul class="header-right-sidebar__container__list list-unstyled">
         <li
-          class="header-right-sidebar__container__list__item wow InUp animated"
+          class="header-right-sidebar__container__list__item wow fadeInUp animated"
           data-wow-duration="1500ms"
           data-wow-delay="300ms"
           style="
             visibility: visible;
             animation-duration: 1500ms;
             animation-delay: 300ms;
-            animation-name: InUp;
+            animation-name: fadeInUp;
           "
         >
           <div class="header-right-sidebar__container__icon">
@@ -1673,14 +1595,14 @@
           </div>
         </li>
         <li
-          class="header-right-sidebar__container__list__item wow InUp animated"
+          class="header-right-sidebar__container__list__item wow fadeInUp animated"
           data-wow-duration="1500ms"
           data-wow-delay="500ms"
           style="
             visibility: visible;
             animation-duration: 1500ms;
             animation-delay: 500ms;
-            animation-name: InUp;
+            animation-name: fadeInUp;
           "
         >
           <div class="header-right-sidebar__container__icon">
@@ -1694,14 +1616,14 @@
           </div>
         </li>
         <li
-          class="header-right-sidebar__container__list__item wow InUp animated"
+          class="header-right-sidebar__container__list__item wow fadeInUp animated"
           data-wow-duration="1500ms"
           data-wow-delay="700ms"
           style="
             visibility: visible;
             animation-duration: 1500ms;
             animation-delay: 700ms;
-            animation-name: InUp;
+            animation-name: fadeInUp;
           "
         >
           <div class="header-right-sidebar__container__icon">
@@ -1717,14 +1639,14 @@
       </ul>
     </div>
     <div
-      class="header-right-sidebar__container__newsletter-box wow InUp animated"
+      class="header-right-sidebar__container__newsletter-box wow fadeInUp animated"
       data-wow-duration="1500ms"
       data-wow-delay="900ms"
       style="
         visibility: visible;
         animation-duration: 1500ms;
         animation-delay: 900ms;
-        animation-name: InUp;
+        animation-name: fadeInUp;
       "
     >
       <h3 class="header-right-sidebar__container__title">
@@ -1761,36 +1683,34 @@ style="
 <span id="scroll-top-value" class="scroll-top-value">77%</span>
 </div>
 
-<!-- Bootstrap Bundle (JS + Popper.js) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="./jquery-3.7.1.min.js.download"></script>
-<script src="./bootstrap.bundle.min.js.download"></script>
-<script src="./bootstrap-select.min.js.download"></script>
-<script src="./jarallax.min.js.download"></script>
-<script src="./jquery-ui.js.download"></script>
-<script src="./jquery.ajaxchimp.min.js.download"></script>
-<script src="./jquery.appear.min.js.download"></script>
-<script src="./jquery.circle-progress.min.js.download"></script>
-<script src="./jquery.magnific-popup.min.js.download"></script>
-<script src="./jquery.validate.min.js.download"></script>
-<script src="./nouislider.min.js.download"></script>
-<script src="./wNumb.min.js.download"></script>
-<script src="./owl.carousel.min.js.download"></script>
-<script src="./slick.min.js.download"></script>
-<script src="./wow.js.download"></script>
-<script src="./imagesloaded.min.js.download"></script>
-<script src="./gsap.js.download"></script>
-<script src="./scrollTrigger.min.js.download"></script>
-<script src="./splittext.min.js.download"></script>
-<script src="./gotur-gsap.js.download"></script>
-  <script src="./countdown.min.js.download"></script>
-<script src="./moment.min.js.download"></script>
-<script src="./daterangepicker.js.download"></script>
-<script src="./jquery.circleType.js.download"></script>
-<script src="./jquery.lettering.min.js.download"></script>
+<script src="./jquery-3.7.1.min.js"></script>
+<script src="./bootstrap.bundle.min.js"></script>
+<script src="./bootstrap-select.min.js"></script>
+<script src="./jarallax.min.js"></script>
+<script src="./jquery-ui.js"></script>
+<script src="./jquery.ajaxchimp.min.js"></script>
+<script src="./jquery.appear.min.js"></script>
+<script src="./jquery.circle-progress.min.js"></script>
+<script src="./jquery.magnific-popup.min.js"></script>
+<script src="./jquery.validate.min.js"></script>
+<script src="./nouislider.min.js"></script>
+<script src="./wNumb.min.js"></script>
+<script src="./owl.carousel.min.js"></script>
+<script src="./slick.min.js"></script>
+<script src="./wow.js"></script>
+<script src="./imagesloaded.min.js"></script>
+<script src="./isotope.js"></script>
+<script src="./countdown.min.js"></script>
+<script src="./moment.min.js"></script>
+<script src="./daterangepicker.js"></script>
+<script src="./jquery.circleType.js"></script>
+<script src="./jquery.lettering.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <!-- GSAP -->
+<script src="./gsap.js"></script>
+<script src="./scrollTrigger.min.js"></script>
+<script src="./splittext.min.js"></script>
+<script src="./gotur-gsap.js"></script>
 
 <script src="./ghumu-jhumu.js"></script>
 <div class="daterangepicker ltr show-calendar opensright">
@@ -1817,12 +1737,5 @@ style="
 </div>
 </div>
 
-<!-- Required Bootstrap CSS and JS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
-
-  </body>
 </html>
