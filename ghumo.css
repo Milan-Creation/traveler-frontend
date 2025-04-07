@@ -18862,3 +18862,7 @@ input.form-control {
   color: red;
   margin-left: 10px;
 }
+.main-header__info__item{
+  font-size: 20px;
+  gap: 20px;
+}
