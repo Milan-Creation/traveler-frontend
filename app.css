@@ -519,6 +519,8 @@ button#fare-rule-btn-2 {
   background-color: #fe9a6d !important;
   border-color: #136ffe00 !important;
   outline: none;
+  border: none;
+  width: 20px;
 }
 
 a.detail-btn {
@@ -2244,7 +2246,6 @@ li {
 }
 
 .filter-section {
-  border-bottom: 1px solid #dee2e6;
   padding: 1rem 0;
 }
 
