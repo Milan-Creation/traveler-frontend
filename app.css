@@ -1760,8 +1760,7 @@ a{
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .hotel-image {
-  width: 500px;
-  border-radius: 5px;
+  max-width: 150px;  border-radius: 5px;
 }
 .rating {
   color: #28a745;
@@ -2933,6 +2932,11 @@ button.btn.btn-outline-primary.dropdown-toggle {
 
 .view-full-btn{
   padding-left: 70px;
+}
+.hotel-image{
+  width: 100%;
+  max-width: 100%;
+  
 }
 
 }

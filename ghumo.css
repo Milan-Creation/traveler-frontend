@@ -18838,3 +18838,27 @@ input.form-control {
   color: #007bff;
   cursor: pointer;
 }
+
+#selectedFilters .badge {
+  margin: 3px;
+  font-size: 12px;
+}
+.applied-filters {
+  margin-top: 30px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 20px;
+}
+.filter-pill {
+  display: inline-block;
+  background: #e0f7fa;
+  border: 1px solid #00acc1;
+  border-radius: 20px;
+  padding: 5px 15px;
+  margin: 5px;
+  font-size: 10px;
+}
+.clear-btn {
+  cursor: pointer;
+  color: red;
+  margin-left: 10px;
+}
