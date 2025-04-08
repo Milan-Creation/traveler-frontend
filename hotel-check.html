@@ -335,22 +335,73 @@
     </header>
     
     <section class="position-relative text-white text-center hero-section-4">
-      <!-- <div class="containers">
-        <div class="title py-5">Booking Travel</div>
-        <div class="logo-container">
-          <img src="assets/images.jpeg" alt="Logo" class="logo" width="100px" />
-        </div>
-      </div> -->
+       <!-- Form Section -->
+  
     </section>
-      
+
     <section class="section-background-color">
           <!-- Hotel Header -->
-          <section class="section-position">
+          <section>
+     
+            <form onsubmit="searchFlights(event)" action="flight-search" method="POST">
+            <div class="container mt-5 position-relative">
+              <div class="booking-container">
+
+                  <div class="tab-content mt-4">
+                    
+                      <div class="tab-pane fade show active" id="flights">
+                          <div class="row g-3">
+                           
+                              <div class="col-md-2 input-box">
+                                  <label>From</label>
+                                  
+                                  <select id="fromCitySelect1" name="from" class="citySelect form-select">
+                                    <option value="Delhi" selected disabled>Select From</option>
+                                </select>
+                                <small class="text-muted">DEL, Delhi Airport India</small>
+                              </div>
+                              <div class="col-md-2 input-box">
+                                  <label>To</label>
+                                  <select id="toCitySelect1" name="to" class="citySelect form-select">
+                                    <option value="Bengaluru" selected disabled>Select To</option>
+                                </select>
+                                <small class="text-muted">BLR, Bengaluru International Airport India</small>
+                              </div>
+                              <div class="col-md-2 input-box">
+                                  <label>Departure</label>
+                                  <input type="text" class="datetimepicker1 form-control" id="departure"
+                                  name="departure" placeholder="Friday, 9 May 2025"/>
+                              </div>
+                              <div class="col-md-2 input-box">
+                                <label>Return</label>
+                              <input type="text" class="datetimepicker2 form-control" id="return" name="return" placeholder="Tap to add return date"/>
+                            </div>
+                            <div class="col-md-2 input-box">
+                              <div class="position-relative">
+                                <label>Travellers & Class</label>
+                                <input type="text" class="form-control" id="travellersInput1" placeholder="0 Adult, 1 Child">
+                              
+                            </div>
+                          </div>
+                          
+                          </div>
+                          <a href="flight-search.html" class="search-flight-btn text-decoration-none text-white">
+                            Search Flights
+                          </a>
+                      </div>
+
+              </div>
+          </div>
+          </form>
+
+         
+          </section>
 
             <div class="container hotels-check-sections">
+              <div class="row bg-white">
                 <!-- Header -->
                 <div class="hotel-header">
-                    <h2>Lemon Tree Premier Delhi Airport</h2>
+                    <h4 class="fw-bold rating">Lemon Tree Premier Delhi Airport</h4>
                     <span class="rating">3.8/5</span>
                 </div>
                 <p class="text-muted"><i class="bi bi-geo-alt-fill"></i> Aerocity, Delhi | 4.2 km to Indira Gandhi International Airport</p>
@@ -358,114 +409,116 @@
                 <!-- Gallery -->
                 <div class="row gallery mt-3">
                     <div class="col-md-5">
-                        <img src="assets/hotel-1.jpg" alt="Hotel Image">
+                        <img src="assets/hotel-1.jpg" alt="Hotel Image" class="pb-2">
                     </div>
-                    <div class="col-md-3 d-flex flex-column gap-3 my-2">
-                        <video width="180" height="160" autoplay loop>
-                            <source src="assets/hotel-video-1.mp4" type="video/mp4">
-                            <source src="assets/hotel-video-1.mp4" type="video/ogg">
-                            Your browser does not support the video tag.
-                        </video>
-
-                        <video width="180" height="160" autoplay loop>
-                            <source src="assets/hotel-video-1.mp4" type="video/mp4">
-                            <source src="assets/hotel-video-1.mp4" type="video/ogg">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 d-flex flex-column gap-2 pb-5">
+                      <video class="w-100" autoplay loop muted playsinline>
+                          <source src="assets/hotel-video-1.mp4" type="video/mp4">
+                          <source src="assets/hotel-video-1.mp4" type="video/ogg">
+                          Your browser does not support the video tag.
+                      </video>
+                  
+                      <video class="w-100" autoplay loop muted playsinline>
+                          <source src="assets/hotel-video-1.mp4" type="video/mp4">
+                          <source src="assets/hotel-video-1.mp4" type="video/ogg">
+                          Your browser does not support the video tag.
+                      </video>
+                  </div>
+                  
                 
-
               <!-- Booking Card -->
-            <div class="col-md-4">
-             <div class="container ">
-                <div class="card card-custom p-3">
-                    <div class="d-flex justify-content-between align-items-start mb-3">
-                        <div>
-                            <h5 class="mb-1">Day Use Room 10 AM...</h5>
-                            <p class="text-muted mb-1">2 Guests | 1 Room</p>
-                        </div>
-                        <span class="couple-badge rounded-pill">Couple Friendly</span>
+              <div class="col-12 col-sm-6 col-md-4 mb-4">
+                <div class="card card-custom p-3 h-100">
+                  <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                      <h5 class="mb-1">Day Use Room 10 AM...</h5>
+                      <p class="text-muted mb-1">2 Guests | 1 Room</p>
                     </div>
-
-                    <p class="cancellation-text mb-3">
-                        <i class="bi bi-check-circle"></i> Free Cancellation Till 26-Mar-2025 13:59
+                    <span class="couple-badge rounded-pill">Couple Friendly</span>
+                  </div>
+              
+                  <p class="cancellation-text mb-3">
+                    <i class="bi bi-check-circle"></i> Free Cancellation Till 26-Mar-2025 13:59
+                  </p>
+              
+                  <div class="mb-3">
+                    <span class="price-tag fw-bold">₹3,723</span>
+                    <span class="taxes-text text-muted">+₹1,393 taxes & fees</span>
+                    <p class="text-muted mb-0">1 Room per night</p>
+                  </div>
+              
+                  <div class="d-flex justify-content-between align-items-center mb-3" style="font-size: 14px;">
+                    <a href="#" class="offer-code text-decoration-none">
+                      <i class="bi bi-tag"></i> Use GOHSBOEMI Code
+                    </a>
+                    <a href="#" class="text-decoration-none">VIEW 36 ROOM OPTIONS <i class="bi bi-chevron-right"></i></a>
+                  </div>
+              
+                  <div class="border-top pt-3">
+                    <p class="text-muted small mb-2">
+                      Get ₹637 off. Get Flat 15% off and No Cost EMI on HSBC Cred..
                     </p>
-
-                    <div class="mb-3">
-                        <span class="price-tag">₹3,723</span>
-                                <span class="taxes-text">+₹1,393 taxes & fees</span>
-                                <p class="text-muted mb-0">1 Room per night</p>
-                            </div>
-
-                            <div class="d-flex justify-content-between align-items-center mb-3" style="font-size: 14px;">
-                                <a href="#" class="offer-code text-decoration-none">
-                                    <i class="bi bi-tag"></i> Use GOHSBOEMI Code
-                                </a>
-                                <a href="#" class="text-decoration-none">VIEW 36 ROOM OPTIONS <i class="bi bi-chevron-right"></i></a>
-                            </div>
-
-                            <div class="border-top pt-3">
-                                <p class="text-muted small mb-2">
-                                    Get ₹637 off. Get Flat 15% off and No Cost EMI on HSBC Cred..
-                                </p>
-                                <p class="text-muted small mb-3">+ 2 more offers</p>
-                                
-                                <div class="d-flex justify-content-end gap-2">
-                                    <button class="btn btn-outline-secondary btn-sm">Add to Wishlist</button>
-                                    <a href="hotels-booking.html" class="btn btn-warning text-white btn-sm">Book Now</a>
-                                </div>
-                            </div>
-                        </div>
+                    <p class="text-muted small mb-3">+ 2 more offers</p>
+              
+                    <div class="d-flex justify-content-end gap-2 flex-wrap">
+                      <button class="btn btn-outline-secondary btn-sm">Add to Wishlist</button>
+                      <a href="hotels-booking.html" class="btn btn-warning text-white btn-sm">Book Now</a>
                     </div>
-
-                    </div>
-
+                  </div>
+                </div>
+              </div>
+              
                 </div>
             </div>
-
+          </div>
         <!-- About Section -->
         <section>
-            <div class="container hotels-check-about py-5" style="border: 1px solid #f1f1f1;">
+          <div class="container hotels-check-about py-5">
+            <div class="row bg-white p-4">
+              <div class="col-12 mb-3">
                 <h2 class="property-highlights-header">About the Hotel</h2>
-                
-                <div class="property-highlights-body">
-                    <p class="highlight-description">
-                        A well-located hotel offering premium accommodation with food and recreational amenities.
+                <p class="highlight-description">
+                  A well-located hotel offering premium accommodation with food and recreational amenities.
+                </p>
+              </div>
+          
+              <!-- Feature Items -->
+              <div class="col-12">
+                <div class="row g-4">
+                  <!-- Feature 1 -->
+                  <div class="col-12 col-sm-6 col-md-4 feature-item text-center">
+                    <img src="https://promos.makemytrip.com/Hotels_product/GI/curtain.png" 
+                         class="feature-img img-fluid mb-2" 
+                         alt="Runway view">
+                    <p class="feature-text">
+                      The runway view rooms provide a unique Airport view experience.
                     </p>
-                    
-                    <div class="row">
-                        <!-- Feature 1 -->
-                        <div class="col-md-4 feature-item">
-                            <img src="https://promos.makemytrip.com/Hotels_product/GI/curtain.png" 
-                                 class="feature-img img-fluid" 
-                                 alt="Runway view">
-                            <p class="feature-text">
-                                The runway view rooms provide a unique Airport view experience.
-                            </p>
-                        </div>
-        
-                        <!-- Feature 2 -->
-                        <div class="col-md-4 feature-item">
-                            <img src="https://promos.makemytrip.com/Hotels_product/GI/favourite.png" 
-                                 class="feature-img img-fluid" 
-                                 alt="Business facilities">
-                            <p class="feature-text">
-                                The property offers extensive conference space and a 24-hour business center.
-                            </p>
-                        </div>
-        
-                        <!-- Feature 3 -->
-                        <div class="col-md-4 feature-item">
-                            <img src="https://promos.makemytrip.com/Hotels_product/GI/location.png" 
-                                 class="feature-img img-fluid" 
-                                 alt="Location">
-                            <p class="feature-text">
-                                Situated in Delhi Aerocity, it is minutes away from the international airport.
-                            </p>
-                        </div>
-                    </div>
+                  </div>
+          
+                  <!-- Feature 2 -->
+                  <div class="col-12 col-sm-6 col-md-4 feature-item text-center">
+                    <img src="https://promos.makemytrip.com/Hotels_product/GI/favourite.png" 
+                         class="feature-img img-fluid mb-2" 
+                         alt="Business facilities">
+                    <p class="feature-text">
+                      The property offers extensive conference space and a 24-hour business center.
+                    </p>
+                  </div>
+          
+                  <!-- Feature 3 -->
+                  <div class="col-12 col-sm-6 col-md-4 feature-item text-center">
+                    <img src="https://promos.makemytrip.com/Hotels_product/GI/location.png" 
+                         class="feature-img img-fluid mb-2" 
+                         alt="Location">
+                    <p class="feature-text">
+                      Situated in Delhi Aerocity, it is minutes away from the international airport.
+                    </p>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
+          
         </section>
 
      
@@ -512,7 +565,7 @@
               <thead>
                   <tr class="table-header">
                       <th>
-                          <button class="btn btn-custom dropdown-toggle text-white" type="button" data-bs-toggle="dropdown">
+                          <button class="btn btn-custom dropdown-toggle" type="button" data-bs-toggle="dropdown">
                               9 Room Types
                           </button>
                           <ul class="dropdown-menu">
@@ -566,7 +619,15 @@
                 <div class="col-md-8 d-flex p-4" style="border: 2px solid #f1f1f1;">
                     <div class="hotel-image">
                         <img src="assets/hotel-1.jpg" alt="Hotel Room">
-                        <p style="color:#2274e0; font-weight:700; font-size: 14px;" class="py-4" data-bs-toggle="modal" data-bs-target="#hotelRoomModal"> View More Details</p>
+
+                        <div class="hotels-gallery ">
+                          <img src="assets/hotel-1.jpg" alt="Hotel Room" class="hotels-gallerys">
+                          <img src="assets/hotel-1.jpg" alt="Hotel Room" class="hotels-gallerys" >
+                          <img src="assets/hotel-1.jpg" alt="Hotel Room" class="hotels-gallerys">
+                          <img src="assets/hotel-1.jpg" alt="Hotel Room" class="hotels-gallerys">
+                        </div>
+
+                        <p style="color:#2274e0; font-weight:700; font-size: 14px;" class="py-3" data-bs-toggle="modal" data-bs-target="#hotelRoomModal"> View More Details</p>
                     </div>
                     <div class="hotel-info ms-3">
                         <p class="fw-bold text-muted">
@@ -697,7 +758,15 @@
                 <div class="col-md-8 d-flex p-4" style="border: 2px solid #f1f1f1;">
                     <div class="hotel-image">
                         <img src="assets/hotel-2.jpg" alt="Hotel Room">
-                        <p style="color:#2274e0; font-weight:700; font-size: 14px;" class="py-4" data-bs-toggle="modal" data-bs-target="#hotelRoomModal"> View More Details</p>
+
+                        <div class="hotels-gallery ">
+                          <img src="assets/hotel-2.jpg" alt="Hotel Room" class="hotels-gallerys">
+                          <img src="assets/hotel-2.jpg" alt="Hotel Room" class="hotels-gallerys" >
+                          <img src="assets/hotel-2.jpg" alt="Hotel Room" class="hotels-gallerys">
+                          <img src="assets/hotel-2.jpg" alt="Hotel Room" class="hotels-gallerys">
+                        </div>
+
+                        <p style="color:#2274e0; font-weight:700; font-size: 14px;" class="py-3" data-bs-toggle="modal" data-bs-target="#hotelRoomModal"> View More Details</p>
                     </div>
                     <div class="hotel-info ms-3">
                         <p class="fw-bold text-muted">
@@ -826,7 +895,15 @@
                       <div class="col-md-8 d-flex p-4" style="border: 2px solid #f1f1f1;">
                           <div class="hotel-image">
                               <img src="assets/hotel-3.jpg" alt="Hotel Room">
-                              <p style="color:#2274e0; font-weight:700; font-size: 14px;" class="py-4" data-bs-toggle="modal" data-bs-target="#hotelRoomModal"> View More Details</p>
+
+                              <div class="hotels-gallery ">
+                                <img src="assets/hotel-3.jpg" alt="Hotel Room" class="hotels-gallerys">
+                                <img src="assets/hotel-3.jpg" alt="Hotel Room" class="hotels-gallerys" >
+                                <img src="assets/hotel-3.jpg" alt="Hotel Room" class="hotels-gallerys">
+                                <img src="assets/hotel-3.jpg" alt="Hotel Room" class="hotels-gallerys">
+                              </div>
+      
+                              <p style="color:#2274e0; font-weight:700; font-size: 14px;" class="py-2" data-bs-toggle="modal" data-bs-target="#hotelRoomModal"> View More Details</p>
                           </div>
                           <div class="hotel-info ms-3">
                               <p class="fw-bold text-muted">
@@ -948,7 +1025,9 @@
               </section>
         
         <section class="text-dark" style="font-size: 14px;">
-          <div class="container mt-4 bg-white py-5">
+          <div class="container mt-4">
+            <div class="row bg-white py-3">
+
             <h4 class="fw-bold">Amenities at Radisson Blu Plaza Delhi Airport</h4>
             <div class="my-3">
                 <span class="popular-badge">POPULAR AMENITIES</span>
@@ -1005,84 +1084,92 @@
                 </div>
             </div>  
         </div>
+      </div>
+
         </section>
 
         <!-- FAQS Section -->
-        <section class="container bg-white mt-5 p-3">
-          <h6 class="mb-4 display-8 fw-bold">Food & Dining</h6>
-          
-          <!-- NYC Restaurant Card -->
-          <div class="card mb-4">
-              <div class="card-header d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#nycCollapse">
-                  <h3 class="mb-0">NYC (Casual Dining)</h3>
-                  <i class="fas fa-chevron-down"></i>
-              </div>
-              <div class="collapse show" id="nycCollapse">
-                  <div class="card-body">
-                      <div class="row mb-3">
-                          <div class="col-md-6 d-flex align-items-center">
-                              <i class="fas fa-leaf text-success me-3 fs-4"></i>
-                              <span>Both Vegetarian & Non-Vegetarian food</span>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-md-6 d-flex align-items-center mb-3">
-                              <i class="fas fa-clock text-warning me-3 fs-4"></i>
-                              <span>24 Hours Restaurant</span>
-                          </div>
-                          <div class="col-md-6 d-flex align-items-center">
-                              <i class="fas fa-utensils text-warning me-3 fs-4"></i>
-                              <span>Cuisines: Continental, South Indian, North Indian, Italian</span>
-                          </div>
-                      </div>
+        <section class="mt-5">
+            <div class="container">
+              <div class="row bg-white">
+
+                <h6 class="mb-4 display-8 fw-bold pt-3">Food & Dining</h6>
+              
+                <!-- NYC Restaurant Card -->
+                <div class="card mb-4">
+                  <div class="card-header d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#nycCollapse" role="button" aria-expanded="true" aria-controls="nycCollapse">
+                    <h5 class="mb-0">NYC (Casual Dining)</h5>
+                    <i class="fas fa-chevron-down"></i>
                   </div>
-              </div>
-          </div>
-      
-          <!-- TGKF Restaurant Card -->
-          <div class="card mb-4">
-              <div class="card-header d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#tgkfCollapse">
-                  <h3 class="mb-0">TGKF (Casual Dining)</h3>
-                  <i class="fas fa-chevron-down"></i>
-              </div>
-              <div class="collapse" id="tgkfCollapse">
-                  <div class="card-body">
+                  <div class="collapse show" id="nycCollapse">
+                    <div class="card-body">
                       <div class="row mb-3">
-                          <div class="col-md-6 d-flex align-items-center">
-                              <i class="fas fa-leaf text-success me-3 fs-4"></i>
-                              <span>Both Vegetarian & Non-Vegetarian food</span>
-                          </div>
+                        <div class="col-12 col-sm-12 col-md-6 d-flex align-items-center mb-2 mb-md-0">
+                          <i class="fas fa-leaf text-success me-3 fs-4"></i>
+                          <span>Both Vegetarian & Non-Vegetarian food</span>
+                        </div>
                       </div>
                       <div class="row">
-                          <div class="col-md-6 d-flex align-items-center mb-3">
-                              <i class="fas fa-clock text-warning me-3 fs-4"></i>
-                              <span>Dinner <strong>7:00 PM - 11:45 PM</strong></span>
-                          </div>
-                          <div class="col-md-6 d-flex align-items-center">
-                              <i class="fas fa-utensils text-warning me-3 fs-4"></i>
-                              <span>Cuisines: North Indian, Mughlai</span>
-                          </div>
+                        <div class="col-12 col-sm-6 col-md-6 d-flex align-items-center mb-3">
+                          <i class="fas fa-clock text-warning me-3 fs-4"></i>
+                          <span>24 Hours Restaurant</span>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-6 d-flex align-items-center">
+                          <i class="fas fa-utensils text-warning me-3 fs-4"></i>
+                          <span>Cuisines: Continental, South Indian, North Indian, Italian</span>
+                        </div>
                       </div>
-                      
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- TGKF Restaurant Card -->
+                <div class="card mb-4">
+                  <div class="card-header d-flex justify-content-between align-items-center" data-bs-toggle="collapse" href="#tgkfCollapse" role="button" aria-expanded="false" aria-controls="tgkfCollapse">
+                    <h5 class="mb-0">TGKF (Casual Dining)</h5>
+                    <i class="fas fa-chevron-down"></i>
+                  </div>
+                  <div class="collapse" id="tgkfCollapse">
+                    <div class="card-body">
+                      <div class="row mb-3">
+                        <div class="col-12 col-sm-12 col-md-6 d-flex align-items-center mb-2 mb-md-0">
+                          <i class="fas fa-leaf text-success me-3 fs-4"></i>
+                          <span>Both Vegetarian & Non-Vegetarian food</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 col-sm-6 d-flex align-items-center mb-3">
+                          <i class="fas fa-clock text-warning me-3 fs-4"></i>
+                          <span>Dinner <strong>7:00 PM - 11:45 PM</strong></span>
+                        </div>
+                        <div class="col-12 col-sm-6 d-flex align-items-center">
+                          <i class="fas fa-utensils text-warning me-3 fs-4"></i>
+                          <span>Cuisines: North Indian, Mughlai</span>
+                        </div>
+                      </div>
+              
                       <!-- Offers Section -->
                       <div class="mt-4">
-                          <h5 class="mb-3">Offers</h5>
-                          <ul class="list-group">
-                              <li class="list-group-item d-flex align-items-center">
-                                  <i class="fas fa-tag text-success me-3"></i>
-                                  Special dishes: Kebabs
-                              </li>
-                          </ul>
+                        <h6 class="mb-3">Offers</h6>
+                        <ul class="list-group">
+                          <li class="list-group-item d-flex align-items-center">
+                            <i class="fas fa-tag text-success me-3"></i>
+                            Special dishes: Kebabs
+                          </li>
+                        </ul>
                       </div>
+                    </div>
                   </div>
+                </div>
               </div>
-          </div>
-      </section>
-
-      <section class="">
+            </div>
+        </section>
+        
+      <section>
         <div class="container mt-5">
+          <div class="row bg-white">
           <div class="property-rules">
-              <h2 class="rule-header pb-2" style="border-bottom:2px solid #f1f1f1;">
+              <h2 class="rule-header pb-2">
                   Property Rules
                   <span class="rule-subheader">For Food & Beverages</span>
               </h2>
@@ -1126,17 +1213,17 @@
               </div>
           </div>
       </div>
-  
+    </div>
       </section>
 
-    <div class="container my-5 p-5 bg-white">
+    <div class="container my-5">
         <!-- Header Section -->
-        <div class="row mb-4">
+        <div class="row mb-4 bg-white p-3">
             <div class="col-md-8">
                 <h4 class="fw-bold">Guest Reviews & Rating for Radisson Blu Plaza Delhi Airport</h4>
             </div>
             <div class="col-md-4 text-end">
-                <div class="dropdown">
+                <div class="dropdown py-2">
                     <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
                         Sort By: Latest first
                     </button>
@@ -1148,10 +1235,9 @@
                     </ul>
                 </div>
             </div>
-        </div>
+ 
 
         <!-- Ratings Overview -->
-        <div class="row mb-5">
             <div class="col-md-2">
                 <div class="card">
                     <div class="card-body text-center cards-rating-1 text-white">
@@ -1241,36 +1327,43 @@
             </div>
         </div>
 
-    
-
         <!-- User Reviews -->
-        <div class="review-list">
+        <div class="container bg-white">
+          <div class="row">
             <!-- Review 1 -->
-            <div class="card mb-4">
+            <div class="col-12 col-md-10 col-lg-8">
+              <div class="card mb-4">
                 <div class="card-body">
-                    <div class="d-flex">
-                        <div class="user-avatar me-3">CJ</div>
-                        <div class="flex-grow-1">
-                            <div class="d-flex justify-content-between">
-                                <div>
-                                    <h5>Chiranjeev Joshi</h5>
-                                    <small class="text-muted">Stayed 12 Mar, 2025 - Group Traveller</small>
-                                </div>
-                                <div class="rating">
-                                    <span class="badge bg-success">5/5</span>
-                                </div>
-                            </div>
-                            <p class="mt-2">Very very good. Staff is nice.</p>
-                            <div class="review-images d-flex">
-                                <img src="assets/hotel-1.jpg" class="img-thumbnail">
-                                <img src="assets/hotel-1.jpg" class="img-thumbnail">
-                                <!-- More images -->
-                            </div>
-                        </div>
+                  <div class="d-flex flex-column flex-sm-row">
+                    <div class="user-avatar me-sm-3 mb-2 mb-sm-0">
+                      <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                        CJ
+                      </div>
                     </div>
+                    <div class="flex-grow-1">
+                      <div class="d-flex justify-content-between flex-column flex-sm-row">
+                        <div>
+                          <h5 class="mb-1">Chiranjeev Joshi</h5>
+                          <small class="text-muted">Stayed 12 Mar, 2025 - Group Traveller</small>
+                        </div>
+                        <div class="rating mt-2 mt-sm-0">
+                          <span class="badge bg-success">5/5</span>
+                        </div>
+                      </div>
+                      <p class="mt-2">Very very good. Staff is nice.</p>
+                      <div class="review-images d-flex flex-wrap gap-2">
+                        <img src="assets/hotel-1.jpg" class="img-thumbnail" style="width: 100px; height: auto;">
+                        <img src="assets/hotel-1.jpg" class="img-thumbnail" style="width: 100px; height: auto;">
+                        <!-- More images -->
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-
+          </div>
+        </div>
+        
             <!-- Review 2 -->
             <div class="card mb-4">
                 <div class="card-body">
@@ -1305,121 +1398,125 @@
         </nav>
     </div>
 
-    <section class="location-map-container pb-5">
+    <section class="location-map-container py-5">
       <div class="container">
-          <!-- Header Section -->
-          <div class="location-header">
-              <h2 class="mb-3">Location of Radisson Blu Plaza Delhi Airport</h2>
-              <div class="d-flex align-items-center text-muted">
-                  <i class="bi bi-geo-alt-fill me-2"></i>
-                  <p class="mb-0">National Highway 8, New Delhi</p>
-              </div>
+        <!-- Header Section -->
+        <div class="location-header mb-4">
+          <h2 class="mb-3">Location of Radisson Blu Plaza Delhi Airport</h2>
+          <div class="d-flex align-items-center text-muted flex-wrap">
+            <i class="bi bi-geo-alt-fill me-2"></i>
+            <p class="mb-0">National Highway 8, New Delhi</p>
           </div>
-  
-          <!-- Search Bar -->
-          <div class="search-container">
-              <div class="input-group">
-                  <span class="input-group-text bg-white border-end-0">
-                      <i class="bi bi-search"></i>
-                  </span>
-                  <input type="text" class="form-control border-start-0 search-input" 
-                         placeholder="Search Area, Landmark or Transit nearby">
-              </div>
+        </div>
+    
+        <!-- Search Bar -->
+        <div class="search-container mb-4">
+          <div class="input-group">
+        
+            <input type="text" class="form-control search-input"
+              placeholder="Search Area, Landmark or Transit nearby">
           </div>
-  
-          <div class="row g-4">
-              <!-- Map Section -->
-              <div class="col-md-6">
-                  <div class="map-container p-2">
-                      <div class="w-100 h-100 d-flex align-items-center justify-content-center text-muted">
-                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56074.183478186715!2d77.08979694653719!3d28.55064467617853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1c4105192819%3A0xa58fcdb6503fdf45!2sDe%20Pavilion%20Hotel%2C%20Delhi!5e0!3m2!1sen!2sin!4v1743227010243!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                      </div>
-                  </div>
-                  <button class="btn btn-outline-primary mt-3 w-100">
-                      Show All Nearby Places
+        </div>
+    
+        <!-- Main Grid -->
+        <div class="row g-4">
+          <!-- Map Section -->
+          <div class="col-12 col-md-6">
+            <div class="map-container p-2">
+              <div class="w-100 h-100">
+                <iframe class="w-100" height="350"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56074.183478186715!2d77.08979694653719!3d28.55064467617853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1c4105192819%3A0xa58fcdb6503fdf45!2sDe%20Pavilion%20Hotel%2C%20Delhi!5e0!3m2!1sen!2sin!4v1743227010243!5m2!1sen!2sin"
+                  style="border:0;" allowfullscreen="" loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+            <button class="btn btn-outline-primary mt-3 w-100">
+              Show All Nearby Places
+            </button>
+          </div>
+    
+          <!-- Points of Interest -->
+          <div class="col-12 col-md-6">
+            <div class="accordion" id="poiAccordion">
+    
+              <!-- Landmarks Accordion -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#landmarks">
+                    <i class="bi bi-geo-alt accordion-icon me-2"></i>
+                    Landmarks
                   </button>
-              </div>
-  
-              <!-- Points of Interest -->
-              <div class="col-md-6 p-2">
-                  <div class="accordion" id="poiAccordion">
-                      
-                      <!-- Landmarks Accordion -->
-                      <div class="accordion-item">
-                          <h2 class="accordion-header">
-                              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#landmarks">
-                                  <i class="bi bi-geo-alt accordion-icon"></i>
-                                  Landmarks
-                              </button>
-                          </h2>
-                          <div id="landmarks" class="accordion-collapse collapse show" data-bs-parent="#poiAccordion">
-                              <div class="accordion-body">
-                                  <ul class="poi-list">
-                                      <li class="poi-item">
-                                          <div>
-                                              <div class="fw-medium">Rajokri Pahari</div>
-                                              <div class="category-label">Tourist Attraction</div>
-                                          </div>
-                                          <span class="distance-badge">4.5km</span>
-                                      </li>
-                                      <!-- Add more list items here -->
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
-  
-                      <!-- Transit Accordion -->
-                      <div class="accordion-item">
-                          <h2 class="accordion-header">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#transit">
-                                  <i class="bi bi-train-front accordion-icon"></i>
-                                  Transit
-                              </button>
-                          </h2>
-                          <div id="transit" class="accordion-collapse collapse" data-bs-parent="#poiAccordion">
-                              <div class="accordion-body">
-                                  <ul class="poi-list">
-                                      <li class="poi-item">
-                                          <div>
-                                              <div class="fw-medium">Aero City Metro Station</div>
-                                              <div class="category-label">Transit Point</div>
-                                          </div>
-                                          <span class="distance-badge">3.7km</span>
-                                      </li>
-                                      <!-- Add more list items here -->
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
-  
-                      <!-- Others Accordion -->
-                      <div class="accordion-item">
-                          <h2 class="accordion-header">
-                              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#others">
-                                  <i class="bi bi-building accordion-icon"></i>
-                                  Others
-                              </button>
-                          </h2>
-                          <div id="others" class="accordion-collapse collapse" data-bs-parent="#poiAccordion">
-                              <div class="accordion-body">
-                                  <ul class="poi-list">
-                                      <li class="poi-item">
-                                          <div>
-                                              <div class="fw-medium">DLF Cyber City</div>
-                                              <div class="category-label">Business Hub</div>
-                                          </div>
-                                          <span class="distance-badge">8km</span>
-                                      </li>
-                                      <!-- Add more list items here -->
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
+                </h2>
+                <div id="landmarks" class="accordion-collapse collapse show" data-bs-parent="#poiAccordion">
+                  <div class="accordion-body">
+                    <ul class="poi-list list-unstyled">
+                      <li class="poi-item d-flex justify-content-between">
+                        <div>
+                          <div class="fw-medium">Rajokri Pahari</div>
+                          <div class="category-label">Tourist Attraction</div>
+                        </div>
+                        <span class="distance-badge">4.5km</span>
+                      </li>
+                    </ul>
                   </div>
+                </div>
               </div>
-          </div>
+    
+              <!-- Transit Accordion -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#transit">
+                    <i class="bi bi-train-front accordion-icon me-2"></i>
+                    Transit
+                  </button>
+                </h2>
+                <div id="transit" class="accordion-collapse collapse" data-bs-parent="#poiAccordion">
+                  <div class="accordion-body">
+                    <ul class="poi-list list-unstyled">
+                      <li class="poi-item d-flex justify-content-between">
+                        <div>
+                          <div class="fw-medium">Aero City Metro Station</div>
+                          <div class="category-label">Transit Point</div>
+                        </div>
+                        <span class="distance-badge">3.7km</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+    
+              <!-- Others Accordion -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#others">
+                    <i class="bi bi-building accordion-icon me-2"></i>
+                    Others
+                  </button>
+                </h2>
+                <div id="others" class="accordion-collapse collapse" data-bs-parent="#poiAccordion">
+                  <div class="accordion-body">
+                    <ul class="poi-list list-unstyled">
+                      <li class="poi-item d-flex justify-content-between">
+                        <div>
+                          <div class="fw-medium">DLF Cyber City</div>
+                          <div class="category-label">Business Hub</div>
+                        </div>
+                        <span class="distance-badge">8km</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+    
+            </div>
+          </div> <!-- End col -->
+        </div> <!-- End row -->
       </div>
-  </section>
+    </section>
+    
 
         </section>
       </section>

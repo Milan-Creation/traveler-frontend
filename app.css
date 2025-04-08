@@ -193,11 +193,8 @@ button.chevron-down {
 }
 
 .hero-section-4{
-  background-image: url("assets/hotels-check.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 50vh;
+background-color: #f7921e;
+  height: 10vh;
   width: 100%;
 }
 
@@ -515,13 +512,6 @@ button#fare-rule-btn-2 {
   vertical-align: middle;
 }
 
-.form-check-input:checked {
-  background-color: #fe9a6d !important;
-  border-color: #136ffe00 !important;
-  outline: none;
-  border: none;
-}
-
 a.detail-btn {
   background: linear-gradient(45deg, #f9bc2c, #f7921e);
   color: #fff;
@@ -554,12 +544,6 @@ button.fareBtn {
   padding: 20px;
 }
 
-input[type="text"] {
-  padding: 6px;
-  width: 100%;
-  border-radius: 4px;
-  padding: 8px;
-}
 
 input.form-control {
   font-size: 14px;
@@ -1274,7 +1258,6 @@ button.btn-confirm-booking {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f8f9fa;
   padding: 15px;
   border-radius: 10px;
 }
@@ -1632,7 +1615,6 @@ a.view-btn-hotels-book {
   background: #fff;
   border-radius: 8px;
   padding: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .rule-header {
@@ -2198,7 +2180,7 @@ li {
 
 
 .features-section {
-  padding: 60px 0;
+  padding-top: 60px;
   background-color: #ffffff;
 }
 
@@ -2703,7 +2685,7 @@ li {
   padding: 1.5rem;
 }
 .country-code-select {
-  max-width: 120px;
+  max-width: 140px;
   margin-right: 10px;
 }
 .form-label {
@@ -2812,7 +2794,7 @@ li {
   background: #e0e0e0;
   margin: 20px 0;
   position: relative;
-  width: 80%;
+  width: 95%;
 }
 
 .slider-handle {
@@ -2903,7 +2885,9 @@ li {
   font-weight: 500;
   margin-top: 10px;
 }
-
+.container.hotels-check-sections {
+  padding-top: 100px;
+}
 @media (max-width: 576px) {
   .section-position {
     position: relative;
@@ -2973,3 +2957,15 @@ button.btn.btn-outline-primary.dropdown-toggle {
 .edit-btn {
   margin-top: 10px;
 }
+
+.hotels-gallerys{
+  width:72px;
+  padding: 5px 0px;
+}
+@media (max-width:568px){
+  .hotels-gallerys{
+    width:67px;
+    padding: 5px 0px;
+  }
+}
+

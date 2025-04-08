@@ -6014,6 +6014,7 @@ select.form-control {
     position: relative;
     z-index: 1;
     bottom: 30px;
+    margin:0;
 }
 }
 
@@ -18374,7 +18375,7 @@ body.boxed-wrapper .testimonials-three__inner {
     border-radius: 6px;
     border: none;
     display: block;
-    width: 50%;
+    width: 70%;
     font-size: 18px;
     font-weight: 600;
     margin-top: 15px;
@@ -18382,6 +18383,9 @@ body.boxed-wrapper .testimonials-three__inner {
     letter-spacing: 1px;
     text-align: center;
   }
+  ul#bookingTabs {
+    font-size: 12px;
+}
 }
 .input-box {
   position: relative;
@@ -18890,4 +18894,12 @@ input.form-control {
   opacity: 0.8;
   height: 0.7em;
   width: 0.7em;
+}
+
+select#toCitySelect1 {
+  padding: 18px;
+}
+
+select#fromCitySelect1 {
+  padding: 18px;
 }
