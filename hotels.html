@@ -584,7 +584,7 @@
           </section>
 
     <section
-    class="feature-package feature-package--two section-space"
+    class="feature-package feature-package--two"
     id="popular"
   >
     <div class="container">
@@ -2189,42 +2189,44 @@
   <!-- /.destinations-two__element -->
 </section>
 <!-- /.destinations-two -->
+<section class="section-background-color">
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 py-5">
+          <div class="faq-container">
+            <h3 class="fw-bold">Hotel Booking FAQ</h3>
+            
+            <div class="faq-item">
+                <div class="faq-question">What is the cancellation policy?</div>
+                <div class="faq-answer">You can cancel up to 24 hours before check-in for a full refund.</div>
+            </div>
+    
+            <div class="faq-item">
+                <div class="faq-question">Do you offer free breakfast?</div>
+                <div class="faq-answer">Yes, complimentary breakfast is included with all bookings.</div>
+            </div>
+    
+            <div class="faq-item">
+                <div class="faq-question">Is parking available?</div>
+                <div class="faq-answer">Yes, we offer free on-site parking for guests.</div>
+            </div>
+        </div>
+    
+        <script>
+            document.querySelectorAll('.faq-question').forEach(item => {
+                item.addEventListener('click', () => {
+                    const answer = item.nextElementSibling;
+                    item.classList.toggle('active');
+                    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        </script>
 
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12 py-5">
-        <div class="faq-container">
-          <h2>Hotel Booking FAQ</h2>
-          
-          <div class="faq-item">
-              <div class="faq-question">What is the cancellation policy?</div>
-              <div class="faq-answer">You can cancel up to 24 hours before check-in for a full refund.</div>
-          </div>
-  
-          <div class="faq-item">
-              <div class="faq-question">Do you offer free breakfast?</div>
-              <div class="faq-answer">Yes, complimentary breakfast is included with all bookings.</div>
-          </div>
-  
-          <div class="faq-item">
-              <div class="faq-question">Is parking available?</div>
-              <div class="faq-answer">Yes, we offer free on-site parking for guests.</div>
-          </div>
-      </div>
-  
-      <script>
-          document.querySelectorAll('.faq-question').forEach(item => {
-              item.addEventListener('click', () => {
-                  const answer = item.nextElementSibling;
-                  item.classList.toggle('active');
-                  answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-              });
-          });
-      </script>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 
  
@@ -2467,15 +2469,7 @@
         <p class="main-footer__copyright">
           © Copyright <span class="dynamic-year">2025</span> by Ghumo Jhumo
         </p>
-        <a
-          href="#"
-          data-target="html"
-          class="scroll-to-target scroll-to-top show"
-        >
-          <span class="scroll-to-top__wrapper">
-            <i class="fas fa-arrow-up"></i>
-          </span>
-        </a>
+    
         <div class="main-footer__bottom__pyment">
           <a href="#"
             ><img src="assets/footer-card-1-1.png" alt="ghumojhumo pyment"

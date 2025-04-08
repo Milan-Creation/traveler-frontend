@@ -455,6 +455,8 @@ a{
   z-index: 1;
   display: inline-block;
   margin-bottom: 8px;
+  padding-bottom: 15px;
+
 }
 .sec-title__tagline::after {
   content: "";
@@ -18902,4 +18904,7 @@ select#toCitySelect1 {
 
 select#fromCitySelect1 {
   padding: 18px;
+}
+.faq-container{
+  font-family: 'poppins';
 }
