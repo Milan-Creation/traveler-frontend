@@ -18891,3 +18891,11 @@ input.form-control {
   height: 0.7em;
   width: 0.7em;
 }
+
+select#toCitySelect1 {
+  padding: 18px;
+}
+
+select#fromCitySelect1 {
+  padding: 18px;
+}
