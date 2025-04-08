@@ -18905,3 +18905,6 @@ select#toCitySelect1 {
 select#fromCitySelect1 {
   padding: 18px;
 }
+.faq-container{
+  font-family: 'poppins';
+}
