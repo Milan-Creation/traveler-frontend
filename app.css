@@ -492,13 +492,13 @@ button#fare-rule-btn-2 {
   background-color: #ddd;
 }
 
-.policy-card {
+/* .policy-card {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
   background: #fff;
   margin-top: 20px;
-}
+} */
 
 .policy-header {
   display: flex;
@@ -749,12 +749,6 @@ button.btn-weather.fw-bold {
   border-radius: 10px;
 }
 
-.policy-card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
 .policy-header {
   font-size: 22px;
   font-weight: 600;
