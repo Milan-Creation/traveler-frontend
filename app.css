@@ -183,11 +183,11 @@ button.chevron-down {
 }
 
 .hero-section-2 {
-  background-image: url("assets/bookings.png");
+  background-image: url("assets/Booking.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 70vh;
+  height: 45vh;
   width: 100%;
 }
 
@@ -1194,6 +1194,8 @@ img {
 section.book-now {
   display: grid;
   place-items: center;
+  position: relative;
+  bottom: 35px;
 }
 button.book-now-btn {
   border: none;
