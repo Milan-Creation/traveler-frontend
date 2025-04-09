@@ -175,18 +175,19 @@ button.chevron-down {
 }
 @media (max-width:568px){
   .hero-section-1 {
-
     height: 15vh;
-
+  }
+  .hero-section-2 {
+    height: 15vh;
   }
 }
 
 .hero-section-2 {
-  background-image: url("assets/Booking.png");
+  background-image: url("assets/bookings.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50vh;
+  height: 70vh;
   width: 100%;
 }
 
