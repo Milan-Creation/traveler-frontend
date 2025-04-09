@@ -173,6 +173,13 @@ button.chevron-down {
   height: 30vh;
   width: 100%;
 }
+@media (max-width:568px){
+  .hero-section-1 {
+
+    height: 15vh;
+
+  }
+}
 
 .hero-section-2 {
   background-image: url("assets/Booking.png");
