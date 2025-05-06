@@ -3269,11 +3269,11 @@ li.dropdown.megamenu {
     gap: 10px;
   }
 }
-@media (max-width: 1316px) {
+/* @media (max-width: 1316px) {
   .main-header--one .main-header__btn {
     display: none;
   }
-}
+} */
 .main-header--one .main-header__btn::after, .main-header--one .main-header__btn::before {
   background-color: var(--gotur-base, #F7921E);
 }
@@ -18916,4 +18916,240 @@ select#fromCitySelect1 {
 }
 .faq-container{
   font-family: 'poppins';
+}
+
+div#bg-sets {
+  position: relative;
+  top: -10px;
+}
+
+.sidebar {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 25px 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  display: block;
+  border-radius: 5px;
+}
+.sidebar a:hover,
+.sidebar a.active {
+  background-color: #e9f5ff;
+  color: #0d6efd;
+}
+.profile-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+.avatar {
+  height: 100px;
+  width: 100px;
+  background: linear-gradient(135deg, #f6911e, #f6911e38);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: #fff;
+  margin: 0 auto 15px;
+}
+.info-label {
+  font-weight: 500;
+  color: #6c757d;
+}
+.info-value a {
+  color: #0d6efd;
+  text-decoration: none;
+}
+.info-value a:hover {
+  text-decoration: underline;
+}
+
+.profile-card {
+  border-radius: 12px;
+  border: none;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.progress {
+  height: 10px;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  background-color:#f6911e;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 1rem 1rem;
+  animation: progress-bar-stripes 1s linear infinite;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.check-icon {
+  color: #f6911e;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.card-title {
+  font-weight: 600;
+  color: #333;
+}
+
+.card-text {
+  color: #666;
+}
+
+@keyframes progress-bar-stripes {
+  from { background-position: 1rem 0; }
+  to { background-position: 0 0; }
+}
+
+.btn-complete {
+  background-color: #f6911e;
+  border: none;
+  padding: 8px 20px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.btn-complete:hover {
+  background-color: #f6911e;
+  transform: translateY(-2px);
+}
+
+.edit-btn {
+  float: right;
+}
+
+.profile-text h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.profile-text p {
+  margin: 0;
+  color: #6c757d;
+}
+
+.edit-btn {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.edit-icon {
+  margin-right: 5px;
+}
+
+.info-row {
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
+.label {
+  font-weight: 500;
+  color: #333;
+}
+.add-link {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+}
+.preferences-header {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 30px;
+}
+.preferences-subtext {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.login-details-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: none;
+  overflow: hidden;
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eaeaea;
+  padding: 1.25rem 1.5rem;
+  font-weight: 600;
+}
+
+.detail-item {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-weight: 500;
+  color: #555;
+  width: 180px;
+  flex-shrink: 0;
+}
+
+.detail-value {
+  font-weight: 400;
+  color: #333;
+  flex-grow: 1;
+}
+
+.verified-badge {
+  background-color: #e6f7ee;
+  color: #00a65a;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-left: 0.75rem;
+  font-weight: 500;
+}
+
+.change-password-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 0.75rem;
+}
+
+.change-password-link:hover {
+  text-decoration: underline;
+}
+
+.add-traveller-btn {
+  background-color: #f8f9fa;
+  border: 1px dashed #ddd;
+  color: #555;
+  padding: 1.25rem 1.5rem;
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-weight: 500;
+  border-radius: 0 0 10px 10px;
+  transition: all 0.2s;
+}
+
+.add-traveller-btn:hover {
+  background-color: #f1f3f5;
+  color: #333;
 }
