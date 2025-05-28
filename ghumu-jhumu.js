@@ -924,3 +924,132 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   });
 });
+// JavaScript to handle the "Add" links and populate the modal
+document.addEventListener('DOMContentLoaded', function() {
+  // Get all "Add" links
+  const addLinks = document.querySelectorAll('.add-link');
+  
+  // Get modal elements
+  const editProfileModal = new bootstrap.Modal(document.getElementById('editProfileModal'));
+  const editForm = document.getElementById('editForm');
+  
+  // Map of field IDs to their corresponding labels
+  const fieldMap = {
+    'Name': 'profileFirstName',
+    'Birthday': 'birthday',
+    'Gender': 'gender',
+    'Marital Status': 'maritalStatus',
+    'Your Address': 'profileAddress',
+    'Pincode': 'profilePincode',
+    'State': 'state',
+    'Domestic Trip Protection Plan': 'domesticInsurance',
+    'International Travel Insurance Plan': 'internationalInsurance'
+  };
+  
+  // Add click event listeners to all "Add" links
+  addLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Get the label text (removing "+ Add" if present)
+      const labelText = this.closest('.info-row').querySelector('.label').textContent.trim();
+      
+      // Find the corresponding field in the modal
+      const fieldId = fieldMap[labelText];
+      if (fieldId) {
+        // Open the modal
+        editProfileModal.show();
+        
+        // Focus on the corresponding field after a short delay (to allow modal to open)
+        setTimeout(() => {
+          const field = document.getElementById(fieldId);
+          if (field) {
+            field.focus();
+            
+            // Scroll to the field
+            field.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        }, 500);
+      }
+    });
+  });
+  
+  // Handle form submission
+  editForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Here you would typically save the data to your backend
+    // For this example, we'll just update the UI
+    
+    // Get all form values
+    const formData = new FormData(editForm);
+    
+    // Update the profile info display
+    for (const [key, value] of formData.entries()) {
+      const labelText = Object.keys(fieldMap).find(k => fieldMap[k] === key);
+      if (labelText && value) {
+        // Find the corresponding info row
+        const infoRows = document.querySelectorAll('.info-row');
+        infoRows.forEach(row => {
+          if (row.querySelector('.label').textContent.trim() === labelText) {
+            // Update the value display
+            const valueDisplay = row.querySelector('.detail-value') || row.querySelector('.add-link');
+            if (valueDisplay) {
+              if (valueDisplay.classList.contains('add-link')) {
+                // Replace the "Add" link with the value
+                valueDisplay.textContent = value;
+                valueDisplay.classList.remove('add-link');
+                valueDisplay.removeAttribute('href');
+              } else {
+                valueDisplay.textContent = value;
+              }
+            }
+          }
+        });
+      }
+    }
+    
+    // Update completion percentage
+    updateCompletionPercentage();
+    
+    // Close the modal
+    editProfileModal.hide();
+    
+    // Show success message
+    alert('Profile updated successfully!');
+  });
+  
+  // Function to update completion percentage
+  function updateCompletionPercentage() {
+    const infoRows = document.querySelectorAll('.info-row');
+    let completedFields = 0;
+    
+    infoRows.forEach(row => {
+      if (!row.querySelector('.add-link')) {
+        completedFields++;
+      }
+    });
+    
+    // Add the verified fields (email and mobile)
+    completedFields += 2;
+    
+    // Total fields: infoRows (9) + verified (2) = 11
+    const percentage = Math.round((completedFields / 11) * 100);
+    
+    // Update progress bar and badge
+    const progressBar = document.querySelector('.progress-bar');
+    const progressBadge = document.querySelector('.badge');
+    
+    progressBar.style.width = `${percentage}%`;
+    progressBar.setAttribute('aria-valuenow', percentage);
+    progressBadge.textContent = `${percentage}%`;
+    
+    // Update the Basic Info checkmark if all basic info is complete
+    if (completedFields >= 7) { // 7 basic fields (name, birthday, gender, etc.)
+      const basicInfoCheck = document.querySelectorAll('.check-item')[2].querySelector('.check-icon');
+      basicInfoCheck.classList.remove('fa-circle', 'text-muted');
+      basicInfoCheck.classList.add('fa-check-circle');
+      basicInfoCheck.nextElementSibling.classList.remove('text-muted');
+    }
+  }
+});
